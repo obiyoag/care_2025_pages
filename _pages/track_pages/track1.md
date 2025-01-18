@@ -100,6 +100,7 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
       <td>30</td>
       <td>LGE and bSSFP</td>
       <td>Scar, left ventricle,  myocardium and and right ventricle</td>
+    </tr>
   </tbody>
 </table>
 </div>
