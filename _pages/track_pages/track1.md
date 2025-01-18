@@ -31,9 +31,7 @@ _styles: >
 
 ## Motivation
 
-{% include figure.liquid loading="eager" path="/assets/img/tfm4media.png" class="img-fluid" zoomable=true caption="Figure 1." %}
-
-While foundation models like the Segment Anything Model (SAM)<d-cite key="tfm1"></d-cite> have demonstrated efficacy in various medical image analysis tasks, their performance on real-world data remains underexplored. Specifically, these models are typically trained for normal and large targets such as the liver and lungs, yet real-world data often originates from different centers with diverse modalities. Furthermore, the application of foundation models to complicated Regions of Interest (ROIs), like lesions or scars, poses additional challenges due to their small size and irregular shapes. Hence, developing effective and efficient transfer learning approaches to fully utilize those foundation models for real world medical image segmentation is of great values.
+Real-world medical imaging data pose distinct challenges, including variability in imaging modalities, distribution shifts due to diverse data acquisition protocols across centers, and irregular regions of interest (ROIs) such as lesions and scars. The advent of foundation models like the Segment Anything Model (SAM) has revolutionized healthcare AI by demonstrating remarkable performance across a range of tasks. However, their effectiveness in real-world medical imaging scenarios remains insufficiently explored, especially for data characterized by high variability and clinical complexity. This limitation is particularly evident in segmentation tasks involving myocardial pathology and lesions or scars, which are often small, irregularly shaped, and structurally intricate. Addressing this gap is essential for adapting foundation models to clinical settings, thereby advancing medical image analysis and improving patient outcomes. In this challenge, we design a track focused on adapting foundation models to four real-world medical imaging analysis tasks. We also establish independent tracks dedicated to each task. This structure encourages participants to not only explore the potential of foundation models but also to investigate alternative methods tailored to address the complexities of real-world medical imaging analysis.
 
 ## Task
 
@@ -49,6 +47,7 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
 ### Training Dataset
 
 1). [Myocardial Pathology Segmentation](http://zmic.org.cn/care_2024/track4/)
+
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
   <thead>
@@ -96,9 +95,15 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
       <td>LGE and bSSFP</td>
       <td>Scar, left ventricle,  myocardium and and right ventricle</td>
     </tr>
+    <tr>
+      <td>8</td>
+      <td>30</td>
+      <td>LGE and bSSFP</td>
+      <td>Scar, left ventricle,  myocardium and and right ventricle</td>
   </tbody>
 </table>
 </div>
+
 
 
  2). [Liver Segmentation](http://zmic.org.cn/care_2024/track3/)
@@ -123,7 +128,7 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
     <tr>
       <td>B</td>
       <td>B1</td>
-      <td>100</td>
+      <td>300</td>
       <td>10</td>
     </tr>
     <tr>
@@ -135,6 +140,7 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
   </tbody>
 </table>
 </div>
+
 
 
  3). [Whole Heart Segmentation](http://zmic.org.cn/care_2024/track5/)
@@ -155,7 +161,7 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
     </tr>
     <tr>
       <td>B</td>
-      <td>20</td>
+      <td>100</td>
       <td>CT</td>
     </tr>
     <tr>
@@ -171,6 +177,7 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
   </tbody>
 </table>
 </div>
+
 
  4). [Left Atrial and Scar Segmentation](http://zmic.org.cn/care_2024/track2/)
 <div style="display: flex; justify-content: center;">
@@ -216,9 +223,16 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
+    <tr>
+      <td>8</td>
+      <td>20</td>
+      <td>LGE and bSSFP</td>
+      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
+    </tr>
   </tbody>
 </table>
 </div>
+
 
  2). [Liver Segmentation](http://zmic.org.cn/care_2024/track3/)
 
@@ -242,7 +256,7 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
     <tr>
       <td>B</td>
       <td>B1</td>
-      <td>10</td>
+      <td>40</td>
       <td>10</td>
     </tr>
     <tr>
@@ -254,6 +268,7 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
   </tbody>
 </table>
 </div>
+
 
 
  3). [Whole Heart Segmentation](http://zmic.org.cn/care_2024/track5/)
@@ -274,7 +289,7 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
     </tr>
     <tr>
       <td>B</td>
-      <td>10</td>
+      <td>44</td>
       <td>CT</td>
     </tr>
     <tr>
@@ -285,6 +300,7 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
   </tbody>
 </table>
 </div>
+
 
  4). [Left Atrial and Scar Segmentation](http://zmic.org.cn/care_2024/track2/)
 <div style="display: flex; justify-content: center;">
@@ -335,9 +351,16 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
+    <tr>
+      <td>8</td>
+      <td>50</td>
+      <td>LGE and bSSFP</td>
+      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
+    </tr>
   </tbody>
 </table>
 </div>
+
 
  2). [Liver Segmentation](http://zmic.org.cn/care_2024/track3/)
 
@@ -361,7 +384,7 @@ The 160 test cases corresponded to 120 new cases from the vendors provided in th
     <tr>
       <td>B</td>
       <td>B1</td>
-      <td>40</td>
+      <td>140</td>
     </tr>
     <tr>
       <td>B</td>
@@ -376,6 +399,7 @@ The 160 test cases corresponded to 120 new cases from the vendors provided in th
   </tbody>
 </table>
 </div>
+
 
 
 
@@ -397,7 +421,7 @@ The 160 test cases corresponded to 120 new cases from the vendors provided in th
     </tr>
     <tr>
       <td>B</td>
-      <td>14</td>
+      <td>100</td>
       <td>CT</td>
     </tr>
     <tr>
@@ -413,6 +437,7 @@ The 160 test cases corresponded to 120 new cases from the vendors provided in th
   </tbody>
 </table>
 </div>
+
 
  4). [Left Atrial and Scar Segmentation](http://zmic.org.cn/care_2024/track2/)
 <div style="display: flex; justify-content: center;">
@@ -462,7 +487,7 @@ The 160 test cases corresponded to 120 new cases from the vendors provided in th
   {% include figure.liquid loading="eager" path="/assets/img/tfm4media2.png" class="img-fluid" max-width="360px" zoomable=true caption="Figure 2. An example of acceptable prompts." %}
 </div>
 
-+ Only **points** or **bounding boxes** are acceptable as **prompts**. Participants can generate prompts based on the segmentation ground truth by themselves for the training dataset.
++  **points** , **bounding boxes**, **text** and **mask** are acceptable as **prompts**. Participants can generate prompts based on the segmentation ground truth by themselves for the training dataset.
 + For validation and testing testing, no more than **5 points** and **1 bounding box** are provided by organizers for each class as prompts. An example can be seen in the Figure 2.
 
 ## Metrics & Ranking
@@ -547,37 +572,42 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
 <table class="table table-sm table-hover border-bottom">
     <tr>
     <td class="text-left"><strong>Training Data Release</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">May 10, 2024</th>
+    <th scope="row" style="width: 60%" class="text-right">April 10, 2025</th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Validation Phase</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><s>June 10, 2024 to July 7, 2024 (DDL)</s> July 1, 2024 to September 25, 2024 (DDL)</th>
+    <td class="text-left"><strong>Validation Phase start</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">May 1, 2025</th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Test Phase</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><s>July 7, 2024 to August 7, 2024 (DDL)</s> August 15, 2024 to September 15, 2024</th>
+    <td class="text-left"><strong>Test data release</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">June 20, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Abstract Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><s>July 15, 2024 (DDL) July 25, 2024 (DDL)</s> August 22, 2024 (DDL)</th>
+    <th scope="row" style="width: 60%" class="text-right">July 15, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Paper Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><s>August 15, 2024 (DDL)</s>September 1, 2024 (DDL)</th>
+    <th scope="row" style="width: 60%" class="text-right">July 30, 2025</th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Notification</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">September 15, 2024</th>
+    <td class="text-left"><strong>Submission of final results</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">July 30, 2025</th>
+    </tr>
+    <tr>
+    <td class="text-left"><strong>Release date of the results</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">August 10, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Camera Ready</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">September 25, 2024 (DDL)</th>
+    <th scope="row" style="width: 60%" class="text-right">August 20, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Workshop (Half-Day)</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">October 10, 2024</th>
+    <th scope="row" style="width: 60%" class="text-right">TBD</th>
     </tr>
 </table>
+
 
 
 ## Citations
