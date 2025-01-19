@@ -35,18 +35,18 @@ Real-world medical imaging data pose distinct challenges, including variability 
 
 ## Task
 
-In this track, we encourage participants to design effective transfer learning approaches to exploit the knowledge from existed foundation models efficiently and make them more effective in four segmentation tasks, including **Myocardial Pathology Segmentation** in [MyoPS++](http://zmic.org.cn/care_2024/track4/) track, **Liver Segmentation** in [LiQA](http://zmic.org.cn/care_2024/track3/) track, **Whole Heart Segmentation** in [WHS++](http://zmic.org.cn/care_2024/track5/) track and **Left Atrial and Scar Segmentation** in [LAScarQS++](http://zmic.org.cn/care_2024/track2/) track. 
+In this track, we encourage participants to design effective transfer learning approaches to exploit the knowledge from existed foundation models efficiently and make them more effective in four segmentation tasks, including **Myocardial Pathology Segmentation** in [MyoPS++](http://zmic.org.cn/care_2025/track4/) track, **Liver Segmentation** in [LiQA](http://zmic.org.cn/care_2025/track3/) track, **Whole Heart Segmentation** in [WHS++](http://zmic.org.cn/care_2025/track5/) track and **Left Atrial and Scar Segmentation** in [LAScarQS++](http://zmic.org.cn/care_2025/track2/) track. 
 
 ***Note***: To address this task, participants are encouraged to leverage *external data*.
 
 
 ## Data
 
-Multi-center datasets are provided for four sub-tasks. More detailed data information can be found here for [Myocardial Pathology Segmentation](http://zmic.org.cn/care_2024/track4/), [Liver Segmentation](http://zmic.org.cn/care_2024/track3/), [Whole Heart Segmentation](http://zmic.org.cn/care_2024/track5/) and [Left Atrial and Scar Segmentation](http://zmic.org.cn/care_2024/track2/).
+Multi-center datasets are provided for four sub-tasks. More detailed data information can be found here for [Myocardial Pathology Segmentation](http://zmic.org.cn/care_2025/track4/), [Liver Segmentation](http://zmic.org.cn/care_2025/track3/), [Whole Heart Segmentation](http://zmic.org.cn/care_2025/track5/) and [Left Atrial and Scar Segmentation](http://zmic.org.cn/care_2025/track2/).
 
 ### Training Dataset
 
-1). [Myocardial Pathology Segmentation](http://zmic.org.cn/care_2024/track4/)
+1). [Myocardial Pathology Segmentation](http://zmic.org.cn/care_2025/track4/)
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
@@ -60,44 +60,44 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
   </thead>
   <tbody>
     <tr>
-      <td>1</td>
-      <td>81</td>
+      <td>A</td>
+      <td>140</td>
       <td>LGE</td>
       <td>Scar, left ventricle and  myocardium</td>
     </tr>
     <tr>
-      <td>2</td>
-      <td>50</td>
+      <td>B</td>
+      <td>10</td>
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
     <tr>
-      <td>3</td>
+      <td>C</td>
+      <td>10</td>
+      <td>LGE, T2 and bSSFP</td>
+      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>10</td>
+      <td>LGE and bSSFP</td>
+      <td>Scar, left ventricle,  myocardium and and right ventricle</td>
+    </tr>
+    <tr>
+      <td>E</td>
       <td>45</td>
-      <td>LGE, T2 and bSSFP</td>
-      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>07</td>
       <td>LGE and bSSFP</td>
       <td>Scar, left ventricle,  myocardium and and right ventricle</td>
     </tr>
     <tr>
-      <td>6</td>
-      <td>09</td>
+      <td>F</td>
+      <td>20</td>
       <td>LGE and bSSFP</td>
       <td>Scar, left ventricle,  myocardium and and right ventricle</td>
     </tr>
     <tr>
-      <td>7</td>
-      <td>08</td>
-      <td>LGE and bSSFP</td>
-      <td>Scar, left ventricle,  myocardium and and right ventricle</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>30</td>
+      <td>H</td>
+      <td>40</td>
       <td>LGE and bSSFP</td>
       <td>Scar, left ventricle,  myocardium and and right ventricle</td>
   </tbody>
@@ -106,7 +106,8 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
 
 
 
- 2). [Liver Segmentation](http://zmic.org.cn/care_2024/track3/)
+
+ 2). [Liver Segmentation](http://zmic.org.cn/care_2025/track3/)
     
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
@@ -115,27 +116,23 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
       <th scope="col">Vendor</th>
       <th scope="col">Center</th>
       <th scope="col">Num. studies</th>
-      <th scope="col">Num. Annotations</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>A</td>
       <td>A</td>
-      <td>100</td>
-      <td>10</td>
+      <td>150</td>
     </tr>
     <tr>
       <td>B</td>
       <td>B1</td>
       <td>300</td>
-      <td>10</td>
     </tr>
     <tr>
       <td>B</td>
       <td>B2</td>
-      <td>50</td>
-      <td>10</td>
+      <td>100</td>
     </tr>
   </tbody>
 </table>
@@ -143,7 +140,8 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
 
 
 
- 3). [Whole Heart Segmentation](http://zmic.org.cn/care_2024/track5/)
+
+ 3). [Whole Heart Segmentation](http://zmic.org.cn/care_2025/track5/)
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
   <thead>
@@ -179,7 +177,7 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
 </div>
 
 
- 4). [Left Atrial and Scar Segmentation](http://zmic.org.cn/care_2024/track2/)
+ 4). [Left Atrial and Scar Segmentation](http://zmic.org.cn/care_2025/track2/)
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
   <thead>
@@ -197,15 +195,9 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
       <td>60</td>
       <td>130</td>
     </tr>
-
-  </tbody>
-</table>
-</div>
-
-
 ### Validation Dataset
 
- 1). [Myocardial Pathology Segmentation](http://zmic.org.cn/care_2024/track4/)
+ 1). [Myocardial Pathology Segmentation](http://zmic.org.cn/care_2025/track4/)
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
   <thead>
@@ -218,14 +210,20 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
   </thead>
   <tbody>
     <tr>
-      <td>4</td>
-      <td>25</td>
-      <td>LGE, T2 and bSSFP</td>
+      <td>A</td>
+      <td>40</td>
+      <td>LGE</td>
+      <td>Scar, edema, left ventricle,  myocardium</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>5</td>
+      <td>LGE and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
     <tr>
-      <td>8</td>
-      <td>20</td>
+      <td>H</td>
+      <td>10</td>
       <td>LGE and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
@@ -234,7 +232,8 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
 </div>
 
 
- 2). [Liver Segmentation](http://zmic.org.cn/care_2024/track3/)
+
+ 2). [Liver Segmentation](http://zmic.org.cn/care_2025/track3/)
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
@@ -243,27 +242,23 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
       <th scope="col">Vendor</th>
       <th scope="col">Center</th>
       <th scope="col">Num. studies</th>
-      <th scope="col">Num. Annotations</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>A</td>
       <td>A</td>
-      <td>10</td>
-      <td>10</td>
+      <td>30</td>
     </tr>
     <tr>
       <td>B</td>
       <td>B1</td>
       <td>40</td>
-      <td>10</td>
     </tr>
     <tr>
       <td>B</td>
       <td>B2</td>
-      <td>10</td>
-      <td>10</td>
+      <td>20</td>
     </tr>
   </tbody>
 </table>
@@ -271,7 +266,8 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
 
 
 
- 3). [Whole Heart Segmentation](http://zmic.org.cn/care_2024/track5/)
+
+ 3). [Whole Heart Segmentation](http://zmic.org.cn/care_2025/track5/)
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
   <thead>
@@ -283,18 +279,13 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>20</td>
-      <td>CT</td>
-    </tr>
-    <tr>
       <td>B</td>
       <td>44</td>
       <td>CT</td>
     </tr>
     <tr>
-      <td>C/D</td>
-      <td>20</td>
+      <td>E</td>
+      <td>6</td>
       <td>MRI</td>
     </tr>
   </tbody>
@@ -302,7 +293,8 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
 </div>
 
 
- 4). [Left Atrial and Scar Segmentation](http://zmic.org.cn/care_2024/track2/)
+
+ 4). [Left Atrial and Scar Segmentation](http://zmic.org.cn/care_2025/track2/)
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
   <thead>
@@ -333,7 +325,7 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
 
 ### Test Dataset
 
- 1). [Myocardial Pathology Segmentation](http://zmic.org.cn/care_2024/track4/)
+ 1). [Myocardial Pathology Segmentation](http://zmic.org.cn/care_2025/track4/)
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
   <thead>
@@ -346,13 +338,19 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
   </thead>
   <tbody>
     <tr>
-      <td>4</td>
-      <td>25</td>
+      <td>F</td>
+      <td>20</td>
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
     <tr>
-      <td>8</td>
+      <td>G</td>
+      <td>50</td>
+      <td>LGE and bSSFP</td>
+      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
+    </tr>
+    <tr>
+      <td>H</td>
       <td>50</td>
       <td>LGE and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
@@ -362,9 +360,8 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
 </div>
 
 
- 2). [Liver Segmentation](http://zmic.org.cn/care_2024/track3/)
 
-The 160 test cases corresponded to 120 new cases from the vendors provided in the training set and 40 additional cases from a third unseen center, that were tested for model generalizability. 
+ 2). [Liver Segmentation](http://zmic.org.cn/care_2025/track3/) 
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:50%;align:center;">
@@ -379,7 +376,7 @@ The 160 test cases corresponded to 120 new cases from the vendors provided in th
     <tr>
       <td>A</td>
       <td>A</td>
-      <td>40</td>
+      <td>80</td>
     </tr>
     <tr>
       <td>B</td>
@@ -389,12 +386,12 @@ The 160 test cases corresponded to 120 new cases from the vendors provided in th
     <tr>
       <td>B</td>
       <td>B2</td>
-      <td>40</td>
+      <td>80</td>
     </tr>
     <tr>
       <td>C (new)</td>
       <td>C</td>
-      <td>40</td>
+      <td>60</td>
     </tr>
   </tbody>
 </table>
@@ -403,7 +400,8 @@ The 160 test cases corresponded to 120 new cases from the vendors provided in th
 
 
 
- 3). [Whole Heart Segmentation](http://zmic.org.cn/care_2024/track5/)
+
+ 3). [Whole Heart Segmentation](http://zmic.org.cn/care_2025/track5/)
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
   <thead>
@@ -416,7 +414,7 @@ The 160 test cases corresponded to 120 new cases from the vendors provided in th
   <tbody>
     <tr>
       <td>A</td>
-      <td>20</td>
+      <td>40</td>
       <td>CT</td>
     </tr>
     <tr>
@@ -426,7 +424,7 @@ The 160 test cases corresponded to 120 new cases from the vendors provided in th
     </tr>
     <tr>
       <td>C/D</td>
-      <td>20</td>
+      <td>40</td>
       <td>MRI</td>
     </tr>
     <tr>
@@ -439,7 +437,8 @@ The 160 test cases corresponded to 120 new cases from the vendors provided in th
 </div>
 
 
- 4). [Left Atrial and Scar Segmentation](http://zmic.org.cn/care_2024/track2/)
+
+ 4). [Left Atrial and Scar Segmentation](http://zmic.org.cn/care_2025/track2/)
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
   <thead>
@@ -510,14 +509,14 @@ This ranking approach encourage the participants to develop methods from foundat
 
 
 ## Registration
-Please register [here](http://zmic.org.cn/care_2024/eval/register?track=TFM4MedIA) to participate in the challenge and get access to the dataset!
+Please register [here](http://zmic.org.cn/care_2025/eval/register?track=TFM4MedIA) to participate in the challenge and get access to the dataset!
 
 ## Submission Guidance
 
 ### Model Submission
-After registration, we will assign participants an account to login into our [TFM4MedIA evaluation platform](http://zmic.org.cn/care_2024/eval/login?track=TFM4MedIA). Participants can directly upload your predictions on the validation data (in nifty format) via the website. Note that evaluation of validation data will be allowed up to 10 times for each task per team. For fair comparison, the test dataset will remain unseen. Participants need to submit their [docker models](http://zmic.org.cn/care_2024/test_submission) for testing.
+After registration, we will assign participants an account to login into our [TFM4MedIA evaluation platform](http://zmic.org.cn/care_2025/eval/login?track=TFM4MedIA). Participants can directly upload your predictions on the validation data (in nifty format) via the website. Note that evaluation of validation data will be allowed up to 10 times for each task per team. For fair comparison, the test dataset will remain unseen. Participants need to submit their [docker models](http://zmic.org.cn/care_2025/test_submission) for testing.
 ### Paper Submission
-Please refer to our [paper submission guidance](/care_2024/paper_submission).
+Please refer to our [paper submission guidance](/care_2025/paper_submission).
 
 ### Docker Submission (New!!!)
 Since the aim of TM4MedIA is one model for all tasks, we make the name/directory/paths of a specific test task anonymous to avoid anyone using the information to select a specfiic model (e.g., nnUnet) for each test task. Therefore, we copy all test images of a specific task into the directory ":/input/images/" and save the corresponding prompts to the path ":/input/prompts.json". For convenience, the json structure keeps the same as the validation phase. For example, the structure of ":/input" is
