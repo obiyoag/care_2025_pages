@@ -32,12 +32,12 @@ _styles: >
 
 
 ## Motivation
-Cardiovascular diseases (CVDs), as the leading cause of death globally<d-cite key="whs1"></d-cite>, necessitate precise morphological and pathological quantification through segmentation of crucial cardiac structures from medical images<d-cite key="whs2"></d-cite>. However, whole heart segmentation (WHS) faces challenges including heart shape variability during the cardiac cycle, clinical artifacts like motion and poor contrast-to-noise ratio, as well as domain shifts in multi-center data and the distinct modalities of CT and MRI. The WHS++ track serves to inspire innovative solutions in the realms of biomedical imaging and computer vision, striving to overcome these challenges and advance automated WHS for enhanced understanding and treatment of CVDs.
+Cardiovascular diseases (CVDs), recognized by the WHO as the leading cause of death globally<d-cite key="whs1"></d-cite>, necessitate precise morphological and pathological quantification through segmentation of crucial cardiac structures from medical images<d-cite key="whs2"></d-cite>. demand precise morphological and pathological assessments through the segmentation of key cardiac structures from medical images. This task aims to achieve whole heart segmentation (WHS), including the extraction of individual substructures such as the left ventricle (LV), right ventricle (RV), left atrium (LA), right atrium (RA), left ventricular myocardium (Myo), ascending aorta (AO), entire aorta, and pulmonary artery (PA). Automated WHS faces several challenges, including variability in heart shape throughout the cardiac cycle, clinical artifacts such as motion blur and poor contrast-to-noise ratios, as well as domain shifts across multi-center datasets and differing imaging modalities like CT and MRI.
 
 ## Task
 {% include figure.liquid loading="eager" path="/assets/img/whs.png" class="img-fluid" zoomable=true caption="Figure 1. Overview of the WHS++ track" %}
 
-The dataset includes **104 CT** and **102 MRI** volumes, sourced globally from **6** imaging centers. The objective of this track is to achieve precise segmentation of seven substructures of the whole heart, with robustness against domain shifts (see Fig. 1).  The specific  substructures, each associated with a unique label value, are:
+This task seeks to inspire innovative solutions in biomedical imaging and computer vision, addressing these challenges to advance automated WHS. The ultimate goal is to enhance the understanding and treatment of CVDs through accurate and robust segmentation methods. In addition to the data from CARE 2024, we have added 200 newly collected CT cases from patients with atrial fibrillation. These images were obtained using a Siemens SOMATOM Force scanner, providing an in-plane resolution of 1 × 1 × 1 mm. The inclusion of these new cases enhances the diversity and clinical relevance of the dataset, offering a broader spectrum of anatomical and pathological variations.  The specific  substructures, each associated with a unique label value, are:
 
 1. **Left Ventricular Blood Cavity (LV)** - Label value: 500
 2. **Right Ventricular Blood Cavity (RV)** - Label value: 600
@@ -47,7 +47,7 @@ The dataset includes **104 CT** and **102 MRI** volumes, sourced globally from *
 6. **Ascending Aorta (AO)** - Label value: 820; defined as the aortic trunk from the aortic valve to the superior level of the atria.
 7. **Pulmonary Artery (PA)** - Label value: 850; defined as the initial segment from the pulmonary valve to the bifurcation point.
 
-**Note on Great Vessels:** The great vessels of interest, comprising the ascending aorta and pulmonary artery, are specifically defined due to variations in the fields of view across different scans. This uniform definition is crucial for ensuring consistency across evaluations. During the assessment, segmentation results for these vessels will be truncated to average lengths measured in healthy subjects, although participants are encouraged to extend their segmentation beyond these lengths. Our provided manual segmentations similarly cover more than the defined trunk measurements.
+**Note on Great Vessels:** The great vessels of interest, specifically the ascending aorta and pulmonary artery, are clearly defined due to variations in the fields of view across different scans. This consistent definition is essential for ensuring uniformity across evaluations. During the assessment, segmentation results for these vessels will be truncated to the average lengths measured in healthy subjects. However, participants are encouraged to extend their segmentation beyond these predefined lengths. Our provided manual segmentations also cover areas extending beyond the defined trunk measurements.
 
 The selected papers will be published as part of the MICCAI Satellite Events joint LNCS proceedings.([see previous proceedings](https://link.springer.com/book/10.1007/978-3-319-75541-0)).
 
@@ -61,27 +61,103 @@ Topics may cover (not exclusively):
 
 ## Data
 
-### Data overview
+### Training data
 
-We include **206** multi-modality whole heart images from **6** centers in different countries, including **104** cardiac CT/CTA and **102** cardiac MRI in 3D that cover the whole heart substructures. 
+<div style="display: flex; justify-content: center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
+  <thead>
+    <tr>
+      <th scope="col">Center</th>
+      <th scope="col">Num. patients</th>
+      <th scope="col">Modalities</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A</td>
+      <td>20</td>
+      <td>CT</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>100</td>
+      <td>CT</td>
+    </tr>
+    <tr>
+      <td>C/D</td>
+      <td>20</td>
+      <td>MRI</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>26</td>
+      <td>MRI</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
-The data were collected based on in vivo clinical environment and the data were used in clinics, covering a wide range of cardiac diseases. So the data had various image quality, some were with relative poor quality. However, it is necessary to include these datasets to validate the robustness of the developed algorithms when it comes to real clinical usage.
+### Validation data
 
-### Data Split
+<div style="display: flex; justify-content: center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
+  <thead>
+    <tr>
+      <th scope="col">Center</th>
+      <th scope="col">Num. patients</th>
+      <th scope="col">Modalities</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>B</td>
+      <td>44</td>
+      <td>CT</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>6</td>
+      <td>MRI</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
-The dataset is divided into training, validation, and test sets:
+### Test data
 
-- **Training Set**: 40 CT and 46 MR images
-- **Validation Set**: 30 CT and 20 MR images
-- **Test Set**: 34 CT and 36 MR images
-
-Further details are provided in Fig. 2. Note that both the images and labels of the test set will not be released.
-
-{% include figure.liquid loading="eager" path="/assets/img/whs2.png" class="img-fluid" zoomable=true caption="Figure 2." %}
-
-### Data Format
-
-All data will be provided in the NIfTI format as [Case Identifier]_[image/label].nii.gz. 
+<div style="display: flex; justify-content: center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
+  <thead>
+    <tr>
+      <th scope="col">Center</th>
+      <th scope="col">Num. patients</th>
+      <th scope="col">Modalities</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A</td>
+      <td>40</td>
+      <td>CT</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>100</td>
+      <td>CT</td>
+    </tr>
+    <tr>
+      <td>C/D</td>
+      <td>40</td>
+      <td>MRI</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>16</td>
+      <td>MRI</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ### Data Acquisition
 
@@ -89,7 +165,7 @@ The cardiac CT/CTA data were acquired using standard coronary CT angiography pro
 
 ### Guidance for Training Strategies
 
-To facilitate a well-informed training process, information about the imaging centers will be provided alongside the cases, indicated by the case naming (refer to Fig. 2).  Participants are strongly encouraged to use this information to design training strategies that aim for high generalization capability. This approach is intended to promote the development of algorithms that perform robustly not only under controlled conditions but also across diverse real-world clinical environments.
+To support an informed training process, details about the imaging centers will be provided alongside the cases, as indicated by the case naming (see Fig. 2). Participants are strongly encouraged to utilize this information when designing their training strategies, with a focus on achieving high generalization capability. This approach aims to foster the development of algorithms that perform robustly not only under controlled conditions but also across a variety of real-world clinical environments.
 
 ## Metrics & Ranking
 
@@ -123,15 +199,15 @@ For test results, both in-sample performance from seen centers and generalizatio
 
 ## Registration
 
-Please register [here](http://zmic.org.cn/care_2024/eval/register?track=WHS%2B%2B) to participate in the challenge and get access to the dataset!!
+Please register [here](http://zmic.org.cn/care_2025/eval/register?track=WHS%2B%2B) to participate in the challenge and get access to the dataset!!
 
 
 ## Submission Guidance
 
 ### Model Submission
-After registration, we will assign participants an account to login into our [WHS++ evaluation platform](http://zmic.org.cn/care_2024/eval/login?track=WHS%2B%2B). Participants can directly upload your predictions on the validation data (in nifty format) via the website. Note that evaluation of validation data will be allowed up to 10 times for each task per team. For fair comparison, the test dataset will remain unseen. Participants need to submit their [docker models](http://zmic.org.cn/care_2024/test_submission) for testing.
+After registration, we will assign participants an account to login into our [WHS++ evaluation platform](http://zmic.org.cn/care_2025/eval/login?track=WHS%2B%2B). Participants can directly upload your predictions on the validation data (in nifty format) via the website. Note that evaluation of validation data will be allowed up to 10 times for each task per team. For fair comparison, the test dataset will remain unseen. Participants need to submit their [docker models](http://zmic.org.cn/care_2025/test_submission) for testing.
 ### Paper Submission
-Please refer to our [paper submission guidance](/care_2024/paper_submission).
+Please refer to our [paper submission guidance](/care_2025/paper_submission).
 
 ## Timeline
 The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in Pacific Standard Time.
@@ -139,37 +215,42 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
 <table class="table table-sm table-hover border-bottom">
     <tr>
     <td class="text-left"><strong>Training Data Release</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">May 10, 2024</th>
+    <th scope="row" style="width: 60%" class="text-right">April 10, 2025</th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Validation Phase</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><s>June 10, 2024 to July 7, 2024 (DDL)</s> July 1, 2024 to July 30, 2024 (DDL)</th>
+    <td class="text-left"><strong>Validation Phase start</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">May 1, 2025</th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Test Phase</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><s>July 7, 2024 to August 7, 2024 (DDL)</s> TBC</th>
+    <td class="text-left"><strong>Test data release</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">June 20, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Abstract Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><s>July 15, 2024 (DDL)</s> July 25, 2024 (DDL)</th>
+    <th scope="row" style="width: 60%" class="text-right">July 15, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Paper Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">August 15, 2024 (DDL)</th>
+    <th scope="row" style="width: 60%" class="text-right">July 30, 2025</th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Notification</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">September 15, 2024</th>
+    <td class="text-left"><strong>Submission of final results</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">July 30, 2025</th>
+    </tr>
+    <tr>
+    <td class="text-left"><strong>Release date of the results</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">August 10, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Camera Ready</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">September 25, 2024 (DDL)</th>
+    <th scope="row" style="width: 60%" class="text-right">August 20, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Workshop (Half-Day)</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">October 10, 2024</th>
+    <th scope="row" style="width: 60%" class="text-right">TBD</th>
     </tr>
 </table>
+
 
 
 ## Citations

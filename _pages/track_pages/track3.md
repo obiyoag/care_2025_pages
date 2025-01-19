@@ -33,17 +33,21 @@ _styles: >
 ## Motivation
 {% include figure.liquid loading="eager" path="/assets/img/liqa1.png" class="img-fluid" zoomable=true caption="Figure 1. Track description." %}
 
-Liver fibrosis, arising from chronic viral or metabolic liver conditions, presents a significant global health challenge. Accurate **liver segmentation (LiSeg)** and **fibrosis staging (LiFS)**<d-cite key="liqa1"></d-cite><d-cite key="liqa2"></d-cite> are essential for evaluating disease severity and facilitating accurate diagnoses. This track focuses on achieving two tasks, including automatic **single-phase liver segmentation** and **multi-phase liver fibrosis staging** from **multi-center** liver MRI scans.
+Liver fibrosis, often resulting from chronic viral or metabolic liver diseases, poses a significant global health challenge. Accurate liver segmentation (LiSeg) and fibrosis staging (LiFS) are crucial for assessing disease severity and enabling precise diagnoses<d-cite key="liqa1"></d-cite><d-cite key="liqa2"></d-cite> . This task focuses on developing automated methods for liver segmentation and fibrosis staging using multi-phase, multi-center liver MRI scans. Automatic LiFS presents challenges such as missing modalities for certain patients, misalignments in multi-phase MRI data, and the need for effective integration of multi-phase information to improve the accuracy and generalizability of liver fibrosis diagnoses. Similarly, automatic LiSeg faces difficulties stemming from limited ground truth annotations across different modalities and domain shifts in multi-center datasets.
+
+
 
 ## Task
 
-Task 1: **The LiSeg task** aims to predict liver segmentation with **limited ground truth**, where the Hepatobiliary phase (HBP) MRI is provided, which contains crucial information on the liver.
+To address these challenges, the extensive use of external data and pre-trained models is encouraged to enhance liver segmentation performance. This track aims to foster innovative solutions that overcome these obstacles, leveraging multi-phase MRI data to advance the field of liver segmentation and fibrosis staging. Building on the dataset used in CARE 2024, we have expanded the collection to include 560 newly acquired cases, bringing the total to 1,000 cases. These cases were obtained from the same vendors and centers, including Philips Ingenia 3.0T, Siemens Skyra 3.0T, and Siemens Aera 1.5T. The dataset features multi-phase imaging modalities such as T2-weighted imaging, diffusion-weighted imaging, and Gadolinium ethoxybenzyl diethylenetriamine pentaacetic acid (Gd-EOB-DTPA)-enhanced dynamic MRIs. The Gd-EOB-DTPA-enhanced dynamic MRIs include multiple phases: non-contrast , arterial, venous, delayed, and hepatobiliary phases.
 
-Task 2: **The LiFS task** aims to stage liver fibrosis accurately. The severity of liver fibrosis can be classified into four stages (S1-S4). Results of two binary classification tasks with clinical significance are evaluated, i.e., staging cirrhosis (S1-3 vs S4) and identifying substantial fibrosis (S1 vs S2-4).
+**Task 1: The LiSeg Task** focuses on liver segmentation with **limited ground truth**, using Hepatobiliary phase (HBP) MRI, which contains crucial liver information. The challenge is to develop methods capable of accurately segmenting the liver in these images.
 
-Notably, both LiSeg and LiFS encounter **domain shifts** across multi-center data. Participants are encouraged to integrate complementary information from multi-phase MRIs effectively, achieving more **precise and generalizable** results. Moreover, automatic LiFS may face challenges including **random missing sequences** for certain patients and **misalignments** among multi-phase MRIs. 
+**Task 2: The LiFS Task** aims to stage liver fibrosis accurately across four stages (S1-S4). Two binary classification tasks with clinical significance will be evaluated: staging cirrhosis (S1-3 vs. S4) and identifying substantial fibrosis (S1 vs. S2-4).
 
-To address this task, participants are also encouraged to leverage **external data**, such as [LLD-MMRI2023](https://github.com/LMMMEng/LLD-MMRI2023), and **pretrained models**.
+Both tasks, LiSeg and LiFS, involve **domain shifts** across multi-center data. Participants are encouraged to effectively integrate complementary information from multi-phase MRIs to achieve more **precise and generalizable** results. Additionally, automatic LiFS may encounter challenges such as **random missing sequences** for certain patients and **misalignments** between multi-phase MRIs.
+
+To tackle these challenges, participants are also encouraged to leverage **external datasets**, such as [LLD-MMRI2023](https://github.com/LMMMEng/LLD-MMRI2023), and **pretrained models**.
 
 ## Data
 
@@ -51,17 +55,13 @@ To address this task, participants are also encouraged to leverage **external da
 
 **1) Scanner:** Philips Ingenia3.0T, Siemens Skyra 3.0T, Siemens Aera 1.5T.
 
-**2) Dataset overview:**  The track cohort was composed of **440 patients** diagnosed with liver fibrosis who underwent multi-phase MRI scans. All subjects were scanned in clinical centers using three different magnetic resonance scanner vendors. The dataset will include **multi-phase** and **multi-center** data, consisting of T2-weighted imaging, diffusion-weighted imaging, and Gadolinium ethoxybenzyl diethylenetriamine pentaacetic acid (Gd-EOB-DTPA)-enhanced dynamic MRIs. Gd-EOB-DTPA-enhanced dynamic MRIs include the non-contrast phase (T1WI), arterial phase, venous phase, delay phase, and hepatobiliary phase.
+**2) Dataset overview:**  The track cohort comprises **1,000 patients** diagnosed with liver fibrosis, all of whom underwent multi-phase MRI scans. The dataset includes **multi-phase** and **multi-center** data, with images acquired from clinical centers using three different MRI scanner vendors. The dataset consists of T2-weighted imaging, diffusion-weighted imaging, and Gadolinium ethoxybenzyl diethylenetriamine pentaacetic acid (Gd-EOB-DTPA)-enhanced dynamic MRIs. The Gd-EOB-DTPA-enhanced dynamic MRIs cover the non-contrast phase (T1WI), arterial phase, venous phase, delayed phase, and hepatobiliary phase.
 
 **3) Contrast-enhanced dynamic scans:** Contrast-enhanced scans were performed based on the injection of the GD-EOB-DTPA agent. The arterial phase is captured 25 seconds after the contrast agent is injected. Subsequently, the portal phase is achieved 1 minute later. After another 3 minutes, the delay phase is obtained, and finally, the hepatobiliary phase is reached 20 minutes thereafter.
 
 **4) Data format:** The data are all in Nifty format. Each sample may randomly lack phases (except hepatobiliary phase ), and the sequences have not applied pre-alignment through spatial registration.
 
 ### Training Set
-
-For LiSeg task, the training set contains 30 annotated segmentation images obtained by experienced clinicians and 220 unannotated images from 2 different MRI vendors and 3 different centers. 
-
-For LiFS task, all 250 training samples are provided with the ground truth of the liver fibrosis stage. Moreover, part of the hepatobiliary phase images have been segmented previously.
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
@@ -70,31 +70,28 @@ For LiFS task, all 250 training samples are provided with the ground truth of th
       <th scope="col">Vendor</th>
       <th scope="col">Center</th>
       <th scope="col">Num. studies</th>
-      <th scope="col">Num. Annotations</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>A</td>
       <td>A</td>
-      <td>100</td>
-      <td>10</td>
+      <td>150</td>
     </tr>
     <tr>
       <td>B</td>
       <td>B1</td>
-      <td>100</td>
-      <td>10</td>
+      <td>300</td>
     </tr>
     <tr>
       <td>B</td>
       <td>B2</td>
-      <td>50</td>
-      <td>10</td>
+      <td>100</td>
     </tr>
   </tbody>
 </table>
 </div>
+
 
 
 ### Validation Set
@@ -106,36 +103,31 @@ For LiFS task, all 250 training samples are provided with the ground truth of th
       <th scope="col">Vendor</th>
       <th scope="col">Center</th>
       <th scope="col">Num. studies</th>
-      <th scope="col">Num. Annotations</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>A</td>
       <td>A</td>
-      <td>10</td>
-      <td>10</td>
+      <td>30</td>
     </tr>
     <tr>
       <td>B</td>
       <td>B1</td>
-      <td>10</td>
-      <td>10</td>
+      <td>40</td>
     </tr>
     <tr>
       <td>B</td>
       <td>B2</td>
-      <td>10</td>
-      <td>10</td>
+      <td>20</td>
     </tr>
   </tbody>
 </table>
 </div>
 
 
-### Test Set
 
-The 160 test cases corresponded to 120 new cases from the vendors provided in the training set and 40 additional cases from a third unseen vendor, that were tested for model generalizability. 
+### Test Set
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:50%;align:center;">
@@ -150,22 +142,22 @@ The 160 test cases corresponded to 120 new cases from the vendors provided in th
     <tr>
       <td>A</td>
       <td>A</td>
-      <td>40</td>
+      <td>80</td>
     </tr>
     <tr>
       <td>B</td>
       <td>B1</td>
-      <td>40</td>
+      <td>140</td>
     </tr>
     <tr>
       <td>B</td>
       <td>B2</td>
-      <td>40</td>
+      <td>80</td>
     </tr>
     <tr>
       <td>C (new)</td>
       <td>C</td>
-      <td>40</td>
+      <td>60</td>
     </tr>
   </tbody>
 </table>
@@ -192,55 +184,61 @@ Finally, the average of in-distribution results (seen center) and out-of-distrib
 2. Only automatic methods are acceptable. 
 
 ## Registration
-To access the dataset, please register in the [LiQA registration platform](http://zmic.org.cn/care_2024/eval/register?track=LiQA).
+
+To access the dataset, please register in the [LiQA registration platform](http://zmic.org.cn/care_2025/eval/register?track=LiQA).
 
 ## Submission Guidance
 
 ### Model Submission
-After registration, we will assign participants an account to login into our [LiQA evaluation platform](http://zmic.org.cn/care_2024/eval/login?track=LiQA). Participants can directly upload your predictions on the validation data (in nifty format) via the website. Note that evaluation of validation data will be allowed up to 10 times for each task per team. For fair comparison, the test dataset will remain unseen. Participants need to submit their [docker models](http://zmic.org.cn/care_2024/test_submission) for testing.
+After registration, we will assign participants an account to login into our [LiQA evaluation platform](http://zmic.org.cn/care_2025/eval/login?track=LiQA). Participants can directly upload your predictions on the validation data (in nifty format) via the website. Note that evaluation of validation data will be allowed up to 10 times for each task per team. For fair comparison, the test dataset will remain unseen. Participants need to submit their [docker models](http://zmic.org.cn/care_2025/test_submission) for testing.
 ### Paper Submission
-Please refer to our [paper submission guidance](/care_2024/paper_submission).
-
+Please refer to our [paper submission guidance](/care_2025/paper_submission).
 
 ## Timeline
+
 The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in Pacific Standard Time.
 
 <table class="table table-sm table-hover border-bottom">
     <tr>
     <td class="text-left"><strong>Training Data Release</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">May 10, 2024</th>
+    <th scope="row" style="width: 60%" class="text-right">April 10, 2025</th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Validation Phase</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><s>June 10, 2024 to July 7, 2024 (DDL)</s> July 1, 2024 to July 30, 2024 (DDL)</th>
+    <td class="text-left"><strong>Validation Phase start</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">May 1, 2025</th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Test Phase</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><s>July 7, 2024 to August 7, 2024 (DDL)</s> TBC</th>
+    <td class="text-left"><strong>Test data release</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">June 20, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Abstract Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><s>July 15, 2024 (DDL)</s> July 25, 2024 (DDL)</th>
+    <th scope="row" style="width: 60%" class="text-right">July 15, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Paper Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">August 15, 2024 (DDL)</th>
+    <th scope="row" style="width: 60%" class="text-right">July 30, 2025</th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Notification</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">September 15, 2024</th>
+    <td class="text-left"><strong>Submission of final results</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">July 30, 2025</th>
+    </tr>
+    <tr>
+    <td class="text-left"><strong>Release date of the results</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">August 10, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Camera Ready</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">September 25, 2024 (DDL)</th>
+    <th scope="row" style="width: 60%" class="text-right">August 20, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Workshop (Half-Day)</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">October 10, 2024</th>
+    <th scope="row" style="width: 60%" class="text-right">TBD</th>
     </tr>
 </table>
 
 ## Citations
+
 **Please cite these papers when you use the data for publications:**
 ```bib
 @inproceedings{gao2023reliable,

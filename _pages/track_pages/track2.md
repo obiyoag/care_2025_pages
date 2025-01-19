@@ -32,19 +32,16 @@ _styles: >
 ## Motivation
 
 {% include figure.liquid loading="eager" path="/assets/img/lascarqs1.png" class="img-fluid" zoomable=true caption="Figure 1." %}
-Atrial fibrillation (AF), the most prevalent cardiac arrhythmia, is poised to escalate in frequency due to aging populations <d-cite key="lascarqs1"></d-cite>.
-Radiofrequency catheter ablation, a common AF therapy, faces challenges due to high recurrence rates <d-cite key="lascarqs2"></d-cite>.
-Cardiac digital twin provides personalized *in-silico* cardiac representations to infer multi-scale properties associated with cardiac mechanisms <d-cite key="lascarqs3"></d-cite><d-cite key="lascarqs4"> </d-cite>. 
-It has shown great promise in personalized targeted ablation of persistent AF <d-cite key="lascarqs5"></d-cite> (see Fig. 1).
-To create a digital twin, it is important to reconstruct the left atrial (LA) geometry with the location of scars from LGE MRI <d-cite key="lascarqs6"></d-cite>.
-However, automatic quantification and analysis of LA scars can be quite challenging due to the low image quality, thin wall, the surrounding enhanced regions, and the complex patterns of scars <d-cite key="lascarqs7"></d-cite>.
-Deep learning (DL) methods have shown promise in LGE MRI analysis, yet their performance often falters in new domains due to domain shifts <d-cite key="lascarqs8"></d-cite><d-cite key="lascarqs9"></d-cite>.
-The LAScarQS++ track aims to address these issues, driving the advancement of DL models that precisely delineate LA cavity and scars and ultimately revolutionize personalized AF treatment.
+Atrial fibrillation (AF) is the most prevalent arrhythmia encountered in clinical practice, affecting approximately 1% of the population, with its incidence rising markedly with age. <d-cite key="lascarqs1"></d-cite>.Precisely determining the location and extent of left atrial (LA) scars is essential for understanding the underlying mechanisms and progression of AF.
+
+This task focuses on achieving (semi-)automatic segmentation of the LA cavity and quantification of LA scars using multi-center late gadolinium enhancement (LGE) MRI scans. Key challenges include variability across multicenter data, complex LA shapes, thin atrial walls, surrounding enhanced regions, and intricate scar patterns in AF patients.
+
+By addressing these challenges, this task aims to advance automated LA analysis and contribute to improved diagnostic and therapeutic strategies for AF. 
 
 ## Task
 
 {% include figure.liquid loading="eager" path="/assets/img/lascarqs2.png" class="img-fluid" zoomable=true caption="Figure 2." %}
-The target of this track is to automatically segment LA cavity and quantify LA scars from LGE MRI (see Fig. 2). The track will provide 200+ LGE MRIs globally, i.e., from multiple imaging centers around the world, for developing novel algorithms that can quantify or segment LA cavity and scars. The track presents an open and fair platform for various research groups to test and validate their methods on these datasets acquired from the clinical environment. To ensure data privacy, the platform will enable remote training and testing on the dataset from different centers in local and the dataset can keep invisible.
+The goal of this track is to develop methods for the automatic segmentation of the left atrial (LA) cavity and the quantification of LA scars from late gadolinium enhancement (LGE) MRI (see Fig. 2). The track will provide over 200 LGE MRIs sourced globally from multiple imaging centers, offering a rich resource for developing novel algorithms capable of segmenting the LA cavity and quantifying scars. This track offers an open and fair platform for various research groups to test and validate their methods using datasets collected from real-world clinical settings. To ensure data privacy, the platform will support remote training and testing on the datasets from different centers, allowing the data to remain securely hidden from participants.
 
 The selected papers will be published in our proceedings (see [previous proceedings](https://www.google.co.uk/books/edition/Left_Atrial_and_Scar_Quantification_and/dkq9EAAAQBAJ?hl=en&gbpv=0)).
 
@@ -88,12 +85,14 @@ This data was collected from King’s College London/ St Thomas' Hospital with p
 
 The dataset has been divided into three main parts: training, validation, and test sets:
 
-*Task 1*:
+*Task1:Segmentation*:
+
 - **Training Set**: 60 LGE MRIs from Center A
 - **Validation Set**: 10 LGE MRIs from Center A
 - **Test Set**: 24 LGE MRIs from Center A
-  
-*Task 2*:
+
+*Task2: Quantification*:
+
 - **Training Set**: 130 LGE MRIs from Centers A
 - **Validation Set**: 10 LGE MRIs from Center A and 10 LGE MRIs from Center C
 - **Test Set**: 14 LGE MRIs from Center A, 20 LGE MRIs from Center B, and 10 LGE MRIs from Center C  <!-- , 40 LGE MRIs from Center 2.2-->
@@ -132,14 +131,16 @@ Tasks 1 and 2 will be evaluated and ranked seperately, based on the performance 
 3. Participants are encouraged to attempt both tasks, but they also can choose to focus on either task 1 or task 2. 
    
 ## Registration
-To access the dataset, please register in the [LAScarQS++ registration platform](http://zmic.org.cn/care_2024/eval/register?track=LAScarQS%2B%2B).
+To access the dataset, please register in the [LAScarQS++ registration platform](http://zmic.org.cn/care_2025/eval/register?track=LAScarQS%2B%2B).
 
 ## Submission Guidance
 
 ### Model Submission
-After registration, we will assign the participant an account to login into our [LAScarQS++ evaluation platform](http://zmic.org.cn/care_2024/eval/login?track=LAScarQS%2B%2B). Participants can directly upload your predictions on the validation data (in nifty format) via the website. Note that evaluation of validation data will be allowed up to 10 times for each task per team. For fair comparison, the test dataset will remain unseen. Participants need to submit their [docker models](http://zmic.org.cn/care_2024/test_submission) for testing.
+
+After registration, we will assign the participant an account to login into our [LAScarQS++ evaluation platform](http://zmic.org.cn/care_2025/eval/login?track=LAScarQS%2B%2B). Participants can directly upload your predictions on the validation data (in nifty format) via the website. Note that evaluation of validation data will be allowed up to 10 times for each task per team. For fair comparison, the test dataset will remain unseen. Participants need to submit their [docker models](http://zmic.org.cn/care_2025/test_submission) for testing.
 ### Paper Submission
-Please refer to our [paper submission guidance](/care_2024/paper_submission).
+
+Please refer to our [paper submission guidance](/care_2025/paper_submission).
 
 ## Timeline
 The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in Pacific Standard Time.
@@ -147,37 +148,42 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
 <table class="table table-sm table-hover border-bottom">
     <tr>
     <td class="text-left"><strong>Training Data Release</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">May 10, 2024</th>
+    <th scope="row" style="width: 60%" class="text-right">April 10, 2025</th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Validation Phase</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><s>June 10, 2024 to July 7, 2024 (DDL)</s> July 1, 2024 to July 30, 2024 (DDL)</th>
+    <td class="text-left"><strong>Validation Phase start</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">May 1, 2025</th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Test Phase</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><s>July 7, 2024 to August 7, 2024 (DDL)</s> TBC</th>
+    <td class="text-left"><strong>Test data release</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">June 20, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Abstract Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><s>July 15, 2024 (DDL)</s> July 25, 2024 (DDL)</th>
+    <th scope="row" style="width: 60%" class="text-right">July 15, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Paper Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">August 15, 2024 (DDL)</th>
+    <th scope="row" style="width: 60%" class="text-right">July 30, 2025</th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Notification</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">September 15, 2024</th>
+    <td class="text-left"><strong>Submission of final results</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">July 30, 2025</th>
+    </tr>
+    <tr>
+    <td class="text-left"><strong>Release date of the results</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">August 10, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Camera Ready</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">September 25, 2024 (DDL)</th>
+    <th scope="row" style="width: 60%" class="text-right">August 20, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Workshop (Half-Day)</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">October 10, 2024</th>
+    <th scope="row" style="width: 60%" class="text-right">TBD</th>
     </tr>
 </table>
+
 
 ## Citations
 Please cite these papers when you use the data for publications:
