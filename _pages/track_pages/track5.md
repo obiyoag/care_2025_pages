@@ -84,7 +84,7 @@ Topics may cover (not exclusively):
       <td>CT</td>
     </tr>
     <tr>
-      <td>C/D</td>
+      <td>C and D</td>
       <td>20</td>
       <td>MRI</td>
     </tr>
@@ -154,6 +154,11 @@ Topics may cover (not exclusively):
       <td>F</td>
       <td>16</td>
       <td>MRI</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>20</td>
+      <td>CTA</td>
     </tr>
   </tbody>
 </table>

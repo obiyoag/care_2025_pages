@@ -56,45 +56,52 @@ The challenge emphasizes addressing key real-world issues, including the integra
   <tbody>
     <tr>
       <td>A</td>
-      <td>140</td>
+      <td>81</td>
       <td>LGE</td>
       <td>Scar, left ventricle and  myocardium</td>
     </tr>
     <tr>
       <td>B</td>
-      <td>10</td>
+      <td>50</td>
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
     <tr>
       <td>C</td>
-      <td>10</td>
+      <td>45</td>
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
     <tr>
       <td>D</td>
-      <td>10</td>
-      <td>LGE and bSSFP</td>
-      <td>Scar, left ventricle,  myocardium and and right ventricle</td>
+      <td>50</td>
+      <td>LGE, T2 and bSSFP</td>
+      <td>Scar, edema, left ventricle,  myocardium  and right ventricle</td>
     </tr>
     <tr>
       <td>E</td>
-      <td>45</td>
+      <td>7</td>
       <td>LGE and bSSFP</td>
-      <td>Scar, left ventricle,  myocardium and and right ventricle</td>
+      <td>Scar, left ventricle,  myocardium  and right ventricle</td>
     </tr>
     <tr>
       <td>F</td>
-      <td>20</td>
+      <td>9</td>
       <td>LGE and bSSFP</td>
       <td>Scar, left ventricle,  myocardium and and right ventricle</td>
     </tr>
     <tr>
-      <td>H</td>
-      <td>40</td>
+      <td>G</td>
+      <td>8</td>
       <td>LGE and bSSFP</td>
       <td>Scar, left ventricle,  myocardium and and right ventricle</td>
+    </tr>
+        <tr>
+      <td>H</td>
+      <td>35</td>
+      <td>LGE </td>
+      <td>Scar, left ventricle,  myocardium and and right ventricle</td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -113,23 +120,12 @@ The challenge emphasizes addressing key real-world issues, including the integra
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>40</td>
+      <td>D</td>
+      <td>25</td>
       <td>LGE</td>
       <td>Scar, edema, left ventricle,  myocardium</td>
     </tr>
-    <tr>
-      <td>F</td>
-      <td>5</td>
-      <td>LGE and bSSFP</td>
-      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
-    </tr>
-    <tr>
-      <td>H</td>
-      <td>10</td>
-      <td>LGE and bSSFP</td>
-      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
-    </tr>
+    
   </tbody>
 </table>
 </div>
@@ -148,21 +144,15 @@ The challenge emphasizes addressing key real-world issues, including the integra
   </thead>
   <tbody>
     <tr>
-      <td>F</td>
-      <td>20</td>
+      <td>D</td>
+      <td>25</td>
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
     <tr>
-      <td>G</td>
-      <td>50</td>
-      <td>LGE and bSSFP</td>
-      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
-    </tr>
-    <tr>
-      <td>H</td>
-      <td>50</td>
-      <td>LGE and bSSFP</td>
+      <td>I</td>
+      <td>16</td>
+      <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
   </tbody>
