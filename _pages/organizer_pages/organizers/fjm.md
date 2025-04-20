@@ -2,3 +2,6 @@
 
 **School of Imaging**
 * Wangbin Ding ([contact person for MyoPS++ and WHS++](mailto:dingwangbin@fjmu.edu.cn))
+
+**The First Affiliated Hospital of Fujian Medical University**
+* Dejun She
