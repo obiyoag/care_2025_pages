@@ -72,12 +72,12 @@ The challenge emphasizes addressing key real-world issues, including the integra
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
-    <tr>
+    <!-- <tr>
       <td>D</td>
       <td>50</td>
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium  and right ventricle</td>
-    </tr>
+    </tr> -->
     <tr>
       <td>E</td>
       <td>7</td>
@@ -122,7 +122,7 @@ The challenge emphasizes addressing key real-world issues, including the integra
     <tr>
       <td>D</td>
       <td>25</td>
-      <td>LGE</td>
+      <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium</td>
     </tr>
     
@@ -197,7 +197,7 @@ The best work, following the precedent of [MyoPS 2020](https://zmiclab.github.io
 
 ## Rules
 - **Only automatic methods are acceptable.** Participants must utilize algorithms that do not require manual intervention or human-assisted processes for the segmentation task.
-- **External data sets and pre-trained models are not allowed in this track.** The solutions must be developed using only the data provided within the scope of this track and cannot leverage any external datasets or models for assistance.
+- **Pre-trained models are  allowed in this track.** The solutions could be developed with pre-trained fundation models, such as SAM, CLIP, and MedSAM.
 
 
 ## Registration

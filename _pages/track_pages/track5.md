@@ -205,8 +205,7 @@ For test results, both in-sample performance from seen centers and generalizatio
 ## Rules
 
 - **Only automatic methods are acceptable.** Participants must utilize algorithms that do not require manual intervention or human-assisted processes for the segmentation task.
-- **External data sets and pre-trained models are not allowed in this track.** The solutions must be developed using only the data provided within the scope of this track and cannot leverage any external datasets or models for assistance.
-
+- **Pre-trained models are allowed in this track.** The solutions could be developed with pre-trained fundation models, such as SAM, CLIP and MedSAM.
 ## Registration
 
 Please register [here](http://zmic.org.cn/care_2025/eval/register?track=WHS%2B%2B) to participate in the challenge and get access to the dataset!!
