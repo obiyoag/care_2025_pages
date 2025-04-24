@@ -178,7 +178,7 @@ The performance of scar and edema segmentation results will be evaluated by：
 - **Dice Similarity Coefficient (DSC)**
 - **Precision (PRE)**
 - **Sensitivity (SEN)**
-- **Specificity (SPE)**
+<!-- - **Specificity (SPE)** -->
 
 Note that the track will provide an open platform for research groups to [validate](http://zmic.org.cn/care_2025/eval/scoreboard?track=MyoPS%2B%2B) and [test](http://zmic.org.cn/care_2025/test_submission) their methods. For fair comparison, the test dataset will remain unseen. Participants need to submit their [docker models](http://zmic.org.cn/care_2025/docker_tutorial) to our platform for testing.
 
@@ -219,7 +219,7 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
 <table class="table table-sm table-hover border-bottom">
     <tr>
     <td class="text-left"><strong>Training Data Release</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">April 10, 2025</th>
+    <th scope="row" style="width: 60%" class="text-right">April 25, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Validation Phase start</strong></td>
