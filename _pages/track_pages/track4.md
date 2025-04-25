@@ -229,15 +229,15 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
 <table class="table table-sm table-hover border-bottom">
     <tr>
     <td class="text-left"><strong>Training Data Release</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">April 10, 2025</th>
+    <th scope="row" style="width: 60%" class="text-right">April 30, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Validation Phase start</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">May 1, 2025</th>
+    <th scope="row" style="width: 60%" class="text-right">May 30, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Test data release</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">June 20, 2025</th>
+    <th scope="row" style="width: 60%" class="text-right">June 30, 2025</th>
     </tr>
     <tr>
     <td class="text-left"><strong>Abstract Submission</strong></td>
