@@ -56,45 +56,52 @@ The challenge emphasizes addressing key real-world issues, including the integra
   <tbody>
     <tr>
       <td>A</td>
-      <td>140</td>
+      <td>81</td>
       <td>LGE</td>
       <td>Scar, left ventricle and  myocardium</td>
     </tr>
     <tr>
       <td>B</td>
-      <td>10</td>
+      <td>50</td>
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
     <tr>
       <td>C</td>
-      <td>10</td>
+      <td>45</td>
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
-    <tr>
+    <!-- <tr>
       <td>D</td>
-      <td>10</td>
-      <td>LGE and bSSFP</td>
-      <td>Scar, left ventricle,  myocardium and and right ventricle</td>
-    </tr>
+      <td>50</td>
+      <td>LGE, T2 and bSSFP</td>
+      <td>Scar, edema, left ventricle,  myocardium  and right ventricle</td>
+    </tr> -->
     <tr>
       <td>E</td>
-      <td>45</td>
+      <td>7</td>
       <td>LGE and bSSFP</td>
-      <td>Scar, left ventricle,  myocardium and and right ventricle</td>
+      <td>Scar, left ventricle,  myocardium  and right ventricle</td>
     </tr>
     <tr>
       <td>F</td>
-      <td>20</td>
+      <td>9</td>
       <td>LGE and bSSFP</td>
       <td>Scar, left ventricle,  myocardium and and right ventricle</td>
     </tr>
     <tr>
-      <td>H</td>
-      <td>40</td>
+      <td>G</td>
+      <td>8</td>
       <td>LGE and bSSFP</td>
       <td>Scar, left ventricle,  myocardium and and right ventricle</td>
+    </tr>
+        <tr>
+      <td>H</td>
+      <td>35</td>
+      <td>LGE </td>
+      <td>Scar, left ventricle,  myocardium and and right ventricle</td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -113,23 +120,12 @@ The challenge emphasizes addressing key real-world issues, including the integra
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>40</td>
-      <td>LGE</td>
+      <td>D</td>
+      <td>25</td>
+      <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium</td>
     </tr>
-    <tr>
-      <td>F</td>
-      <td>5</td>
-      <td>LGE and bSSFP</td>
-      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
-    </tr>
-    <tr>
-      <td>H</td>
-      <td>10</td>
-      <td>LGE and bSSFP</td>
-      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
-    </tr>
+    
   </tbody>
 </table>
 </div>
@@ -148,21 +144,15 @@ The challenge emphasizes addressing key real-world issues, including the integra
   </thead>
   <tbody>
     <tr>
-      <td>F</td>
-      <td>20</td>
+      <td>D</td>
+      <td>25</td>
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
     <tr>
-      <td>G</td>
-      <td>50</td>
-      <td>LGE and bSSFP</td>
-      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
-    </tr>
-    <tr>
-      <td>H</td>
-      <td>50</td>
-      <td>LGE and bSSFP</td>
+      <td>I</td>
+      <td>16</td>
+      <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
   </tbody>
@@ -188,7 +178,8 @@ The performance of scar and edema segmentation results will be evaluated by：
 - **Dice Similarity Coefficient (DSC)**
 - **Precision (PRE)**
 - **Sensitivity (SEN)**
-- **Specificity (SPE)**
+- **Hausdorff Distance (HD)**
+<!-- - **Specificity (SPE)** -->
 
 Note that the track will provide an open platform for research groups to [validate](http://zmic.org.cn/care_2025/eval/scoreboard?track=MyoPS%2B%2B) and [test](http://zmic.org.cn/care_2025/test_submission) their methods. For fair comparison, the test dataset will remain unseen. Participants need to submit their [docker models](http://zmic.org.cn/care_2025/docker_tutorial) to our platform for testing.
 
@@ -207,7 +198,7 @@ The best work, following the precedent of [MyoPS 2020](https://zmiclab.github.io
 
 ## Rules
 - **Only automatic methods are acceptable.** Participants must utilize algorithms that do not require manual intervention or human-assisted processes for the segmentation task.
-- **External data sets and pre-trained models are not allowed in this track.** The solutions must be developed using only the data provided within the scope of this track and cannot leverage any external datasets or models for assistance.
+- **Pre-trained models are  allowed in this track.** The solutions could be developed with pre-trained fundation models, such as SAM, CLIP, and MedSAM.
 
 
 ## Registration

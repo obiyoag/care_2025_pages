@@ -80,11 +80,11 @@ Topics may cover (not exclusively):
     </tr>
     <tr>
       <td>B</td>
-      <td>100</td>
+      <td>20</td>
       <td>CT</td>
     </tr>
     <tr>
-      <td>C/D</td>
+      <td>C and D</td>
       <td>20</td>
       <td>MRI</td>
     </tr>
@@ -110,14 +110,19 @@ Topics may cover (not exclusively):
   </thead>
   <tbody>
     <tr>
-      <td>B</td>
-      <td>44</td>
+      <td>A</td>
+      <td>20</td>
       <td>CT</td>
     </tr>
     <tr>
-      <td>E</td>
-      <td>6</td>
-      <td>MRI</td>
+      <td>B</td>
+      <td>10</td>
+      <td>CT</td>
+    </tr>
+    <tr>
+      <td>C and D</td>
+      <td>20</td>
+      <td>MR</td>
     </tr>
   </tbody>
 </table>
@@ -137,23 +142,28 @@ Topics may cover (not exclusively):
   <tbody>
     <tr>
       <td>A</td>
-      <td>40</td>
+      <td>20</td>
       <td>CT</td>
     </tr>
     <tr>
       <td>B</td>
-      <td>100</td>
+      <td>14</td>
       <td>CT</td>
     </tr>
     <tr>
       <td>C/D</td>
-      <td>40</td>
+      <td>20</td>
       <td>MRI</td>
     </tr>
     <tr>
       <td>F</td>
       <td>16</td>
       <td>MRI</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>20</td>
+      <td>CTA</td>
     </tr>
   </tbody>
 </table>
@@ -174,7 +184,7 @@ To support an informed training process, details about the imaging centers will 
 The performance of segmentation results will be assessed through: 
 
 - Dice Similarity Coefficient (DSC), 
-- Hausdorff Distance (HD), and 
+- Hausdorff Distance (HD), 
 - Average Surface Distance (ASD). 
 
 ### Aim
@@ -195,8 +205,7 @@ For test results, both in-sample performance from seen centers and generalizatio
 ## Rules
 
 - **Only automatic methods are acceptable.** Participants must utilize algorithms that do not require manual intervention or human-assisted processes for the segmentation task.
-- **External data sets and pre-trained models are not allowed in this track.** The solutions must be developed using only the data provided within the scope of this track and cannot leverage any external datasets or models for assistance.
-
+- **Pre-trained models are allowed in this track.** The solutions could be developed with pre-trained fundation models, such as SAM, CLIP and MedSAM.
 ## Registration
 
 Please register [here](http://zmic.org.cn/care_2025/eval/register?track=WHS%2B%2B) to participate in the challenge and get access to the dataset!!
