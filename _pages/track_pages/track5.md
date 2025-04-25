@@ -184,7 +184,7 @@ To support an informed training process, details about the imaging centers will 
 The performance of segmentation results will be assessed through: 
 
 - Dice Similarity Coefficient (DSC), 
-- Hausdorff Distance (HD), and 
+- Hausdorff Distance (HD), 
 - Average Surface Distance (ASD). 
 
 ### Aim
