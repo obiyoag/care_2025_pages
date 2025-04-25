@@ -196,6 +196,10 @@ Multi-center datasets are provided for four sub-tasks. More detailed data inform
       <td>60</td>
       <td>130</td>
     </tr>
+  </tbody>
+</table>
+</div>
+
 ### Validation Dataset
 
  1). [Myocardial Pathology Segmentation](http://zmic.org.cn/care_2025/track4/)
