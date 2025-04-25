@@ -29,17 +29,14 @@ _styles: >
   }
 ---
 
-
 ## Motivation
 {% include figure.liquid loading="eager" path="/assets/img/liqa1.png" class="img-fluid" zoomable=true caption="Figure 1. Track description." %}
 
 Liver fibrosis, often resulting from chronic viral or metabolic liver diseases, poses a significant global health challenge. Accurate liver segmentation (LiSeg) and fibrosis staging (LiFS) are crucial for assessing disease severity and enabling precise diagnoses<d-cite key="liqa1"></d-cite><d-cite key="liqa2"></d-cite> . This task focuses on developing automated methods for liver segmentation and fibrosis staging using multi-phase, multi-center liver MRI scans. Automatic LiFS presents challenges such as missing modalities for certain patients, misalignments in multi-phase MRI data, and the need for effective integration of multi-phase information to improve the accuracy and generalizability of liver fibrosis diagnoses. Similarly, automatic LiSeg faces difficulties stemming from limited ground truth annotations across different modalities and domain shifts in multi-center datasets.
 
-
-
 ## Task
 
-To address these challenges, the extensive use of external data and pre-trained models is encouraged to enhance liver segmentation performance. This track aims to foster innovative solutions that overcome these obstacles, leveraging multi-phase MRI data to advance the field of liver segmentation and fibrosis staging. Building on the dataset used in CARE 2024, we have expanded the collection to include 560 newly acquired cases, bringing the total to 1,000 cases. These cases were obtained from the same vendors and centers, including Philips Ingenia 3.0T, Siemens Skyra 3.0T, and Siemens Aera 1.5T. The dataset features multi-phase imaging modalities such as T2-weighted imaging, diffusion-weighted imaging, and Gadolinium ethoxybenzyl diethylenetriamine pentaacetic acid (Gd-EOB-DTPA)-enhanced dynamic MRIs. The Gd-EOB-DTPA-enhanced dynamic MRIs include multiple phases: non-contrast , arterial, venous, delayed, and hepatobiliary phases.
+To address these challenges, the extensive use of external data and pre-trained models is encouraged to enhance liver segmentation performance. This track aims to foster innovative solutions that overcome these obstacles, leveraging multi-phase MRI data to advance the field of liver segmentation and fibrosis staging. Building on the dataset used in CARE 2024, we have expanded the collection to include 180 newly acquired cases, bringing the total to 620 cases. These cases were obtained from the same vendors and centers, including Philips Ingenia 3.0T, Siemens Skyra 3.0T, and Siemens Aera 1.5T. The dataset features multi-phase imaging modalities such as T2-weighted imaging, diffusion-weighted imaging(DWI), and Gadolinium ethoxybenzyl diethylenetriamine pentaacetic acid (Gd-EOB-DTPA)-enhanced dynamic MRIs. The Gd-EOB-DTPA-enhanced dynamic MRIs include multiple phases: non-contrast, arterial, venous, delayed, and hepatobiliary phases.
 
 **Task 1: The LiSeg Task** focuses on liver segmentation with **limited ground truth**, using Hepatobiliary phase (HBP) MRI, which contains crucial liver information. The challenge is to develop methods capable of accurately segmenting the liver in these images.
 
@@ -55,43 +52,46 @@ To tackle these challenges, participants are also encouraged to leverage **exter
 
 **1) Scanner:** Philips Ingenia3.0T, Siemens Skyra 3.0T, Siemens Aera 1.5T.
 
-**2) Dataset overview:**  The track cohort comprises **1,000 patients** diagnosed with liver fibrosis, all of whom underwent multi-phase MRI scans. The dataset includes **multi-phase** and **multi-center** data, with images acquired from clinical centers using three different MRI scanner vendors. The dataset consists of T2-weighted imaging, diffusion-weighted imaging, and Gadolinium ethoxybenzyl diethylenetriamine pentaacetic acid (Gd-EOB-DTPA)-enhanced dynamic MRIs. The Gd-EOB-DTPA-enhanced dynamic MRIs cover the non-contrast phase (T1WI), arterial phase, venous phase, delayed phase, and hepatobiliary phase.
+**2) Dataset overview:**  The track cohort comprises **620 patients** diagnosed with liver fibrosis, all of whom underwent multi-phase MRI scans. The dataset includes **multi-phase** and **multi-center** data, with images acquired from clinical centers using three different MRI scanner vendors. The dataset consists of T2-weighted imaging, diffusion-weighted imaging, and Gadolinium ethoxybenzyl diethylenetriamine pentaacetic acid (Gd-EOB-DTPA)-enhanced dynamic MRIs. The Gd-EOB-DTPA-enhanced dynamic MRIs cover the non-contrast phase (T1WI), arterial phase, venous phase, delayed phase, and hepatobiliary phase.
 
 **3) Contrast-enhanced dynamic scans:** Contrast-enhanced scans were performed based on the injection of the GD-EOB-DTPA agent. The arterial phase is captured 25 seconds after the contrast agent is injected. Subsequently, the portal phase is achieved 1 minute later. After another 3 minutes, the delay phase is obtained, and finally, the hepatobiliary phase is reached 20 minutes thereafter.
 
 **4) Data format:** The data are all in Nifty format. Each sample may randomly lack phases (except hepatobiliary phase ), and the sequences have not applied pre-alignment through spatial registration.
 
-### Training Set
+### Training set
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
   <thead>
     <tr>
-      <th scope="col">Vendor</th>
-      <th scope="col">Center</th>
-      <th scope="col">Num. studies</th>
+      <th class="text-center" scope="col">Vendor</th>
+      <th class="text-center" scope="col">Center</th>
+      <th class="text-center" scope="col">#Cases</th>
+      <th class="text-center" scope="col">#Annotation for seg</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>A</td>
-      <td>150</td>
+      <td class="text-center">A</td>
+      <td class="text-center">A</td>
+      <td class="text-center">130</td>
+      <td class="text-center">10</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>B1</td>
-      <td>300</td>
+      <td class="text-center">B</td>
+      <td class="text-center">B1</td>
+      <td class="text-center">180</td>
+      <td class="text-center">10</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>B2</td>
-      <td>100</td>
+      <td class="text-center">B</td>
+      <td class="text-center">B2</td>
+      <td class="text-center">60</td>
+      <td class="text-center">10</td>
     </tr>
   </tbody>
 </table>
 </div>
-
 
 
 ### Validation Set
@@ -100,32 +100,34 @@ To tackle these challenges, participants are also encouraged to leverage **exter
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
   <thead>
     <tr>
-      <th scope="col">Vendor</th>
-      <th scope="col">Center</th>
-      <th scope="col">Num. studies</th>
+      <th class="text-center" scope="col">Vendor</th>
+      <th class="text-center" scope="col">Center</th>
+      <th class="text-center" scope="col">#Cases</th>
+      <th class="text-center" scope="col">#Annotation for seg</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>A</td>
-      <td>30</td>
+      <td class="text-center">A</td>
+      <td class="text-center">A</td>
+      <td class="text-center">20</td>
+      <td class="text-center">20</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>B1</td>
-      <td>40</td>
+      <td class="text-center">B</td>
+      <td class="text-center">B1</td>
+      <td class="text-center">20</td>
+      <td class="text-center">20</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>B2</td>
-      <td>20</td>
+      <td class="text-center">B</td>
+      <td class="text-center">B2</td>
+      <td class="text-center">20</td>
+      <td class="text-center">20</td>
     </tr>
   </tbody>
 </table>
 </div>
-
-
 
 ### Test Set
 
@@ -133,31 +135,31 @@ To tackle these challenges, participants are also encouraged to leverage **exter
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:50%;align:center;">
   <thead>
     <tr>
-      <th scope="col">Vendor</th>
-      <th scope="col">Center</th>
-      <th scope="col">Num. studies</th>
+      <th class="text-center" scope="col">Vendor</th>
+      <th class="text-center" scope="col">Center</th>
+      <th class="text-center" scope="col">#Cases</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>A</td>
-      <td>80</td>
+      <td class="text-center">A</td>
+      <td class="text-center">A</td>
+      <td class="text-center">40</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>B1</td>
-      <td>140</td>
+      <td class="text-center">B</td>
+      <td class="text-center">B1</td>
+      <td class="text-center">40</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>B2</td>
-      <td>80</td>
+      <td class="text-center">B</td>
+      <td class="text-center">B2</td>
+      <td class="text-center">40</td>
     </tr>
     <tr>
-      <td>C (new)</td>
-      <td>C</td>
-      <td>60</td>
+      <td class="text-center">C</td>
+      <td class="text-center">C</td>
+      <td class="text-center">70</td>
     </tr>
   </tbody>
 </table>
@@ -241,19 +243,21 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
 
 **Please cite these papers when you use the data for publications:**
 ```bib
+@article{liu2025merit,
+  title = {MERIT: Multi-view evidential learning for reliable and interpretable liver fibrosis staging},
+  author={Liu, Yuanye and Gao, Zheyao and Shi, Nannan and Wu, Fuping and Shi, Yuxin and Chen, Qingchao and Zhuang, Xiahai},
+  journal = {Medical Image Analysis},
+  volume = {102},
+  pages = {103507},
+  year = {2025}
+}
+
 @inproceedings{gao2023reliable,
   title={A reliable and interpretable framework of multi-view learning for liver fibrosis staging},
   author={Gao, Zheyao and Liu, Yuanye and Wu, Fuping and Shi, Nannan and Shi, Yuxin and Zhuang, Xiahai},
   booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
   pages={178--188},
-  year={2023},
-}
-
-@misc{liu2024merit,
-  title={MERIT: Multi-view Evidential learning for Reliable and Interpretable liver fibrosis sTaging}, 
-  author={Yuanye Liu and Zheyao Gao and Nannan Shi and Fuping Wu and Yuxin Shi and Qingchao Chen and Xiahai Zhuang},
-  year={2024},
-  archivePrefix={arXiv},
+  year={2023}
 }
 ```
 
@@ -261,5 +265,4 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
 
 If you have any questions regarding the LiQA track, please feel free to contact: 
 
-* Jiyao Liu: [jiyaoliu.fudan@gmail.com](mailto:jiyaoliu.fudan@gmail.com)
 * Yuanye Liu: [yuanyeliu@fudan.edu.cn](mailto:yuanyeliu@fudan.edu.cn)
