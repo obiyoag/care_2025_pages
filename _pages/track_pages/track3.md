@@ -36,7 +36,7 @@ Liver fibrosis, often resulting from chronic viral or metabolic liver diseases, 
 
 ## Task
 
-To address these challenges, the extensive use of external data and pre-trained models is encouraged to enhance liver segmentation performance. This track aims to foster innovative solutions that overcome these obstacles, leveraging multi-phase MRI data to advance the field of liver segmentation and fibrosis staging. Building on the dataset used in CARE 2024, we have expanded the collection to include 180 newly acquired cases, bringing the total to 620 cases. These cases were obtained from the same vendors and centers, including Philips Ingenia 3.0T, Siemens Skyra 3.0T, and Siemens Aera 1.5T. The dataset features multi-phase imaging modalities such as T2-weighted imaging, diffusion-weighted imaging(DWI), and Gadolinium ethoxybenzyl diethylenetriamine pentaacetic acid (Gd-EOB-DTPA)-enhanced dynamic MRIs. The Gd-EOB-DTPA-enhanced dynamic MRIs include multiple phases: non-contrast, arterial, venous, delayed, and hepatobiliary phases.
+To address these challenges, the extensive use of external data and pre-trained models is encouraged to enhance liver segmentation performance. This track aims to foster innovative solutions that overcome these obstacles, leveraging multi-phase MRI data to advance the field of liver segmentation and fibrosis staging. Building on the dataset used in CARE 2024, we have expanded the collection to include 170 newly acquired cases, bringing the total to 610 cases. These cases were obtained from the same vendors and centers, including Philips Ingenia 3.0T, Siemens Skyra 3.0T, and Siemens Aera 1.5T. The dataset features multi-phase imaging modalities such as T2-weighted imaging, diffusion-weighted imaging(DWI), and Gadolinium ethoxybenzyl diethylenetriamine pentaacetic acid (Gd-EOB-DTPA)-enhanced dynamic MRIs. The Gd-EOB-DTPA-enhanced dynamic MRIs include multiple phases: non-contrast, arterial, venous, delayed, and hepatobiliary phases.
 
 **Task 1: The LiSeg Task** focuses on liver segmentation with **limited ground truth**, using Hepatobiliary phase (HBP) MRI, which contains crucial liver information. The challenge is to develop methods capable of accurately segmenting the liver in these images.
 
@@ -52,7 +52,7 @@ To tackle these challenges, participants are also encouraged to leverage **exter
 
 **1) Scanner:** Philips Ingenia3.0T, Siemens Skyra 3.0T, Siemens Aera 1.5T.
 
-**2) Dataset overview:**  The track cohort comprises **620 patients** diagnosed with liver fibrosis, all of whom underwent multi-phase MRI scans. The dataset includes **multi-phase** and **multi-center** data, with images acquired from clinical centers using three different MRI scanner vendors. The dataset consists of T2-weighted imaging, diffusion-weighted imaging, and Gadolinium ethoxybenzyl diethylenetriamine pentaacetic acid (Gd-EOB-DTPA)-enhanced dynamic MRIs. The Gd-EOB-DTPA-enhanced dynamic MRIs cover the non-contrast phase (T1WI), arterial phase, venous phase, delayed phase, and hepatobiliary phase.
+**2) Dataset overview:**  The track cohort comprises **610 patients** diagnosed with liver fibrosis, all of whom underwent multi-phase MRI scans. The dataset includes **multi-phase** and **multi-center** data, with images acquired from clinical centers using three different MRI scanner vendors. The dataset consists of T2-weighted imaging, diffusion-weighted imaging, and Gadolinium ethoxybenzyl diethylenetriamine pentaacetic acid (Gd-EOB-DTPA)-enhanced dynamic MRIs. The Gd-EOB-DTPA-enhanced dynamic MRIs cover the non-contrast phase (T1WI), arterial phase, venous phase, delayed phase, and hepatobiliary phase.
 
 **3) Contrast-enhanced dynamic scans:** Contrast-enhanced scans were performed based on the injection of the GD-EOB-DTPA agent. The arterial phase is captured 25 seconds after the contrast agent is injected. Subsequently, the portal phase is achieved 1 minute later. After another 3 minutes, the delay phase is obtained, and finally, the hepatobiliary phase is reached 20 minutes thereafter.
 
@@ -80,7 +80,7 @@ To tackle these challenges, participants are also encouraged to leverage **exter
     <tr>
       <td class="text-center">B</td>
       <td class="text-center">B1</td>
-      <td class="text-center">180</td>
+      <td class="text-center">170</td>
       <td class="text-center">10</td>
     </tr>
     <tr>
