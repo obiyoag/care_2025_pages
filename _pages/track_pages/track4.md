@@ -204,7 +204,7 @@ A work is assessed based on several key criteria: **Test Results**, **Generaliza
       <td>D</td>
       <td>25</td>
       <td>LGE, T2 and bSSFP</td>
-      <td>Scar (2221), edema (1220), left ventricle (500),  myocardium (200) and right ventricle (600)</td>
+      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
     <tr>
       <td>B</td>
