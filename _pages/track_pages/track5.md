@@ -34,11 +34,11 @@ _styles: >
 ## Motivation
 <!-- Cardiovascular diseases (CVDs), recognized by the WHO as the leading cause of death globally<d-cite key="whs1"></d-cite>, necessitate precise morphological and pathological quantification through segmentation of crucial cardiac structures from medical images<d-cite key="whs2"></d-cite>. demand precise morphological and pathological assessments through the segmentation of key cardiac structures from medical images. This task aims to achieve whole heart segmentation (WHS), including the extraction of individual substructures such as the left ventricle (LV), right ventricle (RV), left atrium (LA), right atrium (RA), left ventricular myocardium (Myo), ascending aorta (AO), entire aorta, and pulmonary artery (PA). Automated WHS faces several challenges, including variability in heart shape throughout the cardiac cycle, clinical artifacts such as motion blur and poor contrast-to-noise ratios, as well as domain shifts across multi-center datasets and differing imaging modalities like CT and MRI. -->
 
-Cardiovascular diseases (CVDs), as the leading cause of death globally<d-cite key="whs1"></d-cite>, necessitate precise morphological and pathological quantification through segmentation of crucial cardiac structures from medical images<d-cite key="whs2"></d-cite>. However, whole heart segmentation (WHS) faces challenges including heart shape variability during the cardiac cycle, clinical artifacts like motion and poor contrast-to-noise ratio, as well as domain shifts in multi-center data and the distinct modalities of CT and MRI. The WHS++ track serves to inspire innovative solutions in the realms of biomedical imaging and computer vision, striving to overcome these challenges and advance automated WHS for enhanced understanding and treatment of CVDs.
+Cardiovascular diseases (CVDs), as the leading cause of death globally<d-cite key="whs1"></d-cite>, necessitate precise morphological and pathological quantification through segmentation of crucial cardiac structures from medical images<d-cite key="whs2"></d-cite>. However, whole heart segmentation (WHS) faces challenges including heart shape variability during the cardiac cycle, clinical artifacts like motion and poor contrast-to-noise ratio, as well as domain shifts in multi-center data and the distinct modalities of CT and MRI. The WHS track serves to inspire innovative solutions in the realms of biomedical imaging and computer vision, striving to overcome these challenges and advance automated WHS for enhanced understanding and treatment of CVDs.
 
 
 ## Task
-{% include figure.liquid loading="eager" path="/assets/img/whs.png" class="img-fluid" zoomable=true caption="Figure 1. Overview of the WHS++ track" %}
+{% include figure.liquid loading="eager" path="/assets/img/whs.png" class="img-fluid" zoomable=true caption="Figure 1. Overview of the WHS track" %}
 
 <!-- This task seeks to inspire innovative solutions in biomedical imaging and computer vision, addressing these challenges to advance automated WHS. The ultimate goal is to enhance the understanding and treatment of CVDs through accurate and robust segmentation methods. In addition to the data from CARE 2024, we have added newly collected CT images from patients with atrial fibrillation. The inclusion of these new cases enhances the diversity and clinical relevance of the dataset, offering a broader spectrum of anatomical and pathological variations.  The specific  substructures, each associated with a unique label value, are:
 
@@ -73,11 +73,15 @@ The specific  substructures, each associated with a unique label value, are:
 6. **Ascending Aorta (AO)** - Label value: 820; defined as the aortic trunk from the aortic valve to the superior level of the atria.
 7. **Pulmonary Artery (PA)** - Label value: 850; defined as the initial segment from the pulmonary valve to the bifurcation point.
 
-The participants can focus on one of performance in following table:
+
+
+**Note on Great Vessels:** The great vessels of interest, comprising the ascending aorta and pulmonary artery, are specifically defined due to variations in the fields of view across different scans. This uniform definition is crucial for ensuring consistency across evaluations. During the assessment, segmentation results for these vessels will be truncated to average lengths measured in healthy subjects, although participants are encouraged to extend their segmentation beyond these lengths. Our provided manual segmentations similarly cover more than the defined trunk measurements.
+
+We will rank participant methods based on the settings (​Lb1–Lb9) detailed in the following table:
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
-<caption style="caption-side: top; text-align: left; font-weight: bold; padding-bottom: 10px;"> Leaderboard (Lb) of WHS track across modalities and evaluation settings.​​ Lb1–Lb9 represent performance scores from different test centers (e.g., Lb1 = peformance on center A and B (CT) scans; Lb5 = performance on center F (MRI) scans). In-distribution: training-matched centers; Out-of-distribution: unseen centers not in training data.</caption>
+<caption style="caption-side: top; text-align: left; font-weight: bold; padding-bottom: 10px;"> Leaderboard (Lb) for WHS track across modalities and evaluation settings.​​ Lb1–Lb9 represent performance from different test centers (e.g., Lb1 = peformance on center A and B (CT) scans; Lb5 = performance on center F (MRI) scans). In-distribution refers to centers included in the training data, while out-of-distribution refers to unseen centers not used during training.</caption>
 
   <thead>
     <tr>
@@ -124,9 +128,6 @@ The participants can focus on one of performance in following table:
 - **Real-world task**: A, B, C&D, F, and G -->
 
 
-
-
-**Note on Great Vessels:** The great vessels of interest, comprising the ascending aorta and pulmonary artery, are specifically defined due to variations in the fields of view across different scans. This uniform definition is crucial for ensuring consistency across evaluations. During the assessment, segmentation results for these vessels will be truncated to average lengths measured in healthy subjects, although participants are encouraged to extend their segmentation beyond these lengths. Our provided manual segmentations similarly cover more than the defined trunk measurements.
 
 
 
@@ -393,8 +394,8 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
 }
 ```
 
-## Contact
+<!-- ## Contact
 
-If you have any questions regarding the WHS++ track, please feel free to contact [care25challenge@163.com](mailto:care25challenge@163.com):
+If you have any questions regarding the WHS++ track, please feel free to contact [care25challenge@163.com](mailto:care25challenge@163.com): -->
 
 <!-- If you have any problems about the WHS++ track, please contact [Dr. Wangbin Ding](mailto:dingwangbin@fjmu.edu.cn) or [Xicheng Sheng](mailto:xcsheng22@m.fudan.edu.cn). -->

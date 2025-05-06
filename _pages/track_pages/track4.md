@@ -38,7 +38,8 @@ Myocardial infarction (MI) is a major cause of mortality and disability worldwid
 ## Tasks
 
 <!-- The challenge emphasizes addressing key real-world issues, including the integration of multi-continent datasets, handling missing sequences from certain centers, and mitigating misalignments in multi-sequence CMRs. This track seeks innovative solutions that tackle these challenges, leveraging diverse and complex multi-sequence CMR datasets to advance the accuracy and reliability of MyoPS <d-cite key="myops2"></d-cite>, <d-cite key="myops3"></d-cite>. -->
-The target of this track is to segment myocardial pathology regions, specifically scar and edema, from multi-sequence CMR data. This track seeks innovative solutions to address MyoPS using real-world multi-sequence CMR data. 
+The target of this track is to segment myocardial pathology regions, specifically scar and edema, from multi-sequence CMR data. This track seeks innovative solutions to address MyoPS using real-world multi-sequence CMR data. We encourage participants to overcome challenges such as the inclusion of multi-center data, missing sequences for some centers <d-cite key="myops2"></d-cite>, and misalignments in multi-sequence CMRs <d-cite key="myops3"></d-cite>, as illustrated in Figure 1 (B).
+
 The specific  substructures, each associated with a unique label value, are:
 1. **Scar** - Label value: 2221
 2. **Edema** - Label value: 1220
@@ -46,15 +47,12 @@ The specific  substructures, each associated with a unique label value, are:
 4. **Myocardium** - Label value: 200
 5. **Right ventricle** - Label value: 600
 
-We encourage participants to overcome challenges such as the inclusion of multi-center data, missing sequences for some centers <d-cite key="myops2"></d-cite>, and misalignments in multi-sequence CMRs <d-cite key="myops3"></d-cite>, as illustrated in Figure 1 (B).
 
-
-The participants can focus on one of performance in following table:
-
+We will rank participant methods based on the settings (​Lb1–Lb9) detailed in the following table:
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
-<caption style="caption-side: top; text-align: left; font-weight: bold; padding-bottom: 10px;"> Leaderboard (Lb) of MyoPS track across targets and evaluation settings.​​ Lb1–Lb9 represent performance scores from different test centers (e.g., Lb1 = peformance on center B; Lb5 = performance on center D). In-distribution: training-matched centers; Out-of-distribution: unseen centers not in training data.</caption>
+<caption style="caption-side: top; text-align: left; font-weight: bold; padding-bottom: 10px;"> Leaderboard (Lb) for MyoPS track across targets and evaluation settings.​​ Lb1–Lb9 represent performance from different test centers (e.g., Lb1 = peformance on center B; Lb5 = performance on center D). In-distribution refers to centers included in the training data, while out-of-distribution refers to unseen centers not used during training.</caption>
   <thead>
     <tr>
       <th scope="col">Target</th>
@@ -233,7 +231,6 @@ Each CMR sequence and gold standard label of patients will be provided in the NI
 
 ## Metrics 
 
-### Metrics
 
 The performance of scar and edema segmentation results will be evaluated by：
 - **Dice Similarity Coefficient (DSC)**
@@ -406,9 +403,9 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
 }
 ```
 
-## Contact
+<!-- ## Contact
 
-If you have any questions regarding the MyoPS++ track, please feel free to contact [care25challenge@163.com](mailto:care25challenge@163.com):
+If you have any questions regarding the MyoPS++ track, please feel free to contact [care25challenge@163.com](mailto:care25challenge@163.com): -->
 
 <!-- - Dr. Wangbin Ding: [dingwangbin@fjmu.edu.cn](mailto:care25challenge@163.com) -->
 <!-- - Sihan Wang: [21110980009@m.fudan.edu.cn](mailto:21110980009@m.fudan.edu.cn)
