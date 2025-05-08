@@ -5,19 +5,16 @@ nav: true
 nav_order: 1
 dropdown: true
 children:
-  - title: TFM4MedIA
+  - title: CARE-Cardiac
     permalink: /track1/
   - title: divider
-  - title: LAScarQS++
+  - title: CARE-Myops
     permalink: /track2/
   - title: divider
-  - title: LiQA
+  - title: CARE-WHS
     permalink: /track3/
   - title: divider
-  - title: MyoPS++
+  - title: CARE-Liver
     permalink: /track4/
-  - title: divider
-  - title: WHS++
-    permalink: /track5/
 ---
 

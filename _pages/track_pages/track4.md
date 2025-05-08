@@ -1,20 +1,17 @@
 ---
 layout: distill
-title: LiQA
+title: CARE-Liver
 description: Liver Fibrosis Quantification and Analysis
-permalink: /track3/
+permalink: /track4/
 bibliography: reference.bib
 toc:
   - name: Motivation
-  - name: Task
+  - name: Tasks
   - name: Data
-  - name: Metrics & Ranking
+  - name: Leaderboard
   - name: Rules
   - name: Registration
-  - name: Submission Guidance
-  - name: Timeline
   - name: Citations
-  - name: Contact
 _styles: >
   d-article {
     contain: layout style;
@@ -29,12 +26,8 @@ _styles: >
   }
 ---
 
-
-## CARE-Liver: Liver Fibrosis Quantification and Analysis
-<!-- {% include figure.liquid loading="eager" path="/assets/img/liqa1.png" class="img-fluid" zoomable=true caption="Figure 1. Track description." %} -->
-<img src="../../img/liqa1.png" alt="Figure 1. Track description." class="img-fluid" loading="eager" style="max-width: 100%; height: auto;">
-<p style="text-align: center; font-style: italic;">Figure 1. Track description.</p>
-
+## Motivation
+{% include figure.liquid loading="eager" path="/assets/img/liqa1.png" class="img-fluid" zoomable=true caption="Figure 1. Track description." %}
 
 Liver fibrosis, arising from chronic viral or metabolic liver conditions, presents a significant global health challenge. Precise liver segmentation (LiSeg) and fibrosis staging (LiFS) are critical for enabling precise disease management, prognostication, and informed clinical decision-making. This challenge focuses on advancing **two interconnected objectives** to bridge clinical needs with AI innovation:  
 1. **Automated Liver Segmentation**.  
@@ -42,8 +35,7 @@ Liver fibrosis, arising from chronic viral or metabolic liver conditions, presen
 
 Participants will develop robust AI solutions using multi-center, multi-phase MRI data, addressing real-world variability in imaging protocols and scanner systems.  
 
----
-
+## Tasks
 ### **Task 1: Liver Fibrosis Staging (LiFS)**  
 Develop models to stage fibrosis into four stages (S1-S4). leveraging **cross-phase complementary information** from dynamic MRI sequences. Two clinically critical binary subtasks are evaluated:  
 1. **Cirrhosis Detection**: S1–S3 vs. S4  
@@ -52,8 +44,6 @@ Develop models to stage fibrosis into four stages (S1-S4). leveraging **cross-ph
 #### Subtasks:  
 - **Non-Contrast Subtask**: T1WI, T2WI, and DWI sequences only.  
 - **Contrast-Enhanced Subtask**: All modalities allowed, including Gd-EOB-DTPA phases (GED1–GED4).  
-
----
 
 ### **Task 2: Liver Segmentation (LiSeg)**  
 Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepatobiliary phase (GED4) MRI** is available. Non-constrast data (T2WI, DWI) could be segmented via **unsupervised or registration-based approaches** to overcome annotation limitations.  
@@ -64,53 +54,14 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 
 ---
 
-### **Leaderboard Structure**  
-
-<!-- <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 80%; margin: 20px auto; text-align: center;"> -->
-<div style="display: flex; justify-content: center;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
-  <thead style="background-color: #f2f2f2;">
-    <tr>
-      <th>Task</th>
-      <th>Subtask</th>
-      <th>Key Metrics</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="2"><strong>LiFS</strong></td>
-      <td>Non-Contrast</td>
-      <td>AUC, ACC (S4 vs. S1–S3; S1 vs. S2–S4)</td>
-    </tr>
-    <tr>
-      <td>Contrast-Enhanced</td>
-      <td>AUC, ACC (S4 vs. S1–S3; S1 vs. S2–S4)</td>
-    </tr>
-    <tr>
-      <td rowspan="2"><strong>LiSeg</strong></td>
-      <td>Non-Contrast (T2WI/DWI)</td>
-      <td>Dice Score, HD-95</td>
-    </tr>
-    <tr>
-      <td>Contrast-Enhanced (GED4)</td>
-      <td>Dice Score, HD-95</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-- **NOTE**
-  - Participants are welcome to participate in a single subtask, and their performance will still be recorded and displayed on the leaderboard.
-
-### **Data** 
+## Data
 
 #### Data Structure
-
 
 **Training set**
 
 <div style="display: flex; justify-content: center;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:90%;align:center;">
   <thead>
     <tr>
       <th class="text-center" scope="col">Vendor</th>
@@ -146,7 +97,7 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 **Validation Set**
 
 <div style="display: flex; justify-content: center;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:90%;align:center;">
   <thead>
     <tr>
       <th class="text-center" scope="col">Vendor</th>
@@ -214,9 +165,45 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 </table>
 </div>
 
-
 - **NOTE**
   - The evaluation on the unseen dataset (C) highlights the generalization capabilities of the models and algorithms, which we particularly emphasize.
+
+## Leaderboard
+
+<div style="display: flex; justify-content: center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Subtask</th>
+      <th>Key Metrics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2"><strong>LiFS</strong></td>
+      <td>Non-Contrast</td>
+      <td>AUC, ACC (S4 vs. S1–S3; S1 vs. S2–S4)</td>
+    </tr>
+    <tr>
+      <td>Contrast-Enhanced</td>
+      <td>AUC, ACC (S4 vs. S1–S3; S1 vs. S2–S4)</td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>LiSeg</strong></td>
+      <td>Non-Contrast (T2WI/DWI)</td>
+      <td>Dice Score, HD-95</td>
+    </tr>
+    <tr>
+      <td>Contrast-Enhanced (GED4)</td>
+      <td>Dice Score, HD-95</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+- **NOTE**
+  - Participants are welcome to participate in a single subtask, and their performance will still be recorded and displayed on the leaderboard.
 
 
 ## Rules
@@ -224,11 +211,9 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 2. Only automatic methods are acceptable. 
 
 ## Registration
-
-To access the dataset, please register in the [LiQA registration platform](http://zmic.org.cn/care_2025/eval/register?track=LiQA).
+To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=care_liver).
 
 ## Citations
-
 **Please cite these papers when you use the data for publications:**
 ```bib
 @article{liu2025merit,
@@ -248,9 +233,3 @@ To access the dataset, please register in the [LiQA registration platform](http:
   year={2023}
 }
 ```
-
-## Contact
-
-If you have any questions regarding the LiQA track, please feel free to contact: 
-
-* Yuanye Liu: [yuanyeliu@fudan.edu.cn](mailto:yuanyeliu@fudan.edu.cn)

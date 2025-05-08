@@ -1,20 +1,17 @@
 ---
 layout: distill
-title: MyoPS++
+title: CARE-MyoPS
 description: Myocardial Pathology Segmentation
-permalink: /track4/
+permalink: /track2/
 bibliography: reference.bib
 toc:
   - name: Motivation
-  - name: Task
+  - name: Tasks
   - name: Data 
   - name: Metrics
   - name: Rules
   - name: Registration
-  - name: Submission Guidance
-  - name: Timeline
   - name: Citations
-  - name: Contact
 _styles: >
   d-article {
     contain: layout style;
@@ -32,12 +29,10 @@ _styles: >
 ## Motivation
 {% include figure.liquid loading="eager" path="/assets/img/myops.png" class="img-fluid" zoomable=true caption="Figure 1. Myocardial pathology segmentation and its challenges. (A) Myocardial Pathology Segmentation: Scar and edema regions are marked in green and yellow, respectively. (B) Challenges of Myocardial Pathology Segmentation: The challenges include multi-center data, missing sequences, and misalignments in multi-sequence CMR images." %}
 
-<!-- Myocardial infarction (MI) is a leading cause of mortality and disability worldwide. Accurate assessment of myocardial viability is critical for the diagnosis and management of MI patients <d-cite key="myops1"></d-cite>. This track focuses on myocardial pathology segmentation (MyoPS) using multi-sequence cardiac magnetic resonance (CMR) imaging. The primary objective is to classify myocardial regions into healthy myocardium, scar tissue, and edema based on multi-sequence CMR data from MI patients. -->
 Myocardial infarction (MI) is a major cause of mortality and disability worldwide. Assessment of myocardial viability is essential in the diagnosis and treatment management of MI patients <d-cite key="myops1"></d-cite>. Multi-sequence cardiac magnetic resonance (MS-CMR) images can provide valuable myocardial pathology information, which is important for the diagnosis and treatment management of patients. As shown in Figure 1 (A), balanced steady-state free precession (bSSFP) cine sequences present clear anatomical boundaries, while late gadolinium enhancement (LGE) and T2-weighted (T2) CMR sequences visualize myocardial scar and edema of MI, respectively.
 
 ## Tasks
 
-<!-- The challenge emphasizes addressing key real-world issues, including the integration of multi-continent datasets, handling missing sequences from certain centers, and mitigating misalignments in multi-sequence CMRs. This track seeks innovative solutions that tackle these challenges, leveraging diverse and complex multi-sequence CMR datasets to advance the accuracy and reliability of MyoPS <d-cite key="myops2"></d-cite>, <d-cite key="myops3"></d-cite>. -->
 The target of this track is to segment myocardial pathology regions, specifically scar and edema, from multi-sequence CMR data. This track seeks innovative solutions to address MyoPS using real-world multi-sequence CMR data. We encourage participants to overcome challenges such as the inclusion of multi-center data, missing sequences for some centers <d-cite key="myops2"></d-cite>, and misalignments in multi-sequence CMRs <d-cite key="myops3"></d-cite>, as illustrated in Figure 1 (B).
 
 The specific  substructures, each associated with a unique label value, are:
@@ -85,14 +80,6 @@ We will rank participant methods based on the settings (​Lb1–Lb9) detailed i
 </div>
 
 
-<!-- The best works, following the precedent of [CARE2024 MyoPS++](https://zmic.org.cn/care_2024/track4/), will be recognized with awards. -->
-<!-- 
-A work is assessed based on several key criteria: **Test Results**, **Generalizability of Methodologies** and **Quality of the Manuscript**. The selected papers will be published in our proceedings [see previous proceedings](https://link.springer.com/book/10.1007/978-3-031-87009-5). -->
-
-<!-- Topics may cover (not exclusively):
-- Myocardial Pathology Segmentation
-- Cardiac Anatomy Segmentation
-- Multi-Sequence Image Registration -->
 
 
 
@@ -129,12 +116,6 @@ A work is assessed based on several key criteria: **Test Results**, **Generaliza
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
-    <!-- <tr>
-      <td>D</td>
-      <td>50</td>
-      <td>LGE, T2 and bSSFP</td>
-      <td>Scar, edema, left ventricle,  myocardium  and right ventricle</td>
-    </tr> -->
     <tr>
       <td>E</td>
       <td>7</td>
@@ -216,18 +197,7 @@ A work is assessed based on several key criteria: **Test Results**, **Generaliza
 </table>
 </div>
 
-<!-- ### Pre-Processing
 
-In this track, LGE and T2 images are derived from the end-diastolic phase of the cardiac cycle. Consequently, we have extracted the end-diastolic phase of balanced steady-state free precession (bSSFP, C0) for this track.
-
-It is important to note that the LGE, T2, and C0 images are initially unaligned. The dataset is available in two versions: one version has been pre-aligned using the [MvMM method](https://zmiclab.github.io/zxh/0/zxhproj), while the other remains unaligned. **The test phase will utilize the version that has been aligned using the MvMM method.** -->
-
-<!-- ### Data Format
-Each CMR sequence and gold standard label of patients will be provided in the NIfTI format as follows:
-- [Patient Identifier]_LGE.nii.gz
-- [Patient Identifier]_T2.nii.gz
-- [Patient Identifier]_C0.nii.gz
-- [Patient Identifier]_gd.nii.gz (gold standard label) -->
 
 ## Metrics 
 
@@ -237,80 +207,13 @@ The performance of scar and edema segmentation results will be evaluated by：
 - **Precision (PRE)**
 - **Sensitivity (SEN)**
 - **Hausdorff Distance (HD)**
-<!-- - **Specificity (SPE)** -->
-
-
-
-
-
-<!-- 
-<div style="display: flex; justify-content: center;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">Task</th>
-      <th scope="col"> </th>
-      <th scope="col"> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> In Domain Center (Center B) </td>
-      <td> Scar </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> In Domain Center (Center B) </td>
-      <td> Edema </td>
-      <td> </td>
-      <td> </td>
-     </tr>
-    <tr>
-      <td> In Domain Center (Center B) </td>
-      <td> Scar and Edema </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-</div> -->
-
-
-<!-- Note that the track will provide an open platform for research groups to [validate](http://zmic.org.cn/care_2025/eval/scoreboard?track=MyoPS%2B%2B) and [test](http://zmic.org.cn/care_2025/test_submission) their methods. -->
-
-
-<!-- For fair comparison, the test dataset will remain unseen. Participants need to submit their [docker models](http://zmic.org.cn/care_2025/docker_tutorial) to our platform for testing. -->
-
-<!-- 
-
-### Ranking
-
-The best work, following the precedent of [MyoPS 2020](https://zmiclab.github.io/zxh/0/myops20/), will be recognized with awards. A work is assessed based on several key criteria:**Test Results**, **Ggeneralizability of Methodologies** and **Quality of the Manuscript**.
-
-- **Test Results**: The performance of the methods as demonstrated by the test outcomes.
-- **Novelty of Methodologies**: The originality and **generalizability** in the proposed methods.
-- **Quality of the Manuscript**: The clarity, organization, and correctness of the written submission. The selected papers will be published in our proceedings [see previous proceedings](https://link.springer.com/book/10.1007/978-3-030-65651-5). 
-- **Presentation of Their Paper**: The effectiveness of the oral or poster presentation in conveying the work.
-
--->
 
 ## Rules
 - **Only automatic methods are acceptable.** Participants must utilize algorithms that do not require manual intervention or human-assisted processes for the segmentation task.
 - **Pre-trained models are  allowed in this track.** The solutions could be developed with pre-trained fundation models, such as SAM, CLIP, and MedSAM.
 
-
-<!-- ## Registration
-Please [**sign up**](http://zmic.org.cn/care_2025/eval/register?track=MyoPS%2B%2B) to join this track. -->
-
-
-
-
-
-
-
-
+## Registration
+To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=care_myops).
 
 ## Citations
 **Please cite these papers when you use the data for publications:**
@@ -351,12 +254,3 @@ Please [**sign up**](http://zmic.org.cn/care_2025/eval/register?track=MyoPS%2B%2
   year={2023},
 }
 ```
-
-<!-- ## Contact
-
-If you have any questions regarding the MyoPS++ track, please feel free to contact [care25challenge@163.com](mailto:care25challenge@163.com): -->
-
-<!-- - Dr. Wangbin Ding: [dingwangbin@fjmu.edu.cn](mailto:care25challenge@163.com) -->
-<!-- - Sihan Wang: [21110980009@m.fudan.edu.cn](mailto:21110980009@m.fudan.edu.cn)
-- Yang Zhang: [zhangyang23@m.fudan.edu.cn](mailto:zhangyang23@m.fudan.edu.cn) -->
-

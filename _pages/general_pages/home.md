@@ -14,13 +14,13 @@ Medical image analysis empowered by AI has significantly reshaped medicine.  How
 
 This challenge consists of four challenging tracks and encompasses imaging data from over **2000 patients** collected across **three continents**, capturing diverse acquisition protocols, clinical centers, and patient populations.  Participants can explore each track below to access the corresponding datasets and detailed task descriptions.
 
-CARE-Cardiac (Link): Unified Cardiac Sturcture and Pathology Segmentation 
+[CARE-Cardiac](/care_2025/track1): Unified Cardiac Sturcture and Pathology Segmentation 
 
-CARE-Myops (Link): Myocardial Pathology Segmentation
+[CARE-Myops](/care_2025/track2): Myocardial Pathology Segmentation
 
-CARE-WHS (Link): Whole Heart Segmentation 
+[CARE-WHS](/care_2025/track3): Whole Heart Segmentation 
 
-CARE-Liver (Link):  Liver Segmentation and Fibrosis Staging
+[CARE-Liver](/care_2025/track4): Liver Segmentation and Fibrosis Staging
 
 
 
@@ -86,5 +86,5 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
 
 ## Contact
 
-If you have any questions, please feel free to contact: care25challenge@163.com
+If you have any questions, please feel free to contact: [care25challenge@163.com](care25challenge@163.com).
 

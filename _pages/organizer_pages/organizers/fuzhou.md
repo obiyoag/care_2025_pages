@@ -2,5 +2,5 @@
 
 **College of Physics and Information Engineering**
 * Liqin Huang
-* Xingtao Lin ([contact person for LAScarQS++](mailto:xingtaolin174@gmail.com))
+* Xingtao Lin
 * Zhen Zhang

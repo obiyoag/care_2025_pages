@@ -21,8 +21,8 @@ profiles:
     content: organizers/cam.md
     image_circular: false # crops the image to make it circular
   - align: right
-    image: southampton-logo.png
-    content: organizers/southampton.md
+    image: nus-logo.png
+    content: organizers/nus.md
     image_circular: false # crops the image to make it circular
   - align: right
     image: fjm-logo.png

@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: CARE-cardiac
+title: CARE-Cardiac
 description: Unified Cardiac Image Segmentation
 permalink: /track1/
 bibliography: reference.bib
@@ -8,13 +8,9 @@ toc:
   - name: Motivation
   - name: Task
   - name: Data
-  - name: Metrics & Ranking
-  - name: Rules
+  - name: Metrics and Leaderboards
   - name: Registration
-  - name: Submission Guidance
-  - name: Timeline
   - name: Citations
-  - name: Contact
 _styles: >
   d-article {
     contain: layout style;
@@ -31,7 +27,7 @@ _styles: >
 
 ## Motivation
 
-<img src="/Users/bominwang/Library/Application Support/typora-user-images/image-20250506202935133.png" alt="image-20250506202935133" style="zoom:50%;" />
+{% include figure.liquid loading="eager" path="/assets/img/care-cardiac.jpg" class="img-fluid" zoomable=true %}
 
 Cardiac diagnosis involves multiple interrelated tasks, such as delineating anatomical structures (e.g., atria, ventricles, vessels) and identifying pathological regions (e.g., scar and edema) across diverse imaging modalities and acquisition protocols. Relying on separate models for each task leads to fragmented workflows, limited knowledge transfer, and poor adaptability to missing or heterogeneous data. A **unified cardiac segmentation model** addresses these limitations by enabling unified modeling across tasks. 
 
@@ -39,14 +35,12 @@ Cardiac diagnosis involves multiple interrelated tasks, such as delineating anat
 
 This track challenges participants to develop a **unified model** capable of simultaneously performing **single cardiac structure segmentation** (left atria), **whole heart structure segmentation** and **structure and pathology segmentation** (ventricles, scar and edema).
 
-
-
 ***Note\***: Participants are also encouraged to leverage external data.
 
 
 ## Data
 
-Multi-center and multi-modality datasets are provided for three sub-tasks. To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=TFM4MedIA) and the downloading link will be sent. More detailed data information can be found at [Myocardial Pathology Segmentation](http://zmic.org.cn/care_2025/track4/), [Whole Heart Segmentation](http://zmic.org.cn/care_2025/track5/) and [Left Atrial and Scar Segmentation](http://zmic.org.cn/care_2025/track2/).
+Multi-center and multi-modality datasets are provided for three sub-tasks.
 
 ### Training Dataset
 
@@ -67,6 +61,9 @@ Multi-center and multi-modality datasets are provided for three sub-tasks. To ac
       <td>LGE MRI</td>
       <td>60</td>
     </tr>
+  </tbody>
+</table>
+</div>
 
 2). Whole Heart Segmentation
 
@@ -133,12 +130,6 @@ Multi-center and multi-modality datasets are provided for three sub-tasks. To ac
       <td>45</td>
       <td>LGE, T2 and bSSFP</td>
     </tr>
-    <!-- <tr>
-      <td>D</td>
-      <td>50</td>
-      <td>LGE, T2 and bSSFP</td>
-      <td>Scar, edema, left ventricle,  myocardium  and right ventricle</td>
-    </tr> -->
     <tr>
       <td>E</td>
       <td>7</td>
@@ -162,7 +153,6 @@ Multi-center and multi-modality datasets are provided for three sub-tasks. To ac
   </tbody>
 </table>
 </div>
-​    
 
 ### Validation Dataset
 
@@ -183,6 +173,9 @@ Multi-center and multi-modality datasets are provided for three sub-tasks. To ac
       <td>25</td>
       <td>LGE, T2 and bSSFP</td>
     </tr>
+  </tbody>
+</table>
+</div>
 
  2). Whole Heart Segmentation
 
@@ -227,6 +220,9 @@ Multi-center and multi-modality datasets are provided for three sub-tasks. To ac
       <td>25</td>
       <td>LGE, T2 and bSSFP</td>
     </tr>
+  </tbody>
+</table>
+</div>
 
 
 
@@ -254,17 +250,14 @@ Multi-center and multi-modality datasets are provided for three sub-tasks. To ac
       <td>LGE MRI</td>
       <td>20</td>
     </tr>
-<!--     <tr>
-      <td>2.2</td>
-      <td>LGE MRI</td>
-      <td>0</td>
-      <td>40</td>
-    </tr> -->
     <tr>
       <td>C</td>
       <td>LGE MRI</td>
       <td>10</td>
     </tr> 
+  </tbody>
+</table>
+</div>
 
 2). Whole Heart Segmentation
 
@@ -337,7 +330,7 @@ Multi-center and multi-modality datasets are provided for three sub-tasks. To ac
 
 
 
-## Metrics & Leaderboards
+## Metrics and Leaderboards
 
 ### Metrics
 
@@ -370,6 +363,8 @@ The leadboards will be organized as follows:
    </div>
 
 
+## Registration
+To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=care_cardiac).
 
 
 ## Citations
@@ -394,7 +389,3 @@ The leadboards will be organized as follows:
   author = {Shangqi Gao and Hangqi Zhou and Yibo Gao and Xiahai Zhuang},
 }
 ```
-
-## Contact
-
-If you have any questions, please feel free to contact: care25challenge@163.com.
