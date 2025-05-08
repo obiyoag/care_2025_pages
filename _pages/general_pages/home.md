@@ -4,25 +4,87 @@ title: Home
 permalink: /
 ---
 
-## Motivation
-Many foundation models for medical image analysis, such as Segment Anything Model (SAM), have been released and proved to be useful in multiple tasks. However, their effectiveness on real world medical imaging data has not been explored. For example, specific images targeted on organs with large deformation, i.e., heart and liver, exhibit greater challenges for analysis.
+## Motivation 
 
-## Challenges
-First, the misalignment caused by the respiratory motion and cardiac pulsation increases the complexity of performing joint analysis on these data. Second, the inhomogeneity of real-world medical images poses a challenge, including the diversity of modality and the distribution shift caused by collection from various centers. Third, it could be more challenging for those foundation model to work on irregular ROIs, such as lesions or scars, whose size can be very small and shape irregular. Hence, developing effective and efficient transfer learning approaches to fully utilize those foundation models for real world medical image segmentation is of great values.
+Medical image analysis empowered by AI has significantly reshaped medicine.  However, real-world medical image analysis poses significant challenges for medical AI, including domain shifts due to diverse imaging protocols and medical centers, variability in pathological regions of interest (ROIs) such as lesions and scars, and limited generalization capabilities of existing deep learning models. This challenge aims to encourage the development of novel and effective methods that facilitate the translation of medical AI into real-world clinical practice.
 
-## Our Contribution
-In this challenge, we set up a fair and public stage for developing and validating algorithms and applications of transferring foundation models to diverse real-world medical images to address specific practical medical image analysis problems, as well as using conventional methods without pre-trained models.
 
-## Datasets
-Four specific datasets will be released grouped by clinical requirements, targeted on organs with grand large deformation, i.e., heart and liver, and consisting of over 1250 patients from three continents. The diversity of datasets manifests in the following aspects, i.e., multi-continents: collected from over 18 centers across three continents, multi-modality: various modalities are encompassed, misalignment: inherent misalignment exists caused by the respiratory motion and cardiac pulsation, and missing data: refers to the modality missing occurred in practice.
 
 ## Tracks
-Five tracks will be held in this challenge, including one comprehensive issue and four specific tracks with corresponding images and clinical problems:
-1. Transferring Foundation Models for Multi-center Real-World Medical Image Analysis ([TFM4MedIA](/care_2025/track1))
-2. Left Atrial and Scar Quantification & Segmentation ([LAScarQS++](/care_2025/track2))
-3. Liver Fibrosis Quantification and Analysis ([LiQA](/care_2025/track3))
-4. Myocardial Pathology Segmentation ([MyoPS++](/care_2025/track4))
-5. Whole Heart Segmentation ([WHS++](/care_2025/track5))
 
-Specifically, the first track aims at a uniform Transferring Foundation model for the generality across the other four tracks, namely to address all or partial tasks. The uniform model will undergo comprehensive evaluation, with various metrics being integrated for ranking purposes.
+This challenge consists of four challenging tracks and encompasses imaging data from over **2000 patients** collected across **three continents**, capturing diverse acquisition protocols, clinical centers, and patient populations.  Participants can explore each track below to access the corresponding datasets and detailed task descriptions.
+
+CARE-Cardiac (Link): Unified Cardiac Sturcture and Pathology Segmentation 
+
+CARE-Myops (Link): Myocardial Pathology Segmentation
+
+CARE-WHS (Link): Whole Heart Segmentation 
+
+CARE-Liver (Link):  Liver Segmentation and Fibrosis Staging
+
+
+
+## Submission 
+
+After registration, we will assign participants an account to login into our evaluation platform. Participants can directly upload your predictions on the validation and test data via the website. 
+
+
+
+### Paper Submission
+
+Please refer to our [paper submission guidance](/care_2025/paper_submission).
+
+ 
+
+
+## Timeline
+
+The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in Pacific Standard Time.
+
+<table class="table table-sm table-hover border-bottom">
+    <tr>
+    <td class="text-left"><strong>Training Data Release</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">May 8, 2025</th>
+    </tr>
+    <tr>
+    <td class="text-left"><strong>Validation Phase start</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">May 30, 2025</th>
+    </tr>
+    <tr>
+    <td class="text-left"><strong>Test data release</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">June 30, 2025</th>
+    </tr>
+    <tr>
+    <td class="text-left"><strong>Abstract Submission</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">July 15, 2025</th>
+    </tr>
+    <tr>
+    <td class="text-left"><strong>Paper Submission</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">July 30, 2025</th>
+    </tr>
+    <tr>
+    <td class="text-left"><strong>Submission of final results</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">July 30, 2025</th>
+    </tr>
+    <tr>
+    <td class="text-left"><strong>Release date of the results</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">August 10, 2025</th>
+    </tr>
+    <tr>
+    <td class="text-left"><strong>Camera Ready</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">August 20, 2025</th>
+    </tr>
+    <tr>
+    <td class="text-left"><strong>Workshop (Half-Day)</strong></td>
+    <th scope="row" style="width: 60%" class="text-right">TBD</th>
+    </tr>
+</table>
+
+
+
+
+
+## Contact
+
+If you have any questions, please feel free to contact: care25challenge@163.com
 

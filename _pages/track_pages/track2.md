@@ -1,14 +1,14 @@
 ---
 layout: distill
-title: LAScarQS++
-description: Left Atrial and Scar Quantification & Segmentation
-permalink: /track2/
+title: MyoPS++
+description: Myocardial Pathology Segmentation
+permalink: /track4/
 bibliography: reference.bib
 toc:
   - name: Motivation
   - name: Task
-  - name: Data
-  - name: Metrics & Award
+  - name: Data 
+  - name: Metrics
   - name: Rules
   - name: Registration
   - name: Submission Guidance
@@ -30,213 +30,333 @@ _styles: >
 ---
 
 ## Motivation
+{% include figure.liquid loading="eager" path="/assets/img/myops.png" class="img-fluid" zoomable=true caption="Figure 1. Myocardial pathology segmentation and its challenges. (A) Myocardial Pathology Segmentation: Scar and edema regions are marked in green and yellow, respectively. (B) Challenges of Myocardial Pathology Segmentation: The challenges include multi-center data, missing sequences, and misalignments in multi-sequence CMR images." %}
 
-{% include figure.liquid loading="eager" path="/assets/img/lascarqs1.png" class="img-fluid" zoomable=true caption="Figure 1." %}
-Atrial fibrillation (AF) is the most prevalent arrhythmia encountered in clinical practice, affecting approximately 1% of the population, with its incidence rising markedly with age. <d-cite key="lascarqs1"></d-cite>.Precisely determining the location and extent of left atrial (LA) scars is essential for understanding the underlying mechanisms and progression of AF.
+<!-- Myocardial infarction (MI) is a leading cause of mortality and disability worldwide. Accurate assessment of myocardial viability is critical for the diagnosis and management of MI patients <d-cite key="myops1"></d-cite>. This track focuses on myocardial pathology segmentation (MyoPS) using multi-sequence cardiac magnetic resonance (CMR) imaging. The primary objective is to classify myocardial regions into healthy myocardium, scar tissue, and edema based on multi-sequence CMR data from MI patients. -->
+Myocardial infarction (MI) is a major cause of mortality and disability worldwide. Assessment of myocardial viability is essential in the diagnosis and treatment management of MI patients <d-cite key="myops1"></d-cite>. Multi-sequence cardiac magnetic resonance (MS-CMR) images can provide valuable myocardial pathology information, which is important for the diagnosis and treatment management of patients. As shown in Figure 1 (A), balanced steady-state free precession (bSSFP) cine sequences present clear anatomical boundaries, while late gadolinium enhancement (LGE) and T2-weighted (T2) CMR sequences visualize myocardial scar and edema of MI, respectively.
 
-This task focuses on achieving (semi-)automatic segmentation of the LA cavity and quantification of LA scars using multi-center late gadolinium enhancement (LGE) MRI scans. Key challenges include variability across multicenter data, complex LA shapes, thin atrial walls, surrounding enhanced regions, and intricate scar patterns in AF patients.
+## Tasks
 
-By addressing these challenges, this task aims to advance automated LA analysis and contribute to improved diagnostic and therapeutic strategies for AF. 
+<!-- The challenge emphasizes addressing key real-world issues, including the integration of multi-continent datasets, handling missing sequences from certain centers, and mitigating misalignments in multi-sequence CMRs. This track seeks innovative solutions that tackle these challenges, leveraging diverse and complex multi-sequence CMR datasets to advance the accuracy and reliability of MyoPS <d-cite key="myops2"></d-cite>, <d-cite key="myops3"></d-cite>. -->
+The target of this track is to segment myocardial pathology regions, specifically scar and edema, from multi-sequence CMR data. This track seeks innovative solutions to address MyoPS using real-world multi-sequence CMR data. We encourage participants to overcome challenges such as the inclusion of multi-center data, missing sequences for some centers <d-cite key="myops2"></d-cite>, and misalignments in multi-sequence CMRs <d-cite key="myops3"></d-cite>, as illustrated in Figure 1 (B).
 
-## Task
+The specific  substructures, each associated with a unique label value, are:
+1. **Scar** - Label value: 2221
+2. **Edema** - Label value: 1220
+3. **Left ventricle** - Label value: 500
+4. **Myocardium** - Label value: 200
+5. **Right ventricle** - Label value: 600
 
-{% include figure.liquid loading="eager" path="/assets/img/lascarqs2.png" class="img-fluid" zoomable=true caption="Figure 2." %}
-The goal of this track is to develop methods for the automatic segmentation of the left atrial (LA) cavity and the quantification of LA scars from late gadolinium enhancement (LGE) MRI (see Fig. 2). The track will provide over 200 LGE MRIs sourced globally from multiple imaging centers, offering a rich resource for developing novel algorithms capable of segmenting the LA cavity and quantifying scars. This track offers an open and fair platform for various research groups to test and validate their methods using datasets collected from real-world clinical settings. To ensure data privacy, the platform will support remote training and testing on the datasets from different centers, allowing the data to remain securely hidden from participants.
 
-The selected papers will be published in our proceedings (see [previous proceedings](https://www.google.co.uk/books/edition/Left_Atrial_and_Scar_Quantification_and/dkq9EAAAQBAJ?hl=en&gbpv=0)).
+We will rank participant methods based on the settings (​Lb1–Lb9) detailed in the following table:
 
-Topics may cover (not exclusively):
-- Cardiac digital twins
-- Atrial fibrillation
-- Cardiac image segmentation
-- Model generalization
-- Joint optimization
-- Multi-task learning
-- Personalized healthcare
+<div style="display: flex; justify-content: center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
+<caption style="caption-side: top; text-align: left; font-weight: bold; padding-bottom: 10px;"> Leaderboard (Lb) for MyoPS track across targets and evaluation settings.​​ Lb1–Lb9 represent performance from different test centers (e.g., Lb1 = peformance on center B; Lb5 = performance on center D). In-distribution refers to centers included in the training data, while out-of-distribution refers to unseen centers not used during training.</caption>
+  <thead>
+    <tr>
+      <th scope="col">Target</th>
+      <th scope="col">In-distribution</th>
+      <th scope="col">Out-of-distribution</th>
+      <th scope="col">Average (Real-world)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Scar</td>
+      <td>Lb1</td>
+      <td>Lb2</td>
+      <td>Lb3</td>
+    </tr>
+    <tr>
+      <td>Edema</td>
+      <td>Lb4</td>
+      <td>Lb5</td>
+      <td>Lb6</td>
+    </tr>
+        <tr>
+      <td>Scar+Edema</td>
+      <td>Lb7</td>
+      <td>Lb8</td>
+      <td>Lb9</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<!-- The best works, following the precedent of [CARE2024 MyoPS++](https://zmic.org.cn/care_2024/track4/), will be recognized with awards. -->
+<!-- 
+A work is assessed based on several key criteria: **Test Results**, **Generalizability of Methodologies** and **Quality of the Manuscript**. The selected papers will be published in our proceedings [see previous proceedings](https://link.springer.com/book/10.1007/978-3-031-87009-5). -->
+
+<!-- Topics may cover (not exclusively):
+- Myocardial Pathology Segmentation
+- Cardiac Anatomy Segmentation
+- Multi-Sequence Image Registration -->
+
+
 
 ## Data
 
-### Data acquisition information
-We include 200+ multi-center LGE MRIs (enhanced.nii.gz) from different countries, with manual segmentation of LA cavity (atriumSegImgMO.nii.gz) and/ or scarring region (scarSegImgM.nii.gz).
-All these clinical data have got institutional ethic approval and have been anonymized (please follow the data usage agreement, i.e., CC BY NC ND).
-The details of these LGE MRI are listed below:
+### Training data
 
-*Center A*: 154 LGE MRIs
+<div style="display: flex; justify-content: center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
+  <thead>
+    <tr>
+      <th scope="col">Center</th>
+      <th scope="col">Num. patients</th>
+      <th scope="col">Sequences</th>
+      <th scope="col">Manual labels</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A</td>
+      <td>81</td>
+      <td>LGE</td>
+      <td>Scar, left ventricle and  myocardium</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>50</td>
+      <td>LGE, T2 and bSSFP</td>
+      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>45</td>
+      <td>LGE, T2 and bSSFP</td>
+      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
+    </tr>
+    <!-- <tr>
+      <td>D</td>
+      <td>50</td>
+      <td>LGE, T2 and bSSFP</td>
+      <td>Scar, edema, left ventricle,  myocardium  and right ventricle</td>
+    </tr> -->
+    <tr>
+      <td>E</td>
+      <td>7</td>
+      <td>LGE and bSSFP</td>
+      <td>Scar, left ventricle,  myocardium  and right ventricle</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>9</td>
+      <td>LGE and bSSFP</td>
+      <td>Scar, left ventricle,  myocardium and and right ventricle</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>8</td>
+      <td>LGE and bSSFP</td>
+      <td>Scar, left ventricle,  myocardium and and right ventricle</td>
+    </tr>
+        <tr>
+      <td>H</td>
+      <td>35</td>
+      <td>LGE </td>
+      <td>Scar</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
-This data was original collected from Utah [NAMIC-CARMA](https://www.insight-journal.org/midas/collection/view/197) with permission for release. [2018 Atrial Segmentation Challenge](https://atriaseg2018.cardiacatlas.org/) refined the LA segmentation of Utah NAMIC-CARMA dataset before final release.  Therefore, we adopted the refine dataset, and further fixed the resolution irregularities existing in this dataset. The clinical images were acquired with Siemens Avanto 1.5T or Vario 3T using free-breathing (FB) with navigator-gating.  The spatial resolution of the 3D LGE MRI scan was 0.625 × 0.625 × 2.5 mm.  The patient underwent an MR examination prior to ablation or was 3-6 months after ablation.
+### Validation data
 
-*Center B*: 20 LGE MRIs
+<div style="display: flex; justify-content: center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
+  <thead>
+    <tr>
+      <th scope="col">Center</th>
+      <th scope="col">Num. patients</th>
+      <th scope="col">Sequences</th>
+      <th scope="col">Manual labels</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>D</td>
+      <td>25</td>
+      <td>LGE, T2 and bSSFP</td>
+      <td>Scar, edema, left ventricle,  myocardium</td>
+    </tr>
 
-This data was original collected from Beth Israel Deaconess Medical Center and was used in [ISBI2012 Left Atrium Fibrosis and Scar Segmentation Challenge](https://www.cardiacatlas.org/challenges/left-atrium-fibrosis-and-scar-segmentation-challenge/). We selected part of the dataset from this challenge and refine their manual segmentation before release. The clinical images were acquired with Philips Acheiva 1.5T using FB and navigator-gating with fat suppression. The spatial resolution of one 3D LGE MRI scan was 1.4 × 1.4 × 1.4 mm. The patient underwent an MR examination prior to ablation or was 1 month after ablation.
+  </tbody>
+</table>
+</div>
 
-*Center C*: 20 LGE MRIs
+### Test data
 
-This data was original collected from King’s College London and was used in [ISBI2012 Left Atrium Fibrosis and Scar Segmentation Challenge](https://www.cardiacatlas.org/challenges/left-atrium-fibrosis-and-scar-segmentation-challenge/). We selected part of the dataset from this challenge and refine their manual segmentation before release. The clinical images were also acquired with Philips Acheiva 1.5T using FB and navigator-gating with fat suppression. The spatial resolution of one 3D LGE MRI scan was 1.3 × 1.3 × 4.0 mm. The patient underwent an MR examination prior to ablation or was 3-6 months after ablation.
+<div style="display: flex; justify-content: center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
+  <thead>
+    <tr>
+      <th scope="col">Center</th>
+      <th scope="col">Num. patients</th>
+      <th scope="col">Sequences</th>
+      <th scope="col">Manual labels</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>D</td>
+      <td>25</td>
+      <td>LGE, T2 and bSSFP</td>
+      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>16</td>
+      <td>LGE, T2 and bSSFP</td>
+      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
-<!--
-*Center C-2*: 40 LGE MRIs
+<!-- ### Pre-Processing
 
-This data was collected from King’s College London/ St Thomas' Hospital with permission for release. All patients underwent CMR imaging on a 1.5T scanner (Magnetom Area, Siemens Healthineers, Erlangen, Germany) using a previously described protocol. Twenty minutes after contrast administration, late gadolinium enhancement imaging was performed using an ECG-triggered, respiratory navigated, 3D whole heart, inversion recovery spoiled gradient echo sequence in axial orientation (spatial resolution 1.3 mm × 1.3 mm × 4.0 mm reconstructed to 1.3 × 1.3 × 2 mm, TR 4 ms, TE 2 ms, flip angle 20°), phase encoding direction; anterior–posterior, frequency encoding direction; right–left, parallel imaging; GRAPPA factor 2.
+In this track, LGE and T2 images are derived from the end-diastolic phase of the cardiac cycle. Consequently, we have extracted the end-diastolic phase of balanced steady-state free precession (bSSFP, C0) for this track.
+
+It is important to note that the LGE, T2, and C0 images are initially unaligned. The dataset is available in two versions: one version has been pre-aligned using the [MvMM method](https://zmiclab.github.io/zxh/0/zxhproj), while the other remains unaligned. **The test phase will utilize the version that has been aligned using the MvMM method.** -->
+
+<!-- ### Data Format
+Each CMR sequence and gold standard label of patients will be provided in the NIfTI format as follows:
+- [Patient Identifier]_LGE.nii.gz
+- [Patient Identifier]_T2.nii.gz
+- [Patient Identifier]_C0.nii.gz
+- [Patient Identifier]_gd.nii.gz (gold standard label) -->
+
+## Metrics 
+
+
+The performance of scar and edema segmentation results will be evaluated by：
+- **Dice Similarity Coefficient (DSC)**
+- **Precision (PRE)**
+- **Sensitivity (SEN)**
+- **Hausdorff Distance (HD)**
+<!-- - **Specificity (SPE)** -->
+
+
+
+
+
+<!-- 
+<div style="display: flex; justify-content: center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Task</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> In Domain Center (Center B) </td>
+      <td> Scar </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> In Domain Center (Center B) </td>
+      <td> Edema </td>
+      <td> </td>
+      <td> </td>
+     </tr>
+    <tr>
+      <td> In Domain Center (Center B) </td>
+      <td> Scar and Edema </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+</div> -->
+
+
+<!-- Note that the track will provide an open platform for research groups to [validate](http://zmic.org.cn/care_2025/eval/scoreboard?track=MyoPS%2B%2B) and [test](http://zmic.org.cn/care_2025/test_submission) their methods. -->
+
+
+<!-- For fair comparison, the test dataset will remain unseen. Participants need to submit their [docker models](http://zmic.org.cn/care_2025/docker_tutorial) to our platform for testing. -->
+
+<!-- 
+
+### Ranking
+
+The best work, following the precedent of [MyoPS 2020](https://zmiclab.github.io/zxh/0/myops20/), will be recognized with awards. A work is assessed based on several key criteria:**Test Results**, **Ggeneralizability of Methodologies** and **Quality of the Manuscript**.
+
+- **Test Results**: The performance of the methods as demonstrated by the test outcomes.
+- **Novelty of Methodologies**: The originality and **generalizability** in the proposed methods.
+- **Quality of the Manuscript**: The clarity, organization, and correctness of the written submission. The selected papers will be published in our proceedings [see previous proceedings](https://link.springer.com/book/10.1007/978-3-030-65651-5). 
+- **Presentation of Their Paper**: The effectiveness of the oral or poster presentation in conveying the work.
+
 -->
 
-
-
-### Data split
-
-The dataset has been divided into three main parts: training, validation, and test sets:
-
-*Task1:Segmentation*:
-
-- **Training Set**: 60 LGE MRIs from Center A
-- **Validation Set**: 10 LGE MRIs from Center A
-- **Test Set**: 24 LGE MRIs from Center A
-
-*Task2: Quantification*:
-
-- **Training Set**: 130 LGE MRIs from Centers A
-- **Validation Set**: 10 LGE MRIs from Center A and 10 LGE MRIs from Center C
-- **Test Set**: 14 LGE MRIs from Center A, 20 LGE MRIs from Center B, and 10 LGE MRIs from Center C  <!-- , 40 LGE MRIs from Center 2.2-->
-
-### Data Format
-Each LGE MRI and gold standard label(s) of patients will be provided in the NIfTI format as follows:
-- enhanced.nii.gz (LGE MRI)
-- atriumSegImgMO.nii.gz (gold standard LA cavity label)
-- scarSegImgM.nii.gz (gold standard LA scar label, for task 1 only)
-
-The submitted format of the prediction for the participants could be named as follows:
-- LA_predict.nii.gz (predicted LA cavity label)
-- scar_predict.nii.gz (predicted LA scar label)
-  
-## Metrics & Award
-### Metrics
-The performance of LA cavity segmentation or LA scar quantification results will be evaluated by：
-
-*Task 1*:
-- *Generalized Dice Similarity Coefficient (G-DSC)* <d-cite key="lascarqs6">
-- *Accuracy (ACC)*
-- *Sensitivity (SEN)*
-
-*Task 2*:
-- *Dice Similarity Coefficient (DSC)*
-- *Average Surface Distance (ASD)*
-- *Hausdorff Distance (HD)*
-
-### Award
-
-Tasks 1 and 2 will be evaluated and ranked seperately, based on the performance of the model, the novelty of the method, the quality of the submitted paper, and the performance of the presentation (either oral presentation or poster), etc. The best work will be selected with awards, similar to [LAScarQS 2022](https://zmiclab.github.io/projects/lascarqs22/). Specifically, we will prepare one **Champion Winner Award** and one **Best Paper Award**.
-
 ## Rules
-1. External data sets and pre-trained models are NOT allowed in this track.
-2. Only automatic methods are permitted.
-3. Participants are encouraged to attempt both tasks, but they also can choose to focus on either task 1 or task 2. 
-   
-## Registration
-To access the dataset, please register in the [LAScarQS++ registration platform](http://zmic.org.cn/care_2025/eval/register?track=LAScarQS%2B%2B).
+- **Only automatic methods are acceptable.** Participants must utilize algorithms that do not require manual intervention or human-assisted processes for the segmentation task.
+- **Pre-trained models are  allowed in this track.** The solutions could be developed with pre-trained fundation models, such as SAM, CLIP, and MedSAM.
 
-## Submission Guidance
 
-### Model Submission
+<!-- ## Registration
+Please [**sign up**](http://zmic.org.cn/care_2025/eval/register?track=MyoPS%2B%2B) to join this track. -->
 
-After registration, we will assign the participant an account to login into our [LAScarQS++ evaluation platform](http://zmic.org.cn/care_2025/eval/login?track=LAScarQS%2B%2B). Participants can directly upload your predictions on the validation data (in nifty format) via the website. Note that evaluation of validation data will be allowed up to 10 times for each task per team. For fair comparison, the test dataset will remain unseen. Participants need to submit their [docker models](http://zmic.org.cn/care_2025/test_submission) for testing.
-### Paper Submission
 
-Please refer to our [paper submission guidance](/care_2025/paper_submission).
 
-## Timeline
-The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in Pacific Standard Time.
 
-<table class="table table-sm table-hover border-bottom">
-    <tr>
-    <td class="text-left"><strong>Training Data Release</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">April 30, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Validation Phase start</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">May 30, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Test data release</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">June 30, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Abstract Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">July 15, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Paper Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">July 30, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Submission of final results</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">July 30, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Release date of the results</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">August 10, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Camera Ready</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">August 20, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Workshop (Half-Day)</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">TBD</th>
-    </tr>
-</table>
+
+
+
 
 
 ## Citations
-Please cite these papers when you use the data for publications:
+**Please cite these papers when you use the data for publications:**
 ```bib
- @article{journal/MedIA/li2022,
-  title={Medical image analysis on left atrial LGE MRI for atrial fibrillation studies: A review},
-  author={Li, Lei and Zimmer, Veronika A and Schnabel, Julia A and Zhuang, Xiahai},
-  journal={Medical image analysis},
-  volume={77},
-  pages={102360},
-  year={2022},
+ @article{zhuang2019multivariate,
+    title={Multivariate mixture model for myocardial segmentation combining multi-source images},
+    author={Zhuang, Xiahai},
+    journal={IEEE transactions on pattern analysis and machine intelligence},
+    volume={41},
+    number={12},
+    pages={2933--2946},
+    year={2019},
+}
+
+@article{li2023myops,
+  title={MyoPS: A benchmark of myocardial pathology segmentation combining three-sequence cardiac magnetic resonance images},
+  author={Li, Lei and Wu, Fuping and Wang, Sihan and Luo, Xinzhe and Mart{\'\i}n-Isla, Carlos and Zhai, Shuwei and Zhang, Jianpeng and Liu, Yanfei and Zhang, Zhen and Ankenbrand, Markus J and others},
+  journal={Medical Image Analysis},
+  volume={87},
+  pages={102808},
+  year={2023},
   publisher={Elsevier}
 }
 
-@article{journal/MedIA/li2020,
-  title={Atrial scar quantification via multi-scale CNN in the graph-cuts framework},
-  author={Li, Lei and Wu, Fuping and Yang, Guang and Xu, Lingchao and Wong, Tom and Mohiaddin, Raad and Firmin, David and Keegan, Jennifer and Zhuang, Xiahai},
+@article{qiu2023myops,
+  title={MyoPS-Net: Myocardial pathology segmentation with flexible combination of multi-sequence CMR images},
+  author={Qiu, Junyi and Li, Lei and Wang, Sihan and Zhang, Ke and Chen, Yinyin and Yang, Shan and Zhuang, Xiahai},
   journal={Medical image analysis},
-  volume={60},
-  pages={101595},
-  year={2020},
-  publisher={Elsevier}
+  volume={84},
+  pages={102694},
+  year={2023},
 }
 
-@article{journal/MedIA/li2022,
-  title={AtrialJSQnet: a new framework for joint segmentation and quantification of left atrium and scars incorporating spatial and shape information},
-  author={Li, Lei and Zimmer, Veronika A and Schnabel, Julia A and Zhuang, Xiahai},
-  journal={Medical image analysis},
-  volume={76},
-  pages={102303},
-  year={2022},
-  publisher={Elsevier}
-}
-
-@inproceedings{conf/MICCAI/li2021,
-  title={AtrialGeneral: domain generalization for left atrial segmentation of multi-center LGE MRIs},
-  author={Li, Lei and Zimmer, Veronika A and Schnabel, Julia A and Zhuang, Xiahai},
-  booktitle={Medical Image Computing and Computer Assisted Intervention--MICCAI 2021: 24th International Conference, Strasbourg, France, September 27--October 1, 2021, Proceedings, Part VI 24},
-  pages={557--566},
-  year={2021},
-  organization={Springer}
+ @article{ding2023aligning,
+  title={Aligning multi-sequence CMR towards fully automated myocardial pathology segmentation},
+  author={Ding, Wangbin and Li, Lei and Qiu, Junyi and Wang, Sihan and Huang, Liqin and Chen, Yinyin and Yang, Shan and Zhuang, Xiahai},
+  journal={IEEE Transactions on Medical Imaging},
+  year={2023},
 }
 ```
 
-## Contact
+<!-- ## Contact
 
-If you have any questions regarding the LAScarQS++ track, please feel free to contact:
+If you have any questions regarding the MyoPS++ track, please feel free to contact [care25challenge@163.com](mailto:care25challenge@163.com): -->
 
-- Dr Lei Li: [lilei.sky@outlook.com](mailto:lilei.sky@outlook.com)
-- Xingtao Lin: [231110040@fzu.edu.cn](mailto:231110040@fzu.edu.cn)
+<!-- - Dr. Wangbin Ding: [dingwangbin@fjmu.edu.cn](mailto:care25challenge@163.com) -->
+<!-- - Sihan Wang: [21110980009@m.fudan.edu.cn](mailto:21110980009@m.fudan.edu.cn)
+- Yang Zhang: [zhangyang23@m.fudan.edu.cn](mailto:zhangyang23@m.fudan.edu.cn) -->
 
-<!-- ## Organizer and Committee Team
-
-- Dr Lei Li: University of Southampton, UK
-- Dr Yingliang Ma: University of East Anglia, UK
-- Dr Guang Yang: Imperial College London, UK -->

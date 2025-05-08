@@ -1,13 +1,14 @@
 ---
 layout: distill
-title: LiQA
-description: Liver Fibrosis Quantification and Analysis
-permalink: /track3/
+title: WHS++
+description: Whole Heart Segmentation
+permalink: /track5/
 bibliography: reference.bib
 toc:
   - name: Motivation
   - name: Task
   - name: Data
+  - name: Guidance for Training Strategies
   - name: Metrics & Ranking
   - name: Rules
   - name: Registration
@@ -31,235 +32,320 @@ _styles: >
 
 
 ## Motivation
-{% include figure.liquid loading="eager" path="/assets/img/liqa1.png" class="img-fluid" zoomable=true caption="Figure 1. Track description." %}
+<!-- Cardiovascular diseases (CVDs), recognized by the WHO as the leading cause of death globally<d-cite key="whs1"></d-cite>, necessitate precise morphological and pathological quantification through segmentation of crucial cardiac structures from medical images<d-cite key="whs2"></d-cite>. demand precise morphological and pathological assessments through the segmentation of key cardiac structures from medical images. This task aims to achieve whole heart segmentation (WHS), including the extraction of individual substructures such as the left ventricle (LV), right ventricle (RV), left atrium (LA), right atrium (RA), left ventricular myocardium (Myo), ascending aorta (AO), entire aorta, and pulmonary artery (PA). Automated WHS faces several challenges, including variability in heart shape throughout the cardiac cycle, clinical artifacts such as motion blur and poor contrast-to-noise ratios, as well as domain shifts across multi-center datasets and differing imaging modalities like CT and MRI. -->
 
-Liver fibrosis, often resulting from chronic viral or metabolic liver diseases, poses a significant global health challenge. Accurate liver segmentation (LiSeg) and fibrosis staging (LiFS) are crucial for assessing disease severity and enabling precise diagnoses<d-cite key="liqa1"></d-cite><d-cite key="liqa2"></d-cite> . This task focuses on developing automated methods for liver segmentation and fibrosis staging using multi-phase, multi-center liver MRI scans. Automatic LiFS presents challenges such as missing modalities for certain patients, misalignments in multi-phase MRI data, and the need for effective integration of multi-phase information to improve the accuracy and generalizability of liver fibrosis diagnoses. Similarly, automatic LiSeg faces difficulties stemming from limited ground truth annotations across different modalities and domain shifts in multi-center datasets.
-
+Cardiovascular diseases (CVDs), as the leading cause of death globally<d-cite key="whs1"></d-cite>, necessitate precise morphological and pathological quantification through segmentation of crucial cardiac structures from medical images<d-cite key="whs2"></d-cite>. However, whole heart segmentation (WHS) faces challenges including heart shape variability during the cardiac cycle, clinical artifacts like motion and poor contrast-to-noise ratio, as well as domain shifts in multi-center data and the distinct modalities of CT and MRI. The WHS track serves to inspire innovative solutions in the realms of biomedical imaging and computer vision, striving to overcome these challenges and advance automated WHS for enhanced understanding and treatment of CVDs.
 
 
 ## Task
+{% include figure.liquid loading="eager" path="/assets/img/whs.png" class="img-fluid" zoomable=true caption="Figure 1. Overview of the WHS track" %}
 
-To address these challenges, the extensive use of external data and pre-trained models is encouraged to enhance liver segmentation performance. This track aims to foster innovative solutions that overcome these obstacles, leveraging multi-phase MRI data to advance the field of liver segmentation and fibrosis staging. Building on the dataset used in CARE 2024, we have expanded the collection to include 560 newly acquired cases, bringing the total to 1,000 cases. These cases were obtained from the same vendors and centers, including Philips Ingenia 3.0T, Siemens Skyra 3.0T, and Siemens Aera 1.5T. The dataset features multi-phase imaging modalities such as T2-weighted imaging, diffusion-weighted imaging, and Gadolinium ethoxybenzyl diethylenetriamine pentaacetic acid (Gd-EOB-DTPA)-enhanced dynamic MRIs. The Gd-EOB-DTPA-enhanced dynamic MRIs include multiple phases: non-contrast , arterial, venous, delayed, and hepatobiliary phases.
+<!-- This task seeks to inspire innovative solutions in biomedical imaging and computer vision, addressing these challenges to advance automated WHS. The ultimate goal is to enhance the understanding and treatment of CVDs through accurate and robust segmentation methods. In addition to the data from CARE 2024, we have added newly collected CT images from patients with atrial fibrillation. The inclusion of these new cases enhances the diversity and clinical relevance of the dataset, offering a broader spectrum of anatomical and pathological variations.  The specific  substructures, each associated with a unique label value, are:
 
-**Task 1: The LiSeg Task** focuses on liver segmentation with **limited ground truth**, using Hepatobiliary phase (HBP) MRI, which contains crucial liver information. The challenge is to develop methods capable of accurately segmenting the liver in these images.
+1. **Left Ventricular Blood Cavity (LV)** - Label value: 500
+2. **Right Ventricular Blood Cavity (RV)** - Label value: 600
+3. **Left Atrial Blood Cavity (LA)** - Label value: 420
+4. **Right Atrial Blood Cavity (RA)** - Label value: 550
+5. **Myocardium of the Left Ventricle (Myo)** - Label value: 205
+6. **Ascending Aorta (AO)** - Label value: 820; defined as the aortic trunk from the aortic valve to the superior level of the atria.
+7. **Pulmonary Artery (PA)** - Label value: 850; defined as the initial segment from the pulmonary valve to the bifurcation point.
 
-**Task 2: The LiFS Task** aims to stage liver fibrosis accurately across four stages (S1-S4). Two binary classification tasks with clinical significance will be evaluated: staging cirrhosis (S1-3 vs. S4) and identifying substantial fibrosis (S1 vs. S2-4).
+**Note on Great Vessels:** The great vessels of interest, specifically the ascending aorta and pulmonary artery, are clearly defined due to variations in the fields of view across different scans. This consistent definition is essential for ensuring uniformity across evaluations. During the assessment, segmentation results for these vessels will be truncated to the average lengths measured in healthy subjects. However, participants are encouraged to extend their segmentation beyond these predefined lengths. Our provided manual segmentations also cover areas extending beyond the defined trunk measurements.
 
-Both tasks, LiSeg and LiFS, involve **domain shifts** across multi-center data. Participants are encouraged to effectively integrate complementary information from multi-phase MRIs to achieve more **precise and generalizable** results. Additionally, automatic LiFS may encounter challenges such as **random missing sequences** for certain patients and **misalignments** between multi-phase MRIs.
+The selected papers will be published as part of the MICCAI Satellite Events joint LNCS proceedings.([see previous proceedings](https://link.springer.com/book/10.1007/978-3-319-75541-0)).
 
-To tackle these challenges, participants are also encouraged to leverage **external datasets**, such as [LLD-MMRI2023](https://github.com/LMMMEng/LLD-MMRI2023), and **pretrained models**.
+Topics may cover (not exclusively):
+
+- Cardiac anatomy segmentation
+- Cardiac image registration
+- Cardiac modeling
+- Domain adaptation
+- Model generalization -->
+
+The objective of this track is to achieve precise segmentation of seven substructures of the whole heart, with robustness against domain shifts (see Fig. 1).  
+The specific  substructures, each associated with a unique label value, are:
+
+1. **Left Ventricular Blood Cavity (LV)** - Label value: 500
+2. **Right Ventricular Blood Cavity (RV)** - Label value: 600
+3. **Left Atrial Blood Cavity (LA)** - Label value: 420
+4. **Right Atrial Blood Cavity (RA)** - Label value: 550
+5. **Myocardium of the Left Ventricle (Myo)** - Label value: 205
+6. **Ascending Aorta (AO)** - Label value: 820; defined as the aortic trunk from the aortic valve to the superior level of the atria.
+7. **Pulmonary Artery (PA)** - Label value: 850; defined as the initial segment from the pulmonary valve to the bifurcation point.
+
+
+
+**Note on Great Vessels:** The great vessels of interest, comprising the ascending aorta and pulmonary artery, are specifically defined due to variations in the fields of view across different scans. This uniform definition is crucial for ensuring consistency across evaluations. During the assessment, segmentation results for these vessels will be truncated to average lengths measured in healthy subjects, although participants are encouraged to extend their segmentation beyond these lengths. Our provided manual segmentations similarly cover more than the defined trunk measurements.
+
+We will rank participant methods based on the settings (​Lb1–Lb9) detailed in the following table:
+
+<div style="display: flex; justify-content: center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
+<caption style="caption-side: top; text-align: left; font-weight: bold; padding-bottom: 10px;"> Leaderboard (Lb) for WHS track across modalities and evaluation settings.​​ Lb1–Lb9 represent performance from different test centers (e.g., Lb1 = peformance on center A and B (CT) scans; Lb5 = performance on center F (MRI) scans). In-distribution refers to centers included in the training data, while out-of-distribution refers to unseen centers not used during training.</caption>
+
+  <thead>
+    <tr>
+      <th scope="col">Modality</th>
+      <th scope="col">In-distribution</th>
+      <th scope="col">Out-of-distribution</th>
+      <th scope="col">Average (Real-world)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CT</td>
+      <td>Lb1</td>
+      <td>Lb2</td>
+      <td>Lb3</td>
+    </tr>
+    <tr>
+      <td>MR</td>
+      <td>Lb4</td>
+      <td>Lb5</td>
+      <td>Lb6</td>
+    </tr>
+        <tr>
+      <td>MR+CT</td>
+      <td>Lb7</td>
+      <td>Lb8</td>
+      <td>Lb9</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- - **In distribution (ID) CT Center**: CT (A,B)
+- **ID MRI Center**: MRI (C&D)
+- **Out-of-distribution (OOD) CT Center**: CT (G)
+- **OOD MRI Center**: MRI (F)
+- **ID and OOD CT Center**: CT (A,B,G) 
+- **ID and OOD MRI Center**:  MRI (C&D,F)
+- **All Center**: CT (A,B,G),  MRI (C&D,F) -->
+
+
+<!-- - **In-distribution (ID) task**: A, B, and C&D
+- **Out-of-distribution (OOD) task**: F, and G
+- **Real-world task**: A, B, C&D, F, and G -->
+
+
+
+
+
+
+<!-- The selected papers will be published as part of the MICCAI Satellite Events joint LNCS proceedings.([see previous proceedings](https://link.springer.com/book/10.1007/978-3-031-87009-5)). -->
+
+<!-- Topics may cover (not exclusively):
+
+- Cardiac anatomy segmentation
+- Cardiac image registration
+- Cardiac modeling
+- Domain adaptation
+- Model generalization -->
+
 
 ## Data
 
-### About the data
-
-**1) Scanner:** Philips Ingenia3.0T, Siemens Skyra 3.0T, Siemens Aera 1.5T.
-
-**2) Dataset overview:**  The track cohort comprises **1,000 patients** diagnosed with liver fibrosis, all of whom underwent multi-phase MRI scans. The dataset includes **multi-phase** and **multi-center** data, with images acquired from clinical centers using three different MRI scanner vendors. The dataset consists of T2-weighted imaging, diffusion-weighted imaging, and Gadolinium ethoxybenzyl diethylenetriamine pentaacetic acid (Gd-EOB-DTPA)-enhanced dynamic MRIs. The Gd-EOB-DTPA-enhanced dynamic MRIs cover the non-contrast phase (T1WI), arterial phase, venous phase, delayed phase, and hepatobiliary phase.
-
-**3) Contrast-enhanced dynamic scans:** Contrast-enhanced scans were performed based on the injection of the GD-EOB-DTPA agent. The arterial phase is captured 25 seconds after the contrast agent is injected. Subsequently, the portal phase is achieved 1 minute later. After another 3 minutes, the delay phase is obtained, and finally, the hepatobiliary phase is reached 20 minutes thereafter.
-
-**4) Data format:** The data are all in Nifty format. Each sample may randomly lack phases (except hepatobiliary phase ), and the sequences have not applied pre-alignment through spatial registration.
-
-### Training Set
+### Training data
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
   <thead>
     <tr>
-      <th scope="col">Vendor</th>
       <th scope="col">Center</th>
-      <th scope="col">Num. studies</th>
+      <th scope="col">Num. patients</th>
+      <th scope="col">Modalities</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>A</td>
-      <td>A</td>
-      <td>150</td>
-    </tr>
-    <tr>
-      <td>B</td>
-      <td>B1</td>
-      <td>300</td>
-    </tr>
-    <tr>
-      <td>B</td>
-      <td>B2</td>
-      <td>100</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-### Validation Set
-
-<div style="display: flex; justify-content: center;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
-  <thead>
-    <tr>
-      <th scope="col">Vendor</th>
-      <th scope="col">Center</th>
-      <th scope="col">Num. studies</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>A</td>
-      <td>A</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <td>B</td>
-      <td>B1</td>
-      <td>40</td>
-    </tr>
-    <tr>
-      <td>B</td>
-      <td>B2</td>
       <td>20</td>
+      <td>CT</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>20</td>
+      <td>CT</td>
+    </tr>
+    <tr>
+      <td>C & D</td>
+      <td>20</td>
+      <td>MRI</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>26</td>
+      <td>MRI</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-
-
-### Test Set
+### Validation data
 
 <div style="display: flex; justify-content: center;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:50%;align:center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
   <thead>
     <tr>
-      <th scope="col">Vendor</th>
       <th scope="col">Center</th>
-      <th scope="col">Num. studies</th>
+      <th scope="col">Num. patients</th>
+      <th scope="col">Modalities</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>A</td>
-      <td>A</td>
-      <td>80</td>
+      <td>20</td>
+      <td>CT</td>
     </tr>
     <tr>
       <td>B</td>
-      <td>B1</td>
-      <td>140</td>
+      <td>10</td>
+      <td>CT</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>B2</td>
-      <td>80</td>
-    </tr>
-    <tr>
-      <td>C (new)</td>
-      <td>C</td>
-      <td>60</td>
+      <td>C & D</td>
+      <td>20</td>
+      <td>MR</td>
     </tr>
   </tbody>
 </table>
 </div>
+
+### Test data
+
+<div style="display: flex; justify-content: center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
+  <thead>
+    <tr>
+      <th scope="col">Center</th>
+      <th scope="col">Num. patients</th>
+      <th scope="col">Modalities</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A</td>
+      <td>20</td>
+      <td>CT</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>14</td>
+      <td>CT</td>
+    </tr>
+    <tr>
+      <td>C & D</td>
+      <td>20</td>
+      <td>MRI</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>16</td>
+      <td>MRI</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>20</td>
+      <td>CT</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ### Data Acquisition
+
+The cardiac CT/CTA data were acquired using standard coronary CT angiography protocols. At Center A, imaging was conducted with 64-slice Philips CT scanners. Center B used a dual-source SIEMENS CT scanner or a high-end, single-source GE CT scanner. The cardiac MRI data were obtained using various steady-state free precession (SSFP) sequences, adaptable for both free-breathing and breath-held imaging. Centers C and D employed either a 1.5T Philips scanner or a Siemens Avanto 1.5T scanner for scanning. Center E utilized Philips Achieva 1.5T scanners. Center F conducted its imaging with a Siemens Avanto 1.5T scanner. Center G conducted its imaging with a Siemens Dual-Source Force scanner. This diversity in the data acquisition process across centers underscores the extensive scope and scale of the dataset. -->
+
+<!-- ### Guidance for Training Strategies
+
+To support an informed training process, details about the imaging centers will be provided alongside the cases, as indicated by the case naming (see Fig. 2). Participants are strongly encouraged to utilize this information when designing their training strategies, with a focus on achieving high generalization capability. This approach aims to foster the development of algorithms that perform robustly not only under controlled conditions but also across a variety of real-world clinical environments. -->
 
 ## Metrics & Ranking
 
 ### Metrics
 
-* LiSeg: Dice Similarity Coefficient (DSC), Hausdorff Distance
-* LiFS: Area under curve (AUC), Accuracy;
+The performance of segmentation results will be assessed through: 
 
-### Rank methods
+- Dice Similarity Coefficient (DSC), 
+- Hausdorff Distance (HD), 
+- Average Surface Distance (ASD). 
 
-The ranks of classification and segmentation tasks are ranged separately.
+<!-- ### Aim
 
-* a. For classification, the average of metrics, i.e., Area under curve (AUC) and accuracy, are utilized to evaluate performance.
-* b. For segmentation, the average of metrics, i.e., Dice Similarity Coefficient (DSC) and Hausdorff Distance is utilized to  evaluate performance.
+Accuracy and robustness are crucial for the success of automatic WHS algorithms in clinical settings. Therefore, the final evaluation during the test phase will include images from both centers that have been involved in previous phases and a new, unseen center (detailed in the Data Information section).  -->
 
-Finally, the average of in-distribution results (seen center) and out-of-distribution results (unseen center) are used for the final ranking.
+<!-- ### Leaderboard -->
+
+<!-- Outstanding contributions will be recognized with awards, similar to [MM-WHS 2017](https://zmiclab.github.io/zxh/0/mmwhs/)<d-cite key="whs3"></d-cite> . Submissions will be evaluated based on
+- the test results,
+- the novelty of their methodologies, 
+- the quality of their manuscript, and
+- the clarity of their presentation.
+
+For test results, both in-sample performance from seen centers and generalization capabilities at the unseen center will be considered. The empirical results will be ranked by averaging the performance scores from both scenarios. -->
+
 
 ## Rules
-1. Publicly available data (such as [LLD-MMRI2023](https://github.com/LMMMEng/LLD-MMRI2023)) and pre-trained models are allowed. 
-2. Only automatic methods are acceptable. 
 
+- **Only automatic methods are acceptable.** Participants must utilize algorithms that do not require manual intervention or human-assisted processes for the segmentation task.
+- **Pre-trained models are allowed in this track.** The solutions could be developed with pre-trained fundation models, such as SAM, CLIP and MedSAM.
 ## Registration
 
-To access the dataset, please register in the [LiQA registration platform](http://zmic.org.cn/care_2025/eval/register?track=LiQA).
+Please register [here](http://zmic.org.cn/care_2025/eval/register?track=WHS%2B%2B) to participate in the challenge and get access to the dataset!!
 
-## Submission Guidance
 
-### Model Submission
-After registration, we will assign participants an account to login into our [LiQA evaluation platform](http://zmic.org.cn/care_2025/eval/login?track=LiQA). Participants can directly upload your predictions on the validation data (in nifty format) via the website. Note that evaluation of validation data will be allowed up to 10 times for each task per team. For fair comparison, the test dataset will remain unseen. Participants need to submit their [docker models](http://zmic.org.cn/care_2025/test_submission) for testing.
-### Paper Submission
-Please refer to our [paper submission guidance](/care_2025/paper_submission).
 
-## Timeline
 
-The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in Pacific Standard Time.
 
-<table class="table table-sm table-hover border-bottom">
-    <tr>
-    <td class="text-left"><strong>Training Data Release</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">April 30, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Validation Phase start</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">May 30, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Test data release</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">June 30, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Abstract Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">July 15, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Paper Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">July 30, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Submission of final results</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">July 30, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Release date of the results</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">August 10, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Camera Ready</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">August 20, 2025</th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Workshop (Half-Day)</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">TBD</th>
-    </tr>
-</table>
 
 ## Citations
-
 **Please cite these papers when you use the data for publications:**
-```bib
-@inproceedings{gao2023reliable,
-  title={A reliable and interpretable framework of multi-view learning for liver fibrosis staging},
-  author={Gao, Zheyao and Liu, Yuanye and Wu, Fuping and Shi, Nannan and Shi, Yuxin and Zhuang, Xiahai},
-  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
-  pages={178--188},
-  year={2023},
+
+```
+@article{Zhuang2016MSMMA,
+  Author = {Zhuang, Xiahai and Shen, Juan},
+  Title = {Multi-scale patch and multi-modality atlases for whole heart
+     segmentation of MRI},
+  Journal = {Medical Image Analysis},
+  Year = {2016},
+  Volume = {31},
+  Pages = {77-87},
 }
 
-@misc{liu2024merit,
-  title={MERIT: Multi-view Evidential learning for Reliable and Interpretable liver fibrosis sTaging}, 
-  author={Yuanye Liu and Zheyao Gao and Nannan Shi and Fuping Wu and Yuxin Shi and Qingchao Chen and Xiahai Zhuang},
-  year={2024},
-  archivePrefix={arXiv},
+@article{Zhuang2019evaluation,
+  Author={Zhuang, Xiahai and Li, Lei and Payer, Christian and Stern, Darko and Urschler, Martin and Heinrich, Mattias P and Oster, Julien and Wang, Chunliang and Smedby, {\"O}rjan and Bian, Cheng and others},
+  Title={Evaluation of algorithms for multi-modality whole heart segmentation: an open-access grand challenge},
+  Journal={Medical image analysis},
+  Year={2019},
+  Volume={58},
+  Pages={101537}，
+}
+
+@article{Zhuang2019MvMM,
+  Author = {Zhuang, Xiahai},
+  Title = {Multivariate Mixture Model for Myocardial Segmentation Combining
+     Multi-Source Images},
+  Journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  Year = {2019},
+  Volume = {41},
+  Number = {12},
+  Pages = {2933-2946},
+}
+
+@article{GAO2023BayeSeg,
+  Author = {Gao, Shangqi and Zhou, Hangqi and Gao, Yibo and Zhuang, Xiahai},
+  Title = {BayeSeg: Bayesian modeling for medical image segmentation with
+     interpretable generalizability},
+  Journal = {Medical Image Analysis},
+  Year = {2023},
+  Volume = {89},
+  Pages = {102889},
 }
 ```
 
-## Contact
+<!-- ## Contact
 
-If you have any questions regarding the LiQA track, please feel free to contact: 
+If you have any questions regarding the WHS++ track, please feel free to contact [care25challenge@163.com](mailto:care25challenge@163.com): -->
 
-* Jiyao Liu: [jiyaoliu.fudan@gmail.com](mailto:jiyaoliu.fudan@gmail.com)
-* Yuanye Liu: [yuanyeliu@fudan.edu.cn](mailto:yuanyeliu@fudan.edu.cn)
+<!-- If you have any problems about the WHS++ track, please contact [Dr. Wangbin Ding](mailto:dingwangbin@fjmu.edu.cn) or [Xicheng Sheng](mailto:xcsheng22@m.fudan.edu.cn). -->
