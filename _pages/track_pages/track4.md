@@ -26,7 +26,7 @@ _styles: >
   }
 ---
 
-## Motivation
+### Motivation
 {% include figure.liquid loading="eager" path="/assets/img/liqa1.png" class="img-fluid" zoomable=true caption="Figure 1. Track description." %}
 
 Liver fibrosis, arising from chronic viral or metabolic liver conditions, presents a significant global health challenge. Precise liver segmentation (LiSeg) and fibrosis staging (LiFS) are critical for enabling precise disease management, prognostication, and informed clinical decision-making. This challenge focuses on advancing **two interconnected objectives** to bridge clinical needs with AI innovation:  
@@ -35,7 +35,6 @@ Liver fibrosis, arising from chronic viral or metabolic liver conditions, presen
 
 Participants will develop robust AI solutions using multi-center, multi-phase MRI data, addressing real-world variability in imaging protocols and scanner systems.  
 
-## Tasks
 ### **Task 1: Liver Fibrosis Staging (LiFS)**  
 Develop models to stage fibrosis into four stages (S1-S4). leveraging **cross-phase complementary information** from dynamic MRI sequences. Two clinically critical binary subtasks are evaluated:  
 1. **Cirrhosis Detection**: S1–S3 vs. S4  
@@ -54,11 +53,9 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 
 ---
 
-## Data
+### Data Structure
 
-#### Data Structure
-
-**Training set**
+#### Training set
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:90%;align:center;">
@@ -94,7 +91,7 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 </div>
 
 
-**Validation Set**
+#### Validation Set
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:90%;align:center;">
@@ -129,7 +126,7 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 </table>
 </div>
 
-**Test Set**
+#### Test Set
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:50%;align:center;">
@@ -165,10 +162,9 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 </table>
 </div>
 
-- **NOTE**
-  - The evaluation on the unseen dataset (C) highlights the generalization capabilities of the models and algorithms, which we particularly emphasize.
+- **NOTE: The evaluation on the unseen dataset (C) highlights the generalization capabilities of the models and algorithms, which we particularly emphasize.**
 
-## Leaderboard
+### Leaderboard
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
@@ -202,18 +198,17 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 </table>
 </div>
 
-- **NOTE**
-  - Participants are welcome to participate in a single subtask, and their performance will still be recorded and displayed on the leaderboard.
+- **NOTE: Participants are welcome to participate in a single subtask, and their performance will still be recorded and displayed on the leaderboard.**
 
 
-## Rules
+### Rules
 1. Publicly available data (such as [LLD-MMRI2023](https://github.com/LMMMEng/LLD-MMRI2023)) and pre-trained models are allowed. 
 2. Only automatic methods are acceptable. 
 
-## Registration
+### Registration
 To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=care_liver).
 
-## Citations
+### Citations
 **Please cite these papers when you use the data for publications:**
 ```bib
 @article{liu2025merit,
