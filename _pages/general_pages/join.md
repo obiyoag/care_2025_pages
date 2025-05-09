@@ -7,12 +7,10 @@ nav_order: 2
 ---
 
 ## Summary of Registration Platforms
-- [Register for **TFM4MedIA**](http://zmic.org.cn/care_2024/eval/register?track=TFM4MedIA)
-- [Register for **LAScarQS++**](http://zmic.org.cn/care_2024/eval/register?track=LAScarQS%2B%2B)
-- [Register for **LiQA**](http://zmic.org.cn/care_2024/eval/register?track=LiQA)
-- [Register for **MyoPS++**](http://zmic.org.cn/care_2024/eval/register?track=MyoPS%2B%2B)
-- [Register for **WHS++**](http://zmic.org.cn/care_2024/eval/register?track=WHS%2B%2B)
-
+- [Register for **CARE-Cardiac**](http://zmic.org.cn/care_2025/eval/register?track=cardiac)
+- [Register for **CARE-Myops**](http://zmic.org.cn/care_2025/eval/register?track=myops)
+- [Register for **CARE-WHS**](http://zmic.org.cn/care_2025/eval/register?track=whs)
+- [Register for **CARE-Liver**](http://zmic.org.cn/care_2025/eval/register?track=liver)
 
 ## Registration Guidance
 1. Personal information for participants is required. Please ensure that all the information you provide is accurate and truthful.
