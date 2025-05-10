@@ -56,9 +56,7 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 
 ## Data
 
-#### Data Structure
-
-**Training set**
+### Training set
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:90%;align:center;">
@@ -94,7 +92,7 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 </div>
 
 
-**Validation Set**
+### Validation Set
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:90%;align:center;">
@@ -129,7 +127,7 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 </table>
 </div>
 
-**Test Set**
+### Test Set
 
 <div style="display: flex; justify-content: center;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:50%;align:center;">
@@ -165,8 +163,7 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 </table>
 </div>
 
-- **NOTE**
-  - The evaluation on the unseen dataset (C) highlights the generalization capabilities of the models and algorithms, which we particularly emphasize.
+- **NOTE: The evaluation on the unseen dataset (C) highlights the generalization capabilities of the models and algorithms, which we particularly emphasize.**
 
 ## Leaderboard
 
@@ -202,8 +199,7 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 </table>
 </div>
 
-- **NOTE**
-  - Participants are welcome to participate in a single subtask, and their performance will still be recorded and displayed on the leaderboard.
+- **NOTE: Participants are welcome to participate in a single subtask, and their performance will still be recorded and displayed on the leaderboard.**
 
 
 ## Rules
