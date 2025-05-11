@@ -27,20 +27,20 @@ _styles: >
 
 ## Motivation
 
-{% include figure.liquid loading="eager" path="/assets/img/care-cardiac.jpg" class="img-fluid" zoomable=true %}
+{% include figure.liquid loading="eager" path="/assets/img/care-cardiac.png" class="img-fluid" zoomable=true %}
 
-Cardiac diagnosis involves multiple interrelated tasks, such as delineating anatomical structures (e.g., atria, ventricles, vessels) and identifying pathological regions (e.g., scar and edema) across diverse imaging modalities and acquisition protocols. Relying on separate models for each task leads to fragmented workflows, limited knowledge transfer, and poor adaptability to missing or heterogeneous data. A **unified cardiac segmentation model** addresses these limitations by enabling unified modeling across tasks. 
+Cardiac diagnosis involves multiple interrelated tasks, such as delineating anatomical structures (e.g., atria, ventricles, vessels) and identifying pathological regions (e.g., scar) across diverse imaging modalities and acquisition protocols. Relying on separate models for each task leads to fragmented workflows, limited knowledge transfer, and poor adaptability to missing or heterogeneous data. A **unified cardiac segmentation model** addresses these limitations by enabling unified modeling across tasks. 
 
 ## Task
 
-This track challenges participants to develop a **unified model** capable of simultaneously performing **single cardiac structure segmentation** (left atria), **whole heart structure segmentation** and **structure and pathology segmentation** (ventricles, scar and edema).
+This track challenges participants to develop a **unified model** capable of simultaneously performing **single cardiac structure segmentation** (left atria), **whole heart structure segmentation** and **structure and pathology segmentation** (left ventricle, myocardium and scar).
 
 ***Note\***: Participants are also encouraged to leverage external data.
 
 
 ## Data
 
-Multi-center and multi-modality datasets are provided for three sub-tasks.
+Multi-center and multi-modality datasets are provided for three sub-tasks. Please register [here](http://zmic.org.cn/care_2025/eval/register?track=care_cardiac) to access the data. 
 
 ### Training Dataset
 
@@ -51,15 +51,15 @@ Multi-center and multi-modality datasets are provided for three sub-tasks.
   <thead>
     <tr>
       <th scope="col">Center</th>
+      <th scope="col">Num. cases</th>
       <th scope="col">Modality</th>
-      <th scope="col">Num. patients</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>A</td>
+      <td>130</td>
       <td>LGE MRI</td>
-      <td>60</td>
     </tr>
   </tbody>
 </table>
@@ -88,7 +88,7 @@ Multi-center and multi-modality datasets are provided for three sub-tasks.
       <td>CT</td>
     </tr>
     <tr>
-      <td>C/D</td>
+      <td>C & D</td>
       <td>20</td>
       <td>MRI</td>
     </tr>
@@ -111,48 +111,44 @@ Multi-center and multi-modality datasets are provided for three sub-tasks.
     <tr>
       <th scope="col">Center</th>
       <th scope="col">Num. cases</th>
-      <th scope="col">Sequences</th>
+      <th scope="col">Modality</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>A</td>
       <td>81</td>
-      <td>LGE</td>
+      <td>LGE MRI</td>
     </tr>
     <tr>
       <td>B</td>
       <td>50</td>
-      <td>LGE, T2 and bSSFP</td>
+      <td>LGE MRI</td>
     </tr>
     <tr>
       <td>C</td>
       <td>45</td>
-      <td>LGE, T2 and bSSFP</td>
+      <td>LGE MRI</td>
     </tr>
     <tr>
       <td>E</td>
       <td>7</td>
-      <td>LGE and bSSFP</td>
+      <td>LGE MRI</td>
     </tr>
     <tr>
       <td>F</td>
       <td>9</td>
-      <td>LGE and bSSFP</td>
+      <td>LGE MRI</td>
     </tr>
     <tr>
       <td>G</td>
       <td>8</td>
-      <td>LGE and bSSFP</td>
-    </tr>
-        <tr>
-      <td>H</td>
-      <td>35</td>
-      <td>LGE </td>
+      <td>LGE MRI</td>
     </tr>
   </tbody>
 </table>
 </div>
+
 
 ### Validation Dataset
 
@@ -163,7 +159,7 @@ Multi-center and multi-modality datasets are provided for three sub-tasks.
   <thead>
     <tr>
       <th scope="col">Center</th>
-      <th scope="col">Num. patients</th>
+      <th scope="col">Num. cases</th>
       <th scope="col">Sequences</th>
     </tr>
   </thead>
@@ -171,11 +167,12 @@ Multi-center and multi-modality datasets are provided for three sub-tasks.
     <tr>
       <td>D</td>
       <td>25</td>
-      <td>LGE, T2 and bSSFP</td>
+      <td>LGE</td>
     </tr>
   </tbody>
 </table>
 </div>
+
 
  2). Whole Heart Segmentation
 
@@ -184,7 +181,7 @@ Multi-center and multi-modality datasets are provided for three sub-tasks.
   <thead>
     <tr>
       <th scope="col">Center</th>
-      <th scope="col">Num. patients</th>
+      <th scope="col">Num. cases</th>
       <th scope="col">Modalities</th>
     </tr>
   </thead>
@@ -203,6 +200,7 @@ Multi-center and multi-modality datasets are provided for three sub-tasks.
 </table>
 </div>
 
+
  3). Myocardial Pathology Segmentation
 
 <div style="display: flex; justify-content: center;">
@@ -210,19 +208,20 @@ Multi-center and multi-modality datasets are provided for three sub-tasks.
   <thead>
     <tr>
       <th scope="col">Center</th>
-      <th scope="col">Num. patients</th>
-      <th scope="col">Sequences</th>
+      <th scope="col">Num. cases</th>
+      <th scope="col">Modality</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>D</td>
       <td>25</td>
-      <td>LGE, T2 and bSSFP</td>
+      <td>LGE MRI</td>
     </tr>
   </tbody>
 </table>
 </div>
+
 
 
 
@@ -235,25 +234,25 @@ Multi-center and multi-modality datasets are provided for three sub-tasks.
   <thead>
     <tr>
       <th scope="col">Center</th>
-      <th scope="col">Modality</th>
       <th scope="col">Num. cases</th>
+      <th scope="col">Modality</th>
     </tr>
   </thead>
   <tbody>
      <tr>
       <td>A</td>
-      <td>LGE MRI</td>
       <td>24</td>
+      <td>LGE MRI</td>
     </tr>
     <tr>
       <td>B</td>
-      <td>LGE MRI</td>
       <td>20</td>
+      <td>LGE MRI</td>
     </tr>
     <tr>
       <td>C</td>
-      <td>LGE MRI</td>
       <td>10</td>
+      <td>LGE MRI</td>
     </tr> 
   </tbody>
 </table>
@@ -266,7 +265,7 @@ Multi-center and multi-modality datasets are provided for three sub-tasks.
   <thead>
     <tr>
       <th scope="col">Center</th>
-      <th scope="col">Num. patients</th>
+      <th scope="col">Num. cases</th>
       <th scope="col">Modalities</th>
     </tr>
   </thead>
@@ -308,23 +307,24 @@ Multi-center and multi-modality datasets are provided for three sub-tasks.
     <tr>
       <th scope="col">Center</th>
       <th scope="col">Num. cases</th>
-      <th scope="col">Sequences</th>
+      <th scope="col">Modality</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>D</td>
       <td>25</td>
-      <td>LGE, T2 and bSSFP</td>
+      <td>LGE MRI</td>
     </tr>
     <tr>
       <td>I</td>
       <td>16</td>
-      <td>LGE, T2 and bSSFP</td>
+      <td>LGE MRI</td>
     </tr>
   </tbody>
 </table>
 </div>
+
 
 
 
