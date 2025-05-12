@@ -228,4 +228,15 @@ To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/
   pages={178--188},
   year={2023}
 }
+
+@article{wu2022meru,
+  title = {Minimizing Estimated Risks on Unlabeled Data: A New Formulation for Semi-Supervised Medical Image Segmentation},
+  author={Wu, Fuping and Zhuang, Xiahai},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={Minimizing Estimated Risks on Unlabeled Data: A New Formulation for Semi-Supervised Medical Image Segmentation}, 
+  year={2023},
+  volume={45},
+  number={5},
+  pages={6021-6036},
+}
 ```
