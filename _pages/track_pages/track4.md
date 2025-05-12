@@ -189,11 +189,11 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
     <tr>
       <td rowspan="2"><strong>LiSeg</strong></td>
       <td>Non-Contrast (T2WI/DWI)</td>
-      <td>Dice Score, HD-95</td>
+      <td>Dice Score, Hausdorff Distance</td>
     </tr>
     <tr>
       <td>Contrast-Enhanced (GED4)</td>
-      <td>Dice Score, HD-95</td>
+      <td>Dice Score, Hausdorff Distance</td>
     </tr>
   </tbody>
 </table>
