@@ -227,14 +227,7 @@ To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/
   Pages = {77-87},
 }
 
-@article{Zhuang2019evaluation,
-  Author={Zhuang, Xiahai and Li, Lei and Payer, Christian and Stern, Darko and Urschler, Martin and Heinrich, Mattias P and Oster, Julien and Wang, Chunliang and Smedby, {\"O}rjan and Bian, Cheng and others},
-  Title={Evaluation of algorithms for multi-modality whole heart segmentation: an open-access grand challenge},
-  Journal={Medical image analysis},
-  Year={2019},
-  Volume={58},
-  Pages={101537}，
-}
+
 
 @article{Zhuang2019MvMM,
   Author = {Zhuang, Xiahai},
