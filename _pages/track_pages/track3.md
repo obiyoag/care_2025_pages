@@ -227,8 +227,6 @@ To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/
   Pages = {77-87},
 }
 
-
-
 @article{Zhuang2019MvMM,
   Author = {Zhuang, Xiahai},
   Title = {Multivariate Mixture Model for Myocardial Segmentation Combining

@@ -228,7 +228,6 @@ To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/
     year={2019},
 }
 
-
 @article{qiu2023myops,
   title={MyoPS-Net: Myocardial pathology segmentation with flexible combination of multi-sequence CMR images},
   author={Qiu, Junyi and Li, Lei and Wang, Sihan and Zhang, Ke and Chen, Yinyin and Yang, Shan and Zhuang, Xiahai},
