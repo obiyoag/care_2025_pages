@@ -228,16 +228,6 @@ To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/
     year={2019},
 }
 
-@article{li2023myops,
-  title={MyoPS: A benchmark of myocardial pathology segmentation combining three-sequence cardiac magnetic resonance images},
-  author={Li, Lei and Wu, Fuping and Wang, Sihan and Luo, Xinzhe and Mart{\'\i}n-Isla, Carlos and Zhai, Shuwei and Zhang, Jianpeng and Liu, Yanfei and Zhang, Zhen and Ankenbrand, Markus J and others},
-  journal={Medical Image Analysis},
-  volume={87},
-  pages={102808},
-  year={2023},
-  publisher={Elsevier}
-}
-
 @article{qiu2023myops,
   title={MyoPS-Net: Myocardial pathology segmentation with flexible combination of multi-sequence CMR images},
   author={Qiu, Junyi and Li, Lei and Wang, Sihan and Zhang, Ke and Chen, Yinyin and Yang, Shan and Zhuang, Xiahai},
