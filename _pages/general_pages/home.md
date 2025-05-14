@@ -44,40 +44,37 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
 <table class="table table-sm table-hover border-bottom">
     <tr>
     <td class="text-left"><strong>Training Data Release</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">May 8, 2025</th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>May 8, 2025</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Validation Phase start</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">June 10, 2025</th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>June 10, 2025</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Test data release</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">July 7, 2025</th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>July 7, 2025</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Abstract Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">July 15, 2025</th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>July 15, 2025</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Paper Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">August 15, 2025</th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>August 15, 2025</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Release date of the results</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">September 5, 2025</th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>September 15, 2025</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Camera Ready</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">September 10, 2025</th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>September 25, 2025</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Workshop (Half-Day)</strong></td>
-    <th scope="row" style="width: 60%" class="text-right">September 23-27, 2025</th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>TBD</strong></th>
     </tr>
 </table>
-
-
-
 
 
 
