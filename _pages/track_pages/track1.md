@@ -33,7 +33,7 @@ Cardiac diagnosis involves multiple interrelated tasks, such as delineating anat
 
 ## Task
 
-This track challenges participants to develop a **unified model** capable of simultaneously performing **single cardiac structure segmentation** (left atria), **whole heart structure segmentation** and **structure and pathology segmentation** (left ventricle, myocardium and scar).
+Develop a **unified model** capable of segmenting **single cardiac structure** (left atria), **whole heart structures** and **structure and pathology** (left ventricle, myocardium and scar).
 
 ***Note\***: Participants are also encouraged to leverage external data.
 
@@ -167,11 +167,12 @@ Multi-center and multi-modality datasets are provided for three sub-tasks. Pleas
     <tr>
       <td>D</td>
       <td>25</td>
-      <td>LGE</td>
+      <td>LGE MRI</td>
     </tr>
   </tbody>
 </table>
 </div>
+
 
 
  2). Whole Heart Segmentation
@@ -257,7 +258,6 @@ Multi-center and multi-modality datasets are provided for three sub-tasks. Pleas
   </tbody>
 </table>
 </div>
-
 2). Whole Heart Segmentation
 
 <div style="display: flex; justify-content: center;">
@@ -293,11 +293,12 @@ Multi-center and multi-modality datasets are provided for three sub-tasks. Pleas
     <tr>
       <td>G</td>
       <td>20</td>
-      <td>CTA</td>
+      <td>CT</td>
     </tr>
   </tbody>
 </table>
 </div>
+
 
 3). Myocardial Pathology Segmentation
 
@@ -378,6 +379,26 @@ To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/
     number={12},
     pages={2933--2946},
     year={2019},
+}
+
+@article{zhuang2016multi,
+  title={Multi-scale patch and multi-modality atlases for whole heart segmentation of MRI},
+  author={Zhuang, Xiahai and Shen, Juan},
+  journal={Medical image analysis},
+  volume={31},
+  pages={77--87},
+  year={2016},
+  publisher={Elsevier}
+}
+
+@article{li2022atrialjsqnet,
+  title={AtrialJSQnet: a new framework for joint segmentation and quantification of left atrium and scars incorporating spatial and shape information},
+  author={Li, Lei and Zimmer, Veronika A and Schnabel, Julia A and Zhuang, Xiahai},
+  journal={Medical image analysis},
+  volume={76},
+  pages={102303},
+  year={2022},
+  publisher={Elsevier}
 }
 
 @article{GAO2023BayeSeg,
