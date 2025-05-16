@@ -64,15 +64,15 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
     </tr>
     <tr>
     <td class="text-left"><strong>Release date of the results</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>September 15, 2025</strong></th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>September 5, 2025</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Camera Ready</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>September 25, 2025</strong></th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>September 10, 2025</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Workshop (Half-Day)</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>TBD</strong></th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>September 23-27, 2025</strong></th>
     </tr>
 </table>
 
@@ -80,5 +80,5 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
 
 ## Contact
 
-If you have any questions, please feel free to contact: [care25challenge@163.com](care25challenge@163.com).
+If you have any questions, please feel free to contact: [care25challenge@163.com](mailto:care25challenge@163.com).
 
