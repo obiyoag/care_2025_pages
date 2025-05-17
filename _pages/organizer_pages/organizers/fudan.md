@@ -5,6 +5,7 @@
 * Bomin Wang
 * Yuanye Liu
 * Yibo Gao
+* Yang Zhang
 * An Sui
 * Ruoxuan Zhen
 
