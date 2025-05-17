@@ -213,7 +213,7 @@ The performance of scar and edema segmentation results will be evaluated by：
 - **Pre-trained models are  allowed in this track.** The solutions could be developed with pre-trained fundation models, such as SAM, CLIP, and MedSAM.
 
 ## Registration
-To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=care_myops).
+To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=myops).
 
 ## Citations
 **Please cite these papers when you use the data for publications:**

@@ -40,7 +40,7 @@ Develop a **unified model** capable of segmenting **single cardiac structure** (
 
 ## Data
 
-Multi-center and multi-modality datasets are provided for three sub-tasks. Please register [here](http://zmic.org.cn/care_2025/eval/register?track=care_cardiac) to access the data. 
+Multi-center and multi-modality datasets are provided for three sub-tasks. Please register [here](http://zmic.org.cn/care_2025/eval/register?track=cardiac) to access the data. 
 
 ### Training Dataset
 
@@ -365,7 +365,7 @@ The leadboards will be organized as follows:
 
 
 ## Registration
-To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=care_cardiac).
+To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=cardiac).
 
 
 ## Citations

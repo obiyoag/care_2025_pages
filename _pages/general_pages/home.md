@@ -14,13 +14,13 @@ Medical image analysis empowered by AI has significantly reshaped medicine.  How
 
 This challenge consists of four challenging tracks and encompasses imaging data from over **2000 patients** collected across **three continents**, capturing diverse acquisition protocols, clinical centers, and patient populations.  Participants can explore each track below to access the corresponding datasets and detailed task descriptions.
 
-[**CARE-Cardiac**](/care_2025/track1): Unified Cardiac Sturcture and Pathology Segmentation 
+[**<u>CARE-Cardiac</u>**](/care_2025/track1): Unified Cardiac Sturcture and Pathology Segmentation 
 
-[**CARE-Myops**](/care_2025/track2): Myocardial Pathology Segmentation
+[**<u>CARE-Myops</u>**](/care_2025/track2): Myocardial Pathology Segmentation
 
-[**CARE-WHS**](/care_2025/track3): Whole Heart Segmentation 
+[**<u>CARE-WHS</u>**](/care_2025/track3): Whole Heart Segmentation 
 
-[**CARE-Liver**](/care_2025/track4): Liver Segmentation and Fibrosis Staging
+[**<u>CARE-Liver</u>**](/care_2025/track4): Liver Segmentation and Fibrosis Staging
 
 
 
