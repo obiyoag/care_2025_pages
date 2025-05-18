@@ -80,5 +80,5 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
 
 ## Contact
 
-If you have any questions, please feel free to contact: [care25challenge@163.com](mailto:care25challenge@163.com).
+If you have any questions, please feel free to contact: [care25challenge@163.com](mailto:care25challenge@163.com) or [care25challenge@outlook.com](mailto:care25challenge@outlook.com).
 
