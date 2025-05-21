@@ -56,6 +56,16 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 
 ## Data
 
+### About the data
+
+**1) Scanner:** Philips Ingenia3.0T, Siemens Skyra 3.0T, Siemens Aera 1.5T.
+
+**2) Dataset overview:**  The track cohort comprises **610 patients** (170 newly cases compared to CARE2024) diagnosed with liver fibrosis, all of whom underwent multi-phase MRI scans. The dataset includes **multi-phase** and **multi-center** data, with images acquired from clinical centers using three different MRI scanner vendors. The dataset consists of T2-weighted imaging, diffusion-weighted imaging, and Gadolinium ethoxybenzyl diethylenetriamine pentaacetic acid (**Gd-EOB-DTPA**)-enhanced dynamic MRIs. The Gd-EOB-DTPA-enhanced dynamic MRIs cover the non-contrast phase (T1WI), arterial phase, venous phase, delayed phase, and hepatobiliary phase.
+
+**3) Contrast-enhanced dynamic scans:** Contrast-enhanced scans were performed based on the injection of the GD-EOB-DTPA agent. The arterial phase is captured 25 seconds after the contrast agent is injected. Subsequently, the portal phase is achieved 1 minute later. After another 3 minutes, the delay phase is obtained, and finally, the hepatobiliary phase is reached 20 minutes thereafter.
+
+**4) Data format:** The data are all in Nifty format. Each sample may randomly lack phases (except hepatobiliary phase), and the sequences have not applied pre-alignment through spatial registration.
+
 ### Training set
 
 <div style="display: flex; justify-content: center;">
