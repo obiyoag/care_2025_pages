@@ -165,8 +165,13 @@ Multi-center and multi-modality datasets are provided for three sub-tasks. Pleas
   </thead>
   <tbody>
     <tr>
-      <td>D</td>
-      <td>25</td>
+      <td>A</td>
+      <td>10</td>
+      <td>LGE MRI</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>10</td>
       <td>LGE MRI</td>
     </tr>
   </tbody>
@@ -188,13 +193,18 @@ Multi-center and multi-modality datasets are provided for three sub-tasks. Pleas
   </thead>
   <tbody>
     <tr>
-      <td>B</td>
-      <td>44</td>
+      <td>A</td>
+      <td>20</td>
       <td>CT</td>
     </tr>
     <tr>
-      <td>E</td>
-      <td>6</td>
+      <td>B</td>
+      <td>10</td>
+      <td>CT</td>
+    </tr>
+    <tr>
+      <td>C & D</td>
+      <td>20</td>
       <td>MRI</td>
     </tr>
   </tbody>
@@ -242,7 +252,7 @@ Multi-center and multi-modality datasets are provided for three sub-tasks. Pleas
   <tbody>
      <tr>
       <td>A</td>
-      <td>24</td>
+      <td>14</td>
       <td>LGE MRI</td>
     </tr>
     <tr>
@@ -281,7 +291,7 @@ Multi-center and multi-modality datasets are provided for three sub-tasks. Pleas
       <td>CT</td>
     </tr>
     <tr>
-      <td>C/D</td>
+      <td>C & D</td>
       <td>20</td>
       <td>MRI</td>
     </tr>
@@ -318,7 +328,7 @@ Multi-center and multi-modality datasets are provided for three sub-tasks. Pleas
       <td>LGE MRI</td>
     </tr>
     <tr>
-      <td>I</td>
+      <td>B</td>
       <td>16</td>
       <td>LGE MRI</td>
     </tr>
