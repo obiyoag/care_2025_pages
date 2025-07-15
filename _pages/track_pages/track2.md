@@ -189,7 +189,7 @@ We will rank participant methods based on the settings (​Lb1–Lb9) detailed i
     </tr>
     <tr>
       <td>B</td>
-      <td>16</td>
+      <td>15</td>
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
