@@ -52,19 +52,23 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
     </tr>
     <tr>
     <td class="text-left"><strong>Test data release</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>July 7, 2025</strong></th>
-    </tr>
-    <tr>
-    <td class="text-left"><strong>Abstract Submission</strong></td>
     <th scope="row" style="width: 60%" class="text-right"><strong>July 15, 2025</strong></th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Paper Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>August 15, 2025</strong></th>
+    <td class="text-left"><strong>Abstract Submission</strong></td>
+    <th scope="row" style="width: 60%" class="text-right"><strong>July 25, 2025</strong></th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Release date of the results</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>September 5, 2025</strong></th>
+    <td class="text-left"><strong>Test results Submission</strong></td>
+    <th scope="row" style="width: 60%" class="text-right"><strong>August 1, 2025</strong></th>
+    </tr>
+    <tr>
+    <td class="text-left"><strong>Paper Submission</strong></td>
+    <th scope="row" style="width: 60%" class="text-right"><strong>August 10, 2025</strong></th>
+    </tr>
+    <tr>
+    <td class="text-left"><strong>Paper Acceptance Notification</strong></td>
+    <th scope="row" style="width: 60%" class="text-right"><strong>August 15, 2025</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Camera Ready</strong></td>
@@ -72,9 +76,10 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
     </tr>
     <tr>
     <td class="text-left"><strong>Workshop (Half-Day)</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>September 23-27, 2025</strong></th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>September 23, 2025</strong></th>
     </tr>
 </table>
+
 
 
 
