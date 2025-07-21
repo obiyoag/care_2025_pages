@@ -40,14 +40,15 @@ All deadlines are on 23:59 in Pacific Standard Time.
 
 ## Submission Site
 
-**CMT submission link** will be coming shortly
+Please submit your abstract and paper via the following submission portal:
+[https://cmt3.research.microsoft.com/CARE2025](https://cmt3.research.microsoft.com/CARE2025)
 
 ## CMT Submission Instructions 
 
 The authors need to have a **CMT account** before submitting papers.
 
-- The link to create the account: https://cmt3.research.microsoft.com/docs/help/general/account-creation.html.
-- The link of CMT submission instructions: https://cmt3.research.microsoft.com/docs/help/author/author-submission-form.html.
+- The link to create the account: [https://cmt3.research.microsoft.com/docs/help/general/account-creation.html](https://cmt3.research.microsoft.com/docs/help/general/account-creation.html])
+- The link of CMT submission instructions: [https://cmt3.research.microsoft.com/docs/help/author/author-submission-form.html](https://cmt3.research.microsoft.com/docs/help/author/author-submission-form.html)
 
 ## CMT Acknowledgment
 
