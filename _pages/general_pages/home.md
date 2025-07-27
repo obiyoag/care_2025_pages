@@ -26,7 +26,16 @@ This challenge consists of four challenging tracks and encompasses imaging data 
 
 ## Submission 
 
-After registration, we will assign participants an account to login into our evaluation platform. Participants can directly upload your predictions on the validation and test data via the website. 
+After registration, we will assign participants an account to login into our evaluation platform. Participants can directly upload your predictions and docker via the website. 
+
+
+
+## Awards
+
+We are also pleased to announce the **CARE 2025 Paper Awards**, which will recognize outstanding contributions across all tracks:
+
+- **Best Paper Award:** $500
+- **Runner-Up Awards:** $300 × 2
 
 
 
@@ -56,7 +65,7 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
     </tr>
     <tr>
     <td class="text-left"><strong>Abstract Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>July 25, 2025</strong></th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>August 1, 2025</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Test results Submission</strong></td>
@@ -64,11 +73,11 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
     </tr>
     <tr>
     <td class="text-left"><strong>Paper Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>August 10, 2025</strong></th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>August 15, 2025</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Paper Acceptance Notification</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>August 15, 2025</strong></th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>August 25, 2025</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Camera Ready</strong></td>
@@ -79,6 +88,7 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
     <th scope="row" style="width: 60%" class="text-right"><strong>September 23, 2025</strong></th>
     </tr>
 </table>
+
 
 
 
