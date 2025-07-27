@@ -8,4 +8,4 @@ For CARE-Cardiac track, participants can directly upload your predictions (in ni
 
 #### Summary of Evaluation Platforms
 
-- [**CARE-Cardiac** evaluation platform](http://zmic.org.cn/care_2025/test/login?track=cardiac)
+- [**CARE-Cardiac** evaluation platform](https://zmic.org.cn/care_2025/eval/login?track=cardiac)

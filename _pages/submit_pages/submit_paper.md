@@ -47,7 +47,7 @@ Please submit your abstract and paper via the following submission portal:
 
 The authors need to have a **CMT account** before submitting papers.
 
-- The link to create the account: [https://cmt3.research.microsoft.com/docs/help/general/account-creation.html](https://cmt3.research.microsoft.com/docs/help/general/account-creation.html])
+- The link to create the account: [https://cmt3.research.microsoft.com/docs/help/general/account-creation.html](https://cmt3.research.microsoft.com/docs/help/general/account-creation.html)
 - The link of CMT submission instructions: [https://cmt3.research.microsoft.com/docs/help/author/author-submission-form.html](https://cmt3.research.microsoft.com/docs/help/author/author-submission-form.html)
 
 ## CMT Acknowledgment
