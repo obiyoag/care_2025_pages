@@ -26,24 +26,9 @@ This challenge consists of four challenging tracks and encompasses imaging data 
 
 ## Submission 
 
-After registration, we will assign participants an account to login into our evaluation platform. Participants can directly upload your predictions and docker via the website. 
+After registration, we will assign participants an account to login into our evaluation platform. Participants can directly upload your predictions and docker via the website. For paper submission, please refer to our [paper submission guidance](/care_2025/paper_submission).
 
-
-
-## Awards
-
-We are also pleased to announce the **CARE 2025 Paper Awards**, which will recognize outstanding contributions across all tracks:
-
-- **Best Paper Award:** $500
-- **Runner-Up Awards:** $300 × 2
-
-
-
-### Paper Submission
-
-Please refer to our [paper submission guidance](/care_2025/paper_submission).
-
- 
+**Contact**: If you have any questions, please feel free to contact: [care25challenge@163.com](mailto:care25challenge@163.com) or [care25challenge@outlook.com](mailto:care25challenge@outlook.com).
 
 
 ## Timeline
@@ -89,11 +74,31 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
     </tr>
 </table>
 
+## Awards
+
+We are pleased to announce the **CARE 2025 Paper Awards**, which will recognize outstanding contributions across all tracks:
+
+- **Best Paper Award:** $500
+- **Runner-Up Awards:** $300 × 2
+
+Sponsors:
+
+- **[MICCAI-SIG Cardiac Imaging, Computational Modelling and Clinical Sciences (SIG-Cardiac)](https://miccai.org/index.php/special-interest-groups/sig-cardiac/)**
+- **[MICCAI-SIG Explainable AI for Medical Image Analysis (SIG-xMedIA)](https://miccai.org/index.php/special-interest-groups/sig-xmedia/)**
+
+<br>
+
+<div class="d-flex justify-content-center">
+  <div style="margin: 0 3rem;">
+  {% include logo.liquid loading="eager" path="assets/img/miccai-logo.png" class="img-fluid" zoomable=true max-height="100px" %}
+  </div>
+  <div style="margin: 0 3rem;">
+  {% include logo.liquid loading="eager" path="assets/img/SIG-Cardiac-logo-Large.png" class="img-fluid" zoomable=true max-height="100px" %}
+  </div>
+  <div style="margin: 0 3rem;">
+  {% include logo.liquid loading="eager" path="assets/img/sigxmedia-logo.png" class="img-fluid" zoomable=true max-height="100px" %}
+  </div>
+</div>
 
 
-
-
-## Contact
-
-If you have any questions, please feel free to contact: [care25challenge@163.com](mailto:care25challenge@163.com) or [care25challenge@outlook.com](mailto:care25challenge@outlook.com).
 
