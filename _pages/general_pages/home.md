@@ -98,6 +98,9 @@ Sponsors:
   <div style="margin: 0 3rem;">
   {% include logo.liquid loading="eager" path="assets/img/sigxmedia-logo.png" class="img-fluid" zoomable=true max-height="100px" %}
   </div>
+  <div style="margin: 0 3rem;">
+  {% include logo.liquid loading="eager" path="assets/img/sds-logo.png" class="img-fluid" zoomable=true max-height="100px" %}
+  </div>
 </div>
 
 
