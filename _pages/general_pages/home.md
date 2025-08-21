@@ -49,16 +49,16 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
     <th scope="row" style="width: 60%" class="text-right"><strong>July 15, 2025</strong></th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Abstract Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>August 1, 2025</strong></th>
+    <td class="text-left"><strong>Test Results Submission</strong></td>
+    <th scope="row" style="width: 60%" class="text-right"><strong>August 10, 2025</strong></th>
     </tr>
     <tr>
-    <td class="text-left"><strong>Test results Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>August 1, 2025</strong></th>
+    <td class="text-left"><strong>Abstract Submission</strong></td>
+    <th scope="row" style="width: 60%" class="text-right"><strong>August 20, 2025</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Paper Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>August 15, 2025</strong></th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>August 20, 2025</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Paper Acceptance Notification</strong></td>
@@ -73,6 +73,7 @@ The schedule for this track is as follows. All deadlines(DDLs) are on 23:59 in P
     <th scope="row" style="width: 60%" class="text-right"><strong>September 23, 2025</strong></th>
     </tr>
 </table>
+
 
 ## Awards
 
@@ -102,6 +103,5 @@ Sponsors:
   {% include logo.liquid loading="eager" path="assets/img/sds-logo.png" class="img-fluid" zoomable=true max-height="100px" %}
   </div>
 </div>
-
 
 
