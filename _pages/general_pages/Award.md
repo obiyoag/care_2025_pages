@@ -1,42 +1,119 @@
 ---
-layout: award
+layout: page
+permalink: /award/
 title: Award
-permalink: /
+nav: true
+nav_order: 6
 ---
 
-## Awards
  The awards for the challenge include:
 
-| Award Type            | Number of Awards | Award Details                                                                 |
-|----------------------|------------------|-------------------------------------------------------------------------------|
-| Best Paper Award     | 1                | Certificate + $500 USD                                                       |
-| Best Paper Runner-up Paper Award | 2                | Certificate + $300 USD each                                                  |
-| Best Performance Award | 7                | Certificate                                                   |
+<div style="display: flex;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:60%;align:center;">
+  <thead>
+    <tr>
+      <th scope="col">Award Type</th>
+      <th scope="col">Number of Awards</th>
+      <th scope="col">Award Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Best Paper Award</td>
+      <td>1</td>
+      <td>Certificate + $500 USD</td>
+    </tr>
+    <tr>
+      <td>Best Paper Runner-up Award</td>
+      <td>2</td>
+      <td>Certificate + $300 USD each</td>
+    </tr>
+    <tr>
+      <td>Best Performance Award</td>
+      <td>7</td>
+      <td>Certificate</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
-
+---
 
 ### Best Paper Award
-- A Unified 3D Cardiac Structure Segmentation Framework for Heterogeneous Medical Data
-- Authors: Zhao Wang, Zheyao Gao, Qi Dou
-![Best Paper](/img/awards/best.jpg)
+<div class="paper-title-block" style="text-align:center;">
+  <p style="margin:0; font-weight:bold;">A Unified 3D Cardiac Structure Segmentation Framework for Heterogeneous Medical Data</p>
+  <p>Zhao Wang, Zheyao Gao, Qi Dou</p>
+</div>
+
+{% include figure.liquid loading="eager" path="/assets/img/awards/best.jpg" class="img-fluid" zoomable=true width="50%" %}
+
+---
 
 ### Best Paper Runner-up Award
-- Uncertainty-Guided Hard–Soft Priors for Myocardial Scar and Edema Segmentation on Multi-Sequence CMR images
-- Authors: Haohao Luan, Yilin Lyu, Jinwei Dong, Lin Pan
-![Best Paper Runner-up](/img/awards/runner-up-1.jpg)
+<div class="paper-title-block" style="text-align:center;">
+  <p style="margin:0; font-weight:bold;">1.Uncertainty-Guided Hard–Soft Priors for Myocardial Scar and Edema Segmentation on Multi-Sequence CMR images</p>
+  <p>Haohao Luan, Yilin Lyu, Jinwei Dong, Lin Pan</p>
+</div>
 
-- Uncertainty-Guided Curriculum Learning for Automated Liver Fibrosis Staging on Heterogeneous MRIs
-- Authors: Yuxin Jin, Fengjun Zhao, Yanrong Chen, Xuelei He
-![Best Paper Runner-up](/img/awards/runner-up-2.jpg)
+{% include figure.liquid loading="eager" path="/assets/img/awards/runner-up-1.jpg" class="img-fluid" zoomable=true width="50%" %}
+
+<div class="paper-title-block" style="text-align:center;">
+  <p style="margin:0; font-weight:bold;">2.Uncertainty-Guided Curriculum Learning for Automated Liver Fibrosis Staging on Heterogeneous MRIs</p>
+  <p>Yuxin Jin, Fengjun Zhao, Yanrong Chen, Xuelei He</p>
+</div>
+
+{% include figure.liquid loading="eager" path="/assets/img/awards/runner-up-2.jpg" class="img-fluid" zoomable=true width="50%" %}
+
+---
 
 ### Best Performance Award
 
-| Track                           | Team            | Members                                                                                      |
-|----------------------------------|-----------------|----------------------------------------------------------------------------------------------|
-| CARE-WHS                         | Nacho       | Yongli Liu, Shaohua Zheng                                                                    |
-| CARE-MyoPS                       | sxy         | Xianying Shi                                                                                 |
-| CARE-LiSeg          | Monster     | Jincan Lou, Jingkun Chen, Haoquan Li, Hang Li, Wenjian Huang, Weihua Chen, Fan Wang, Jianguo Zhang |
-| CARE-LiSeg          | CitiSJTU    | Derong Yu, Guoyan Zheng                                                                      |
-| CARE-LiFS      | Space       | Chenyuan Bian, Shan Cong, Xiaohui Yao                                                        |
-| CARE-LiFS      | BioDreamer  | Yang Zhou, Kunhao Yuan, Ye Wei, Jishizhan Chen                                               |
-| CARE-Cardiac                     | Med-AIR     | Zhao Wang, Zheyao Gao, Qi Dou                                                                |
+<div style="display: flex;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:50%;align:center;">
+  <thead>
+    <tr>
+      <th scope="col">Track</th>
+      <th scope="col">Team</th>
+      <th scope="col">Members</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CARE-WHS</td>
+      <td>Nacho</td>
+      <td>Yongli Liu, Shaohua Zheng</td>
+    </tr>
+    <tr>
+      <td>CARE-MyoPS</td>
+      <td>sxy</td>
+      <td>Xianying Shi</td>
+    </tr>
+    <tr>
+      <td>CARE-LiSeg</td>
+      <td>Monster</td>
+      <td>Jincan Lou, Jingkun Chen, Haoquan Li, Hang Li, Wenjian Huang, Weihua Chen, Fan Wang, Jianguo Zhang</td>
+    </tr>
+    <tr>
+      <td>CARE-LiSeg</td>
+      <td>CitiSJTU</td>
+      <td>Derong Yu, Guoyan Zheng</td>
+    </tr>
+    <tr>
+      <td>CARE-LiFS</td>
+      <td>Space</td>
+      <td>Chenyuan Bian, Shan Cong, Xiaohui Yao</td>
+    </tr>
+    <tr>
+      <td>CARE-LiFS</td>
+      <td>BioDreamer</td>
+      <td>Yang Zhou, Kunhao Yuan, Ye Wei, Jishizhan Chen</td>
+    </tr>
+    <tr>
+      <td>CARE-Cardiac</td>
+      <td>Med-AIR</td>
+      <td>Zhao Wang, Zheyao Gao, Qi Dou</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
