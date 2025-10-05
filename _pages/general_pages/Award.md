@@ -9,12 +9,12 @@ nav_order: 6
  The awards for the challenge include:
 
 <div style="display: flex;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:60%;align:center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:60%;align:center;color:black;">
   <thead>
     <tr>
-      <th scope="col">Award Type</th>
-      <th scope="col">Number of Awards</th>
-      <th scope="col">Award Details</th>
+      <th scope="col"><strong>Award Type</strong></th>
+      <th scope="col"><strong>Number of Awards</strong></th>
+      <th scope="col"><strong>Award Details</strong></th>
     </tr>
   </thead>
   <tbody>
@@ -69,12 +69,12 @@ nav_order: 6
 ### Best Performance Award
 
 <div style="display: flex;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:50%;align:center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:50%;align:center;color:black;">
   <thead>
     <tr>
-      <th scope="col">Track</th>
-      <th scope="col">Team</th>
-      <th scope="col">Members</th>
+      <th scope="col"><strong>Track</strong></th>
+      <th scope="col"><strong>Team</strong></th>
+      <th scope="col"><strong>Members</strong></th>
     </tr>
   </thead>
   <tbody>

@@ -10,13 +10,13 @@ The leaderboard for the challenge is based on the evaluation metrics computed on
 
 ### Cardiac
 <div style="display: flex;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:60%;align:center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:60%;align:center;color:black;">
   <thead>
     <tr>
-      <th scope="col">Rank</th>
-      <th scope="col">Team</th>
-      <th scope="col">Dice</th>
-      <th scope="col">HD</th>
+      <th scope="col"><strong>Rank</strong></th>
+      <th scope="col"><strong>Team</strong></th>
+      <th scope="col"><strong>Dice</strong></th>
+      <th scope="col"><strong>HD</strong></th>
     </tr>
   </thead>
   <tbody>
@@ -31,15 +31,15 @@ The leaderboard for the challenge is based on the evaluation metrics computed on
 
 ### Myops
 <div style="display: flex;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:80%;align:center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:80%;align:center;color:black;">
   <thead>
     <tr>
-      <th scope="col">Rank</th>
-      <th scope="col">Team</th>
-      <th scope="col">Scar+Edema_Dice</th>
-      <th scope="col">Scar+Edema_SEN</th>
-      <th scope="col">Scar+Edema_PRE</th>
-      <th scope="col">Scar+Edema_HD</th>
+      <th scope="col"><strong>Rank</strong></th>
+      <th scope="col"><strong>Team</strong></th>
+      <th scope="col"><strong>Scar+Edema_Dice</strong></th>
+      <th scope="col"><strong>Scar+Edema_SEN</strong></th>
+      <th scope="col"><strong>Scar+Edema_PRE</strong></th>
+      <th scope="col"><strong>Scar+Edema_HD</strong></th>
     </tr>
   </thead>
   <tbody>
@@ -57,14 +57,14 @@ The leaderboard for the challenge is based on the evaluation metrics computed on
 
 ### WHS
 <div style="display: flex;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:60%;align:center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:60%;align:center;color:black;">
   <thead>
     <tr>
-      <th scope="col">Rank</th>
-      <th scope="col">Team</th>
-      <th scope="col">Dice</th>
-      <th scope="col">HD</th>
-      <th scope="col">ASD</th>
+      <th scope="col"><strong>Rank</strong></th>
+      <th scope="col"><strong>Team</strong></th>
+      <th scope="col"><strong>Dice</strong></th>
+      <th scope="col"><strong>HD</strong></th>
+      <th scope="col"><strong>ASD</strong></th>
     </tr>
   </thead>
   <tbody>
@@ -85,13 +85,13 @@ The leaderboard for the challenge is based on the evaluation metrics computed on
 
 ### LiSeg-Contrast
 <div style="display: flex;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:60%;align:center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:60%;align:center;color:black;">
   <thead>
     <tr>
-      <th scope="col">Rank</th>
-      <th scope="col">Team</th>
-      <th scope="col">DSC</th>
-      <th scope="col">HD</th>
+      <th scope="col"><strong>Rank</strong></th>
+      <th scope="col"><strong>Team</strong></th>
+      <th scope="col"><strong>DSC</strong></th>
+      <th scope="col"><strong>HD</strong></th>
     </tr>
   </thead>
   <tbody>
@@ -115,13 +115,13 @@ The leaderboard for the challenge is based on the evaluation metrics computed on
 
 ### LiSeg-NonContrast
 <div style="display: flex;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:60%;align:center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:60%;align:center;color:black;">
   <thead>
     <tr>
-      <th scope="col">Rank</th>
-      <th scope="col">Team</th>
-      <th scope="col">Dice</th>
-      <th scope="col">HD</th>
+      <th scope="col"><strong>Rank</strong></th>
+      <th scope="col"><strong>Team</strong></th>
+      <th scope="col"><strong>Dice</strong></th>
+      <th scope="col"><strong>HD</strong></th>
     </tr>
   </thead>
   <tbody>
@@ -137,13 +137,13 @@ The leaderboard for the challenge is based on the evaluation metrics computed on
 
 ### LiFS-Contrast
 <div style="display: flex;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:60%;align:center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:60%;align:center;color:black;">
   <thead>
     <tr>
-      <th scope="col">Rank</th>
-      <th scope="col">Team</th>
-      <th scope="col">ACC</th>
-      <th scope="col">AUC</th>
+      <th scope="col"><strong>Rank</strong></th>
+      <th scope="col"><strong>Team</strong></th>
+      <th scope="col"><strong>ACC</strong></th>
+      <th scope="col"><strong>AUC</strong></th>
     </tr>
   </thead>
   <tbody>
@@ -160,13 +160,13 @@ The leaderboard for the challenge is based on the evaluation metrics computed on
 
 ### LiFS-NonContrast
 <div style="display: flex;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:60%;align:center;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:60%;align:center;color:black;">
   <thead>
     <tr>
-      <th scope="col">Rank</th>
-      <th scope="col">Team</th>
-      <th scope="col">ACC</th>
-      <th scope="col">AUC</th>
+      <th scope="col"><strong>Rank</strong></th>
+      <th scope="col"><strong>Team</strong></th>
+      <th scope="col"><strong>ACC</strong></th>
+      <th scope="col"><strong>AUC</strong></th>
     </tr>
   </thead>
   <tbody>
