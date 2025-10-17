@@ -24,11 +24,16 @@ This challenge consists of four challenging tracks and encompasses imaging data 
 
 
 
-## Submission 
+## Submission
 
 After registration, we will assign participants an account to login into our evaluation platform. Participants can directly upload your predictions and docker via the website. For paper submission, please refer to our [paper submission guidance](/care_2025/paper_submission).
 
 **Contact**: If you have any questions, please feel free to contact: [care25challenge@163.com](mailto:care25challenge@163.com) or [care25challenge@outlook.com](mailto:care25challenge@outlook.com).
+
+## Post-Challenge Data Request
+
+For post-challenge data access requests, please contact [bmwang21@m.fudan.edu.cn](mailto:bmwang21@m.fudan.edu.cn). 
+
 
 
 ## Timeline
