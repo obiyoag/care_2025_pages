@@ -12,7 +12,7 @@ Medical image analysis empowered by AI has significantly reshaped medicine.  How
 
 ## Tracks
 
-This challenge consists of four challenging tracks and encompasses imaging data from over **2000 patients** collected across **three continents**, capturing diverse acquisition protocols, clinical centers, and patient populations.  Participants can explore each track below to access the corresponding datasets and detailed task descriptions.
+This challenge consists of four challenging tracks and encompasses imaging data from over **1300 patients** collected across **three continents**, capturing diverse acquisition protocols, clinical centers, and patient populations.  Participants can explore each track below to access the corresponding datasets and detailed task descriptions.
 
 [**<u>CARE-Cardiac</u>**](/care_2025/track1): Unified Cardiac Sturcture and Pathology Segmentation 
 
