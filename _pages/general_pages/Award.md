@@ -69,7 +69,7 @@ nav_order: 6
 ### Best Performance Award
 
 <div style="display: flex;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:50%;align:center;color:black;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:80%;align:center;color:black;">
   <thead>
     <tr>
       <th scope="col"><strong>Track</strong></th>
