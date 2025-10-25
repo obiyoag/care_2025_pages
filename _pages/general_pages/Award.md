@@ -69,7 +69,7 @@ nav_order: 6
 ### Best Performance Award
 
 <div style="display: flex;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:50%;align:center;color:black;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:80%;align:center;color:black;">
   <thead>
     <tr>
       <th scope="col"><strong>Track</strong></th>
@@ -80,33 +80,33 @@ nav_order: 6
   <tbody>
     <tr>
       <td>CARE-WHS</td>
-      <td>Nacho</td>
-      <td>Yongli Liu, Shaohua Zheng</td>
+      <td>wei_yuan</td>
+      <td>Heng Zheng, Mingjing Yang</td>
     </tr>
     <tr>
       <td>CARE-MyoPS</td>
-      <td>sxy</td>
-      <td>Xianying Shi</td>
+      <td>JMT</td>
+      <td>Mengting Jin, Shu Chen</td>
     </tr>
     <tr>
-      <td>CARE-LiSeg</td>
+      <td>CARE-LiSeg(Contrast)</td>
       <td>Monster</td>
       <td>Jincan Lou, Jingkun Chen, Haoquan Li, Hang Li, Wenjian Huang, Weihua Chen, Fan Wang, Jianguo Zhang</td>
     </tr>
     <tr>
-      <td>CARE-LiSeg</td>
+      <td>CARE-LiSeg(Non-Contrast)</td>
       <td>CitiSJTU</td>
       <td>Derong Yu, Guoyan Zheng</td>
     </tr>
     <tr>
-      <td>CARE-LiFS</td>
-      <td>Space</td>
-      <td>Chenyuan Bian, Shan Cong, Xiaohui Yao</td>
+      <td>CARE-LiFS(Contrast)</td>
+      <td>Sigma</td>
+      <td>Boya Wang, Ruizhe Li, Chao Chen, Xin Chen</td>
     </tr>
     <tr>
-      <td>CARE-LiFS</td>
-      <td>BioDreamer</td>
-      <td>Yang Zhou, Kunhao Yuan, Ye Wei, Jishizhan Chen</td>
+      <td>CARE-LiFS(Non-Contrast)</td>
+      <td>Sigma</td>
+      <td>Boya Wang, Ruizhe Li, Chao Chen, Xin Chen</td>
     </tr>
     <tr>
       <td>CARE-Cardiac</td>
