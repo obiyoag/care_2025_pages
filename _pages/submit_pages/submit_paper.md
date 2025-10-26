@@ -34,8 +34,8 @@ Listed below are official requirements for preparing and submitting a manuscript
 
 All deadlines are on 23:59 in Pacific Standard Time.
 
-- Paper Submission:  **August 20, 2025**
-- Paper Acceptance Notification:  **August 25, 2025**
+- Paper Submission:  **August 10, 2025**
+- Paper Acceptance Notification:  **August 15, 2025**
 - Camera Ready:  **September 10, 2025**
 
 ## Submission Site

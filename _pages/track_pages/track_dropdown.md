@@ -8,7 +8,7 @@ children:
   - title: CARE-Cardiac
     permalink: /track1/
   - title: divider
-  - title: CARE-Myops
+  - title: CARE-MyoPS
     permalink: /track2/
   - title: divider
   - title: CARE-WHS

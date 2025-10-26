@@ -16,7 +16,7 @@ This challenge consists of four challenging tracks and encompasses imaging data 
 
 [**<u>CARE-Cardiac</u>**](/care_2025/track1): Unified Cardiac Sturcture and Pathology Segmentation 
 
-[**<u>CARE-Myops</u>**](/care_2025/track2): Myocardial Pathology Segmentation
+[**<u>CARE-MyoPS</u>**](/care_2025/track2): Myocardial Pathology Segmentation
 
 [**<u>CARE-WHS</u>**](/care_2025/track3): Whole Heart Segmentation 
 

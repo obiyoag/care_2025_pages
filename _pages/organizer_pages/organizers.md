@@ -33,6 +33,10 @@ profiles:
     content: organizers/fuzhou.md
     image_circular: false # crops the image to make it circular
   - align: right
+    image: uoa-logo.png
+    content: organizers/uoa.md
+    image_circular: false # crops the image to make it circular
+  - align: right
     image: chru-logo.png
     content: organizers/chru.md
     image_circular: false # crops the image to make it circular
