@@ -182,7 +182,7 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 ## Registration
 To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=liver).
 
-## Leaderboard
+## Leaderboards
 
 <div style="display: flex;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:80%;align:center;">

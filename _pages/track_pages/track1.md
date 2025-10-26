@@ -380,7 +380,7 @@ Both in-distribution (i.e., seen centers) and out-of-distribution (OOD) (i.e., u
 ## Registration
 To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=cardiac).
 
-## Leaderboard
+## Leaderboards
 
 #### Single Cardiac Structure (ID)
 

@@ -206,7 +206,7 @@ The performance of segmentation results will be assessed through:
 To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=whs).
 
 
-## Leaderboard
+## Leaderboards
 #### WHS CT (ID)
 
 <div style="display:flex; flex-direction:column; gap:8px;">

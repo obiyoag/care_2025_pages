@@ -208,7 +208,7 @@ The performance of scar and edema segmentation results will be evaluated by：
 To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=myops).
 
 
-## Leaderboard
+## Leaderboards
 
 #### MyoPS Scar (ID)
 
