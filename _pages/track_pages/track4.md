@@ -46,10 +46,10 @@ Develop models to stage fibrosis into four stages (S1-S4). leveraging **cross-ph
 - **Contrast-Enhanced Subtask**: All modalities allowed, including Gd-EOB-DTPA phases (GED1–GED4).  
 
 ### **Task 2: Liver Segmentation (LiSeg)**  
-Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepatobiliary phase (GED4) MRI** is available. Non-constrast data (T2WI, DWI) could be segmented via **unsupervised or registration-based approaches** to overcome annotation limitations.  
+Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepatobiliary phase (GED4) MRI** is available. Non-constrast data (T2WI, T1, DWI) could be segmented via **unsupervised or registration-based approaches** to overcome annotation limitations.  
 
 #### Subtasks:
-- **Non-Contrast Subtask**: Segment liver anatomy in **T2WI** and **DWI** sequences. No annotations provided.
+- **Non-Contrast Subtask**: Segment liver anatomy in **T2WI**, **T1**, and **DWI** sequences. No annotations provided.
 - **Contrast-Enhanced Subtask**: Segment **GED4** sequence. Limited annotations provided.
 
 ---
