@@ -23,12 +23,19 @@ permalink: /
 
 <div style="display: flex; align-items: center; gap: 30px; background: #f9fafb; padding: 25px 30px; border-radius: 16px; border-left: 6px solid #1f3a4b; margin: 20px 0; flex-wrap: wrap;">
   <!-- 左侧：照片与基本信息 -->
-  <div style="flex-shrink: 0; text-align: center; min-width: 150px;">
+  <div style="flex: 1; min-width: 250px; max-width: 45%;text-align: center">
       <img src="/assets/img/keynotespeaker.png" alt="Dinggang Shen" 
             style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
       <h3 style="margin: 12px 0 2px 0; color: #1f3a4b; font-size: 1.2rem;">Prof. Dinggang Shen</h3>
-      <p style="margin: 0; color: #666; font-size: 0.9rem;">School of BME, ShanghaiTech University, China</p>
-      <p style="margin: 0; color: #666; font-size: 0.9rem;">Shanghai United Imaging Intelligence Co., Ltd., China</p>
+      <p style="margin: 0; color: #666; font-size: 0.95rem;">School of BME, ShanghaiTech University, China</p>
+      <p style="margin: 0; color: #666; font-size: 0.95rem;">Shanghai United Imaging Intelligence Co., Ltd., China</p>
+
+
+  <div style="text-align: left; word-wrap: break-word; overflow-wrap: break-word;">
+    <p style="margin: 0; color: #444; font-size: 0.8rem; line-height: 1.6;">
+      Dinggang Shen is a Professor and a Founding Dean with School of Biomedical Engineering, ShanghaiTech University, and also a Co-CEO of United Imaging Intelligence (UII), Shanghai, China. He is a Fellow of IEEE, AIMBE, IAPR, MICCAI, ISMRM, and IAMBE. He was a recipient of the Distinguished Investigator Award from The Academy for Radiological &amp; Biomedical Imaging Research, USA (2019), Technical Achievement Award from IEEE EMBS (2024), and Enduring Impact Award from MICCAI (2025). He was a Jeffrey Houpt Distinguished Investigator and a Full Professor (Tenured) with University of North Carolina at Chapel Hill, USA. He was also a tenure-track assistant professor in University of Pennsylvanian, and an Instructor in Johns Hopkins University. His research interests include medical image analysis and artificial intelligence, in which he published &gt;800 SCI papers, with H-index 172 and 120K+ citations. He serves as Senior Editor for Medical Image Analysis, IEEE TBME, and IEEE TMI, and also editorial board member for six international journals. He has served in the Board of Directors, The Medical Image Computing and Computer Assisted Intervention (MICCAI) Society, in 2012-2015, and was the General Chair for MICCAI 2019.
+    </p>
+  </div>
   </div>
 
   <!-- 右侧：演讲详情 -->
