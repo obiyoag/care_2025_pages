@@ -24,7 +24,7 @@ permalink: /
 <div style="display: flex; align-items: center; gap: 30px; background: #f9fafb; padding: 25px 30px; border-radius: 16px; border-left: 6px solid #1f3a4b; margin: 20px 0; flex-wrap: wrap;">
   <!-- 左侧：照片与基本信息 -->
   <div style="flex: 1; min-width: 250px; max-width: 45%;text-align: center">
-      <img src="/assets/img/keynotespeaker.png" alt="Dinggang Shen" 
+      <img src="{{ '/assets/img/keynotespeaker.png' | relative_url }}" alt="Dinggang Shen" 
             style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
       <h3 style="margin: 12px 0 2px 0; color: #1f3a4b; font-size: 1.2rem;">Prof. Dinggang Shen</h3>
       <p style="margin: 0; color: #666; font-size: 0.95rem;">School of BME, ShanghaiTech University, China</p>
@@ -182,73 +182,73 @@ permalink: /
   <!-- Theme 2: 8篇（编号6-13，但主题内从1开始） -->
   <tr>
     <td rowspan="8" style="padding:8px; border-bottom:1px solid #ddd; vertical-align:middle; font-weight:bold;">Theme 2: CARE-Liver: Liver Fibrosis Quantification and Analysis</td>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">1</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">6</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">A Unified Registration-Guided 3DINO Framework for Semi-Supervised Liver Segmentation and Patch-Based Liver Fibrosis Staging under Missing Modalities</td>
   </tr>
   <tr>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">2</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">7</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">CIRSeg: Coarse-to-Fine Intensity-Robust Liver Segmentation with Source-Free Continual Test-Time Adaptation</td>
   </tr>
   <tr>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">3</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">8</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">Iterative Human-in-the-Loop Learning for Accurate Segmentation of Liver</td>
   </tr>
   <tr>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">4</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">9</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">Topology-Guided Lightweight 2.5D Liver Segmentation for Limited-Annotation Multi-Center Fibrosis MRI</td>
   </tr>
   <tr>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">5</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">10</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">Fibrosis-Aware Spatial-Temporal Representation Learning for Liver Fibrosis Staging from Real-World MRI</td>
   </tr>
   <tr>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">6</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">11</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">Pseudo-Label-Enhanced Liver Segmentation and Mask-Guided Patch Learning for Fibrosis Staging Classification</td>
   </tr>
   <tr>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">7</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">12</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">A Transfer-Learned Segmentation-to-Staging Cascade for Robust Liver Fibrosis Staging on Real-World Multi-Vendor MRI</td>
   </tr>
   <tr>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">8</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">13</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">Dual-Task Multi-Sequence MRI Framework: 3D Segmentation and Ensembled Fibrosis Staging of the Liver</td>
   </tr>
 
   <!-- Theme 3: 5篇 -->
   <tr>
     <td rowspan="5" style="padding:8px; border-bottom:1px solid #ddd; vertical-align:middle; font-weight:bold;">Theme 3: CARE-Myocardium: Myocardial Pathology Segmentation</td>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">1</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">14</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">MaskSAM-PBPR: A Prior-Guided Bidirectional Propagation Refiner for Multi-Sequence CMR Myocardial Pathology Segmentation</td>
   </tr>
   <tr>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">2</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">15</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">Decoupling Supervision and Recoupling Context: Reliability-Aware Soft-Prior Learning for Myocardial Scar and Edema Segmentation</td>
   </tr>
   <tr>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">3</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">16</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">ABMP-Net: Abnormality-Aware Bidirectional Motion-Physics Network for Cine CMR-Based Myocardial Scar Segmentation</td>
   </tr>
   <tr>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">4</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">17</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">Causality-inspired Polar Approach for Myocardial Pathology Segmentation in Multi-sequence CMR</td>
   </tr>
   <tr>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">5</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">18</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">Myocardial Scar and Edema Segmentation with Partial Labels and LGE-Guided Rescue</td>
   </tr>
 
   <!-- Theme 4: 3篇 -->
   <tr>
     <td rowspan="3" style="padding:8px; vertical-align:middle; font-weight:bold;">Theme 4: CARE-Whole Heart: Whole Heart Segmentation</td>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">1</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">19</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">Improving Cross-Site Whole-Heart Segmentation</td>
   </tr>
   <tr>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">2</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">20</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">Structure-Reliability-Guided ROI and Donor Fusion for Multi-Center MR Whole-Heart Segmentation</td>
   </tr>
   <tr>
-    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">3</td>
+    <td style="padding:8px; border-bottom:1px solid #ddd; text-align:center;">21</td>
     <td style="padding:8px; border-bottom:1px solid #ddd;">Shared Multimodal Learning with Anatomical Pretraining for CT and MRI Whole-Heart Segmentation</td>
   </tr>
   </tbody>
