@@ -2,7 +2,3 @@
 
 **Department of Population Health**
 * Fuping Wu
-
-**Radcliffe Department of Medicine**
-* Hanyu Chen
-* Qiang Zhang
